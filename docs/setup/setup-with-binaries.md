@@ -102,7 +102,7 @@ To stop the node, run 'killall -9 "axelard"'
 ```
 
  Wait for your node to catch up with the network before proceeding.
- Use `tail -f $HOME/axelar_testnet/logs/axelard.log` to keep an eye on the node's progress (this can take a while). Your logs will be in `ROOT_DIRECTORY/logs` where `ROOT_DIRECTORY` is whatever you passed through the flag.
+ Use `tail -f $HOME/.axelar_testnet/logs/axelard.log` to keep an eye on the node's progress (this can take a while). Your logs will be in `ROOT_DIRECTORY/logs` where `ROOT_DIRECTORY` is whatever you passed through the flag.
 
  You can check the sync status by running:
  ```bash
