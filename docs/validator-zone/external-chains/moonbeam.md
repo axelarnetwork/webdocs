@@ -47,7 +47,7 @@ After installation of `moonbase-alpha`, we are now ready to start the node but i
 !> In the service file below you need to replace `"YOUR-NODE-NAME"` and path to `moonbeam`, depending on your system configuration.
 
 ```bash
-sudo tee <<EOF >/dev/null /etc/systemd/system/geth.service
+sudo tee <<EOF >/dev/null /etc/systemd/system/moonbeam.service
 [Unit]
 Description="Moonbase Alpha systemd service"
 After=network.target
