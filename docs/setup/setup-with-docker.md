@@ -12,6 +12,7 @@ This tutorial will take 30-60 minutes of dev time and 2-4 hours of waiting for b
 ## Prerequisites
 
 - Mac OS or Ubuntu (tested on 18.04)
+- Increase the maximum number of open files on your system.  Example: `ulimit -n 16384`.  You may wish to add this command to your shell profile so that you do not need to execute it next time you restart.
 - [Docker](https://docs.docker.com/engine/install/)
 - JQ command line tool (`apt-get install jq` on Ubuntu, `brew install jq` on Mac OS)
 - Minimum hardware requirements: 4 cores, 8-16GB RAM, 512 GB drive. Recommended 6-8 cores, 16-32 GB RAM, 1 TB+ drive.
