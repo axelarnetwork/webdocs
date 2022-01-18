@@ -3,22 +3,46 @@
 
 Variable  | Value
 ------------- | -------------
-`axelar-core` version | `v0.9.6`
-`axelarate-community` version | `v0.9.1`
-`tofnd` version | `v0.8.0`
-Ethereum Axelar Gateway contract address | `0xCf36e7E9d83772fF1EeeE31D7e3edF66d805A01e`
-Ethereum AXL token address | `0xf609213f6925C3C11375B443eB0176c2fDD5DdD9`
-Ethereum axelarUST token address | `0xf4F19390B69f8Ee95453CC4F61ED6B5d1C1C3014`
-Avalanche Axelar Gateway contract address | `0xCa8EBeD9EbE8BC7fdB4b8600c2B81beAB573bAF6`
-Avalanche AXL token address | `0x45aE4960e3B8F30682d83656bd26A69be816aA09`
-Avalanche axelarUST token address | `0x7068D0EA041AD0d51b816dDbb3952e06DD4db831`
-Fantom Axelar Gateway contract address | `0x007a197F31C3BdA10970844068f6802fbb8779a7`
-Fantom AXL token address | `0xA64441B91b3483b0286aFFe59EAf8FeE0F790768`
-Fantom axelarUST token address | `0x241CA50E3e4321D189d6Cf6cE029039B562EbB4C`
-Moonbeam Axelar Gateway contract address | `0x76e57A476a80cA2d6F39e86Bdb9db97eFAcD7F56`
-Moonbeam AXL token address | `0xc31dB357bf37CC60e812092fd51A64BE2c2bdf78`
-Moonbeam axelarUST token address | `0xDe24F336EBbAF774708B3A87f4f6dED9C5A46F45`
-Polygon Axelar Gateway contract address | `0x86762362aCF2603b0c2e9b9eD34005a21E92d076`
-Polygon AXL token address | `0xd3b51251beBe2A0cc96813Ab86BD718f8dDb211b`
-Polygon axelarUST token address | `0x553665235653f1c098488f720a696DBc8114bAD6`
-Terra channel id | `not yet available`
+`axelar-core` version | `v0.13.0`
+`tofnd` version | `v0.8.2`
+Ethereum Axelar Gateway contract address | `0x81b450CA8F0e842EcC361FD64270aeb5A374A0d8`
+Ethereum AXL token address | `0xBf96Dfc6AE44e880681b7221deE21E900BC0F21c`
+Ethereum UST token address | `0x5f1E1bdc2c73EFA2eEEe6b30128d968791D1c55C`
+Ethereum LUNA token address | `0xB7454D02D4190dAe72be2051482aCF044435C5D8`
+Avalanche Axelar Gateway contract address | `0x8F19fF12a38aDa314e6fC2611E75473BBb11FebE`
+Avalanche AXL token address | `0x5a3cF244040Ab7C8e6B192E8eb8eF6C78C9D612b`
+Avalanche UST token address | `0x0749e7902520ab6b3DBD28a1203A2d358700655e`
+Avalanche LUNA token address | `0x28EE721a8128ee8ff57f14b131535E05b88fd636`
+Fantom Axelar Gateway contract address | `0xdCE436d858Cfc7d46946d8f95B466e37FA897A4a`
+Fantom AXL token address | `0x0efE77aEf986684650c84C149e0e37196D9b7abc`
+Fantom UST token address | `0x243615425b166719A13875A5Dc044094DDF3dA4d`
+Fantom LUNA token address | `0x79e1b09d919AE79D039BB81BEB7c53C70f95719B`
+Polygon Axelar Gateway contract address | `0xa4dbF01D58C4C89B96194682e48b05c0dEC62201`
+Polygon AXL token address | `0x578aBd5AD95D0e85CB9b508295D4bC1B35496f8a`
+Polygon UST token address | `0x1912e95A44960c785e96d43651660aF55cA84ab8`
+Polygon LUNA token address | `0xaf11e7D46A146256D9178251CBe8A1e5E6218f90`
+Moonbeam Axelar Gateway contract address | `0xd01C68e0cf45F99A6016f80a9C1783f497902bAC`
+Moonbeam AXL token address | `0xa9d0D7b596AC9F1704E886892870daB084ECd220`
+Moonbeam UST token address | `0x1c84ea8C5Fd26f8e49aF418De742982980d88593`
+Moonbeam LUNA token address | `0x3a89372397265fAFd704fb8DA373926901CEFA19`
+Terra channel id | `channel-55`
+Axelar channel id | `channel-0`
+
+# Upgrade Path
+
+Core Version  | Start Height | End Height
+------------- | ------------- | -------------
+v0.10.7 | 0 | 14700
+v0.13.0 | 14701 | N/A
+
+# Minimum transfer amounts
+
+For each asset X in (AXL, UST, LUNA) and each external chain Y in (Ethereum, non-Ethereum EVM, Cosmos/IBC): any transfer of asset X to chain Y must exceed the minimum amount given in the table below.  (If Y is the origin chain for asset X then this transfer is called "redeem"/"burn"; there is no minimum in this case.)
+
+If the total amount of asset X sent to a deposit address A is smaller than the minimum then those deposits will sit in the queue until a future deposit to A brings the total above the minimum.
+
+Asset symbol | Ethereum | non-Ethereum EVM | Cosmos/IBC
+---|---|---|---
+AXL | 100 AXL | 10 AXL | 0.1 AXL
+UST | 100 UST | 10 UST | 0.1 UST
+LUNA | 1 LUNA | 0.1 LUNA | 0.001 LUNA
