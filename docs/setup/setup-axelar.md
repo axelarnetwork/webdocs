@@ -18,7 +18,7 @@ You can run this client on your computer or in a hosted Docker container.
 
 ### Prerequisites
 
-Here are the prerequisites for both setup methods. You only need to install Docker of that's the setup method you want to use. 
+Here are the prerequisites for setting up an Axelar node and connecting it to the network. You only need to install Docker of that's the setup method you want to use. 
 
 |  |  | 
 |:--|:--|
@@ -36,7 +36,7 @@ See [Testnet Releases](/resources/testnet-releases.md) for the latest available 
 - [`axelar-core`](https://hub.docker.com/repository/docker/axelarnet/axelar-core) 
 - [`tofnd`](https://hub.docker.com/repository/docker/axelarnet/tofnd) 
 
-You can save the latest version and to variables:
+You can save the latest version to a variable:
 
 ```bash
 AXELAR_CORE_VERSION=$(curl -s https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/documentation/docs/resources/testnet-releases.md  | grep axelar-core | cut -d \` -f 4)
@@ -65,14 +65,6 @@ To filter the log to make finding relevant information easier, run:
 docker logs -f axelar-core 2>&1 | grep -a -e threshold -e num_txs -e proxies
 ```
 
-### Ethereum accounts
-
-You don't need an Ethereum account for your initial setup and connection the Axelar network.
-
-However, Axelar signs meta transactions for Ethereum, which means that any Ethereum account can send transaction executing commands so long as the commands are signed by Axelar's key. In the [exercises](https://docs.axelar.dev/#/parent-pages/exercises), all of the Ethereum-related transactions are sent from address `0xE3deF8C6b7E357bf38eC701Ce631f78F2532987A` on Ropsten testnet.
-
-
-
 ## Connect to the testnet 
 
 To use Axelar's scripts and configuration templates, follow these steps:
@@ -99,73 +91,70 @@ To use Axelar's scripts and configuration templates, follow these steps:
 
 6. Monitor the progress of the network synch. Catching your node up to the network can take a few minutes. You can check the progress in a few ways, depending on your setup method. You can also use cURL. 
 
-  - **Docker**
+    - **Docker**
 
-      docker logs -f axelar-core
+        docker logs -f axelar-core
   
-  - **Binaries**
+    - **Binaries**
 
-      tail -f $HOME/.axelar_testnet/logs/axelard.log
+        tail -f $HOME/.axelar_testnet/logs/axelard.log
   
-  Your logs are written to `<ROOT_DIRECTORY>/logs` where `<ROOT_DIRECTORY>` is the path you passed through the `-r` flag when you ran the setup script (`/join/join-testnet-with-binaries.sh`).
+    Your logs are written to `<ROOT_DIRECTORY>/logs` where `<ROOT_DIRECTORY>` is the path you passed through the `-r` flag when you ran the setup script (`/join/join-testnet-with-binaries.sh`).
 
-  - **cURL**
+    - **cURL**
 
-      curl localhost:26657/status | jq '.result.sync_info'      
+        curl localhost:26657/status | jq '.result.sync_info'      
 
-  Your node has caught up to the network when the `catching_up` field in the response is `true`.
+    Your node has caught up to the network when the `catching_up` field in the response is `true`.
 
 7. Prepare for the Axelar node. 
 
-  - **Docker** -- Open a new terminal window and enter the Axelar node: 
+    - **Docker** -- Open a new terminal window and enter the Axelar node: 
 
-      docker exec -it axelar-core sh
+        docker exec -it axelar-core sh
 
-  - **Binaries** -- Add `$HOME/.axelar_testnet/bin` to your path (the location of the `bin` directory differs depending on your root directory) or use the full path to run the executable. Set the `AXELARD_CHAIN_ID` environment variable to `axelar-testnet-toronto`, then run `export AXELARD_CHAIN_ID=axelar-testnet-toronto`.
+    - **Binaries** -- Add `$HOME/.axelar_testnet/bin` to your path (the location of the `bin` directory differs depending on your root directory) or use the full path to run the executable. Set the `AXELARD_CHAIN_ID` environment variable to `axelar-testnet-toronto`, then run `export AXELARD_CHAIN_ID=axelar-testnet-toronto`.
 
-8. Find the address of `validator` account on the node. Every node has a an account called `validator` by default--these are not yet validators on the network. 
+8. Find the address of `validator` account on the node. This  Every node has a an account called `validator` by default--these are not yet validators on the network. You can also find the address in the output of the `join/join-testnet.sh` script.
 
-  - **Docker**
+    - **Docker**
 
-      axelard keys show validator -a
+        axelard keys show validator -a
 
-  - **Binaries** 
+    - **Binaries** 
 
-      $HOME/.axelar_testnet/bin/axelard keys show validator -a --home ~/.axelar_testnet/.core
+        $HOME/.axelar_testnet/bin/axelard keys show validator -a --home ~/.axelar_testnet/.core
 
 9. Go to the Axelar [testnet faucet](http://faucet.testnet.axelar.dev/) and fund the `validator` account. 
 
 10. Confirm that the account received the funds. Use the output from step 8 for the `VALIDATOR_ACCOUNT_ADDRESS` value. You have to wait for the node to fully sync with the network to see the testnet balances reflected in the account. 
 
-  - **Docker**
+    - **Docker**
 
-      axelard q bank balances <VALIDATOR_ACCOUNT_ADDRESS>
+        axelard q bank balances <VALIDATOR_ACCOUNT_ADDRESS>
 
-  - **Binaries** 
+    - **Binaries** 
 
-      $HOME/.axelar_testnet/bin/axelard q bank balances <VALIDATOR_ACCOUNT_ADDRESS> --home ~/.axelar_testnet/.core
+        $HOME/.axelar_testnet/bin/axelard q bank balances <VALIDATOR_ACCOUNT_ADDRESS> --home ~/.axelar_testnet/.core
 
 11. Stop the node:
 
-  - **Docker** -- You can leave the Axelar node CLI by entering `exit` or `Ctrl + D`. To stop the node, enter a new CLI terminal and run the following command. This stops all currently running containers. If you want to stop a single container, run `docker stop <CONTAINER_ID>`.
+    - **Docker** -- You can leave the Axelar node CLI by entering `exit` or `Ctrl + D`. To stop the node, enter a new CLI terminal and run the following command. This stops all currently running containers. If you want to stop a single container, run `docker stop <CONTAINER_ID>`.
 
-      docker stop $(docker ps -a -q)
+        docker stop $(docker ps -a -q)
   
   Run `docker exec -it axelar-core sh` to enter the CLI again. 
 
-  - **Binaries** 
+    - **Binaries** 
 
-      killall axelard
+        killall axelard
   
 
   To restart the node, run the `join/join-testnet.sh` script again, with the same `--axelar-core version` (and optionally `--root`) parameters as before. Do **NOT** use the `--reset-chain` flag--if you do, your node has to sync again from the beginning and any keys you haven't backed up are lost.
 
-## Axelar processs and containers
+## Axelar processes and containers
 
-### Docker
-
-
-Axelar runs up to three docker containers. It only runs all three processes for validators. If you're not running a validator, Axelar only needs the `axelar-core` container.
+Axelar runs up to three proccesses or docker containers. It only runs all three for validators. If you're not running a [validator](/validator-zone/setup/overview), Axelar only needs `axelar-core`.
 
 - `axelar-core` -- Runs the core consensus engine.
 
@@ -173,11 +162,16 @@ Axelar runs up to three docker containers. It only runs all three processes for 
 
 - `tofnd` -- Handles threshold crypto operations.
 
-You can stop or remove these containers by running:
 
-```bash
-docker stop axelar-core vald tofnd
-```
+You can stop or remove these containers by running the following commands:
+
+- **Docker**
+
+    docker stop <CONTAINER_NAME>
+
+- **Binaries**
+
+    kill -9 $(pgrep -f '<PROCESS_NAME>')
 
 If you see an error related to insufficient gas at any point during the workflow, add these flags:
 
@@ -185,25 +179,10 @@ If you see an error related to insufficient gas at any point during the workflow
 --gas=auto --gas-adjustment 1.2
 ```
 
-### Binaries
+## Next steps
 
-Axelar runs up to three unique processes. It only runs all three processes for validators. If you're not running a validator, Axelar only runs `axelar-core`.
+Now that you have a node running and connected to the Axelar network, you can do a few different things. 
 
-- `axelar-core` -- Runs the core consensus engine.
-
-  To kill this process:
-
-      kill -9 $(pgrep -f 'axelard start')
-
-- `vald` -- Broadcasts chain event transactions. 
-
-  To kill this process:
-
-      kill -9 $(pgrep -f 'axelard vald-start')
-
-- `tofnd` -- Handles threshold crypto operations.
-
-  To kill this process:
-
-      kill -9 $(pgrep tofnd)
-
+- [Become a validator](/validator-zone/setup/overview?id=steps-to-become-a-validator)
+- [Set up external chains](/validator-zone/external-chains/external-chains-homepage)
+- [Transfer assets on Axelar network](/exercises)
