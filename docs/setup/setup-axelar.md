@@ -93,17 +93,17 @@ To use Axelar's scripts and configuration templates, follow these steps:
 
     - **Docker**
 
-        docker logs -f axelar-core
+          docker logs -f axelar-core
   
     - **Binaries**
 
-        tail -f $HOME/.axelar_testnet/logs/axelard.log
+          tail -f $HOME/.axelar_testnet/logs/axelard.log
   
     Your logs are written to `<ROOT_DIRECTORY>/logs` where `<ROOT_DIRECTORY>` is the path you passed through the `-r` flag when you ran the setup script (`/join/join-testnet-with-binaries.sh`).
 
     - **cURL**
 
-        curl localhost:26657/status | jq '.result.sync_info'      
+          curl localhost:26657/status | jq '.result.sync_info'      
 
     Your node has caught up to the network when the `catching_up` field in the response is `true`.
 
@@ -111,7 +111,7 @@ To use Axelar's scripts and configuration templates, follow these steps:
 
     - **Docker** -- Open a new terminal window and enter the Axelar node: 
 
-        docker exec -it axelar-core sh
+          docker exec -it axelar-core sh
 
     - **Binaries** -- Add `$HOME/.axelar_testnet/bin` to your path (the location of the `bin` directory differs depending on your root directory) or use the full path to run the executable. Set the `AXELARD_CHAIN_ID` environment variable to `axelar-testnet-toronto`, then run `export AXELARD_CHAIN_ID=axelar-testnet-toronto`.
 
@@ -119,11 +119,11 @@ To use Axelar's scripts and configuration templates, follow these steps:
 
     - **Docker**
 
-        axelard keys show validator -a
+          axelard keys show validator -a
 
     - **Binaries** 
 
-        $HOME/.axelar_testnet/bin/axelard keys show validator -a --home ~/.axelar_testnet/.core
+          $HOME/.axelar_testnet/bin/axelard keys show validator -a --home ~/.axelar_testnet/.core
 
 9. Go to the Axelar [testnet faucet](http://faucet.testnet.axelar.dev/) and fund the `validator` account. 
 
@@ -131,23 +131,23 @@ To use Axelar's scripts and configuration templates, follow these steps:
 
     - **Docker**
 
-        axelard q bank balances <VALIDATOR_ACCOUNT_ADDRESS>
+          axelard q bank balances <VALIDATOR_ACCOUNT_ADDRESS>
 
     - **Binaries** 
 
-        $HOME/.axelar_testnet/bin/axelard q bank balances <VALIDATOR_ACCOUNT_ADDRESS> --home ~/.axelar_testnet/.core
+          $HOME/.axelar_testnet/bin/axelard q bank balances <VALIDATOR_ACCOUNT_ADDRESS> --home ~/.axelar_testnet/.core
 
 11. Stop the node:
 
     - **Docker** -- You can leave the Axelar node CLI by entering `exit` or `Ctrl + D`. To stop the node, enter a new CLI terminal and run the following command. This stops all currently running containers. If you want to stop a single container, run `docker stop <CONTAINER_ID>`.
 
-        docker stop $(docker ps -a -q)
+          docker stop $(docker ps -a -q)
   
   Run `docker exec -it axelar-core sh` to enter the CLI again. 
 
     - **Binaries** 
 
-        killall axelard
+          killall axelard
   
 
   To restart the node, run the `join/join-testnet.sh` script again, with the same `--axelar-core version` (and optionally `--root`) parameters as before. Do **NOT** use the `--reset-chain` flag--if you do, your node has to sync again from the beginning and any keys you haven't backed up are lost.
@@ -167,11 +167,11 @@ You can stop or remove these containers by running the following commands:
 
 - **Docker**
 
-    docker stop <CONTAINER_NAME>
+      docker stop <CONTAINER_NAME>
 
 - **Binaries**
 
-    kill -9 $(pgrep -f '<PROCESS_NAME>')
+      kill -9 $(pgrep -f '<PROCESS_NAME>')
 
 If you see an error related to insufficient gas at any point during the workflow, add these flags:
 
