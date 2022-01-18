@@ -1,6 +1,7 @@
 - [**Setup**](/parent-pages/setup.md)
   - [Setup with Docker](/setup/setup-with-docker.md)
   - [Setup with Binaries](/setup/setup-with-binaries.md)
+  - [Setup Single-Source](/setup/setup-axelar.md)
   
 - [**Resources**](/parent-pages/resources.md)
   - [Testnet Release](/resources/testnet-releases.md)

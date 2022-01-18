@@ -22,6 +22,16 @@
        <center><h1>Setup with Binaries</h1></center>
   </a>
   </center>
+
+<!-- div:right-panel -->
+<center>
+  <a href="../#/setup/setup-axelar">
+<img src="../_media/axelar-validator.png"
+     width=300" height="300">
+       <center><h1>Setup Single-Source</h1></center>
+  </a>
+  </center>
+
 <!-- div:right-panel -->
 
 
