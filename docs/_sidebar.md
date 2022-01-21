@@ -1,6 +1,5 @@
 - [**Setup**](/parent-pages/setup.md)
-  - [Setup with Docker](/setup/setup-with-docker.md)
-  - [Setup with Binaries](/setup/setup-with-binaries.md)
+  - [Join the Axelar testnet for the first time](/setup/setup-testnet.md)
   
 - [**Resources**](/parent-pages/resources.md)
   - [Mainnet Release](/resources/mainnet-releases.md)
