@@ -3,6 +3,7 @@
   - [Setup with Binaries](/setup/setup-with-binaries.md)
   
 - [**Resources**](/parent-pages/resources.md)
+  - [Mainnet Release](/resources/mainnet-releases.md)
   - [Testnet Release](/resources/testnet-releases.md)
   - [Extra Commands](/resources/extra-commands.md)
   - [Useful Links](/resources/useful-links.md)
