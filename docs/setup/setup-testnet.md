@@ -1,10 +1,11 @@
 # Join the Axelar testnet for the first time
 
-Start your Axelar node and begin downloading the blockchain.
+Start your Axelar node and download the blockchain.
 
 !> :fire: The Axelar Network is under development. **Do not transfer any real assets over the Axelar testnet.** Only use testnet tokens that you're not afraid to lose. Axelar is not responsible for any assets lost, frozen, or unrecoverable in any state or condition.
 
-> [!TIP] Choose to run your Axelar node in docker mode or binary mode.
+> [!NOTE] Choose to run your Axelar node in docker mode or binary mode.
+>
 > Look for **Docker only:** or **Binary only:** for instructions specific to your chosen mode.
 
 ## Prerequisites
@@ -14,7 +15,7 @@ Start your Axelar node and begin downloading the blockchain.
 * **Software:**
     * Install [`jq`](https://stedolan.github.io/jq/download/).
     * **Docker only:** Install [Docker](https://docs.docker.com/engine/install/).
-
+    * **Binary only:** Increase the maximum number of open files on your system.  Example: `ulimit -n 16384`.  You may wish to add this command to your shell profile so that you don't need to execute it next time you restart your machine.
 ## Choose a keyring password
 
 Your Axelar keyring is encrypted with a password you choose.
@@ -23,8 +24,7 @@ Your password must have at least 8 characters.
 
 In what follows you will execute a shell script to join the Axelar testnet.  Your keyring password is supplied to the shell script via a `KEYRING_PASSWORD` environment variable.
 
-> [!NOTE]
-> In the following instructions you must substitute your chosen keyring password for `my-secret-password`.
+!> In the following instructions you must substitute your chosen keyring password for `my-secret-password`.
 
 ## Join the Axelar testnet
 
@@ -99,3 +99,12 @@ curl localhost:26657/status | jq '.result.sync_info'
 Look for the field `catching_up`:
 * `true`: you are still downloading the blockchain.
 * `false`: you have finished downloading the blockchain.
+
+## Next steps
+
+Congratulations!  You joined the Axelar network and downloaded the blockchain.
+
+Learn what you can do with Axelar:
+
+* Basic management of your Axelar node
+* Tutorial: transfer UST or LUNA tokens from the Terra blockchain to EVM-compatible blockchains such as Ethereum, Avalanche, Fantom, Moonbeam, Polygon.
