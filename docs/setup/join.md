@@ -1,8 +1,10 @@
-# Join the Axelar testnet for the first time
+# Join the Axelar network for the first time
 
 Start your Axelar node and download the blockchain.
 
-!> :fire: The Axelar Network is under development. **Do not transfer any real assets over the Axelar testnet.** Only use testnet tokens that you're not afraid to lose. Axelar is not responsible for any assets lost, frozen, or unrecoverable in any state or condition.
+[TODO add mainnet]
+
+!> :fire: [TODO fix] The Axelar Network is under development. **Do not transfer any real assets over the Axelar testnet.** Only use testnet tokens that you're not afraid to lose. Axelar is not responsible for any assets lost, frozen, or unrecoverable in any state or condition.
 
 > [!NOTE] Choose to run your Axelar node in docker mode or binary mode.
 >
@@ -48,6 +50,18 @@ KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -e host -a v0.10.7
 ```
 
 Your Axelar testnet node will launch and begin downloading the blockchain.
+
+## Backup your secret keys
+
+BACKUP and DELETE the `validator` account secret mnemonic:
+```
+~/.axelar_testnet/shared/validator.txt
+```
+
+BACKUP but do NOT DELETE the Tendermint consensus secret key (this is needed on node restarts):
+```
+~/.axelar_testnet/.core/config/priv_validator_key.json
+```
 
 ## View logs
 
@@ -106,5 +120,5 @@ Congratulations!  You joined the Axelar network and downloaded the blockchain.
 
 Learn what you can do with Axelar:
 
-* Basic management of your Axelar node
+* [Basic management of your Axelar node](basic.md)
 * Tutorial: transfer UST or LUNA tokens from the Terra blockchain to EVM-compatible blockchains such as Ethereum, Avalanche, Fantom, Moonbeam, Polygon.
