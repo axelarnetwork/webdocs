@@ -1,6 +1,6 @@
 # Basic management of your Axelar node
 
-Stop your node, backup your chain data, resume your node.  Check your AXL balance, get AXL tokens from the faucet, send AXL tokens.
+Stop your node, backup your chain data, resume your node.  Check your AXL balance, get AXL tokens from the faucet.
 
 ## Prerequisites
 
@@ -78,24 +78,8 @@ echo my-secret-password | ~/.axelar_testnet/bin/axelard q bank balances {MY_ADDR
 
 If this is a new account then you should see no token balances.
 
-## Testnet only: send AXL tokens
+## Get AXL tokens from the faucet
 
-!> :fire: Do not attempt this task on Axelar mainnet unless you know what you are doing.  If you send mainnet AXL tokens to an address that you do not control then those tokens might become permanently lost.
+Get free AXL testnet tokens sent to `{MY_ADDRESS}` from the [Axelar Testnet Faucet](https://faucet.testnet.axelar.dev/).
 
-> [!NOTE] You must have a nonzero balance of `AXL` tokens at your address to complete this task.
->
-> Get free AXL testnet tokens sent to `{MY_ADDRESS}` from the [Axelar Testnet Faucet](https://faucet.testnet.axelar.dev/).
-
-Send 1 `AXL` token to `{YOUR_ADDRESS}`:
-
-**Docker only:**
-```bash
-docker exec axelar-core sh -c 'echo my-secret-password | axelard tx bank send {MY_ADDRESS} {YOUR_ADDRESS} 1000000uaxl'
-```
-
-**Binary only:**
-```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx bank send {MY_ADDRESS} {YOUR_ADDRESS} 1000000uaxl --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
-```
-
-> [!TIP] `AXL` token amounts are typically denominated in `uaxl` where `1 AXL = 1000000uaxl`.
+Check your balance again to see the tokens you received from the faucet.
