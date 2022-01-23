@@ -1,5 +1,6 @@
 - [**Setup**](/parent-pages/setup.md)
-  - [Join the Axelar testnet for the first time](/setup/setup-testnet.md)
+  - [Join the Axelar testnet for the first time](/setup/join.md)
+  - [Basic management of your Axelar node](/setup/basic.md)
   
 - [**Resources**](/parent-pages/resources.md)
   - [Mainnet Release](/resources/mainnet-releases.md)
