@@ -18,11 +18,10 @@ Start your Axelar node and download the blockchain.
     * Install [`jq`](https://stedolan.github.io/jq/download/).
     * **Docker only:** Install [Docker](https://docs.docker.com/engine/install/).
     * **Binary only:** Increase the maximum number of open files on your system.  Example: `ulimit -n 16384`.  You may wish to add this command to your shell profile so that you don't need to execute it next time you restart your machine.
+
 ## Choose a keyring password
 
-Your Axelar keyring is encrypted with a password you choose.
-
-Your password must have at least 8 characters.
+Your Axelar keyring is encrypted with a password you choose.  Your password must have at least 8 characters.
 
 In what follows you will execute a shell script to join the Axelar testnet.  Your keyring password is supplied to the shell script via a `KEYRING_PASSWORD` environment variable.
 
@@ -65,7 +64,9 @@ BACKUP but do NOT DELETE the Tendermint consensus secret key (this is needed on 
 
 ## View logs
 
-In a new terminal window view the streaming logs for your Axelar testnet node:
+View the streaming logs for your Axelar testnet node:
+
+In a new terminal window:
 
 **Docker only:**
 ```bash
@@ -120,5 +121,5 @@ Congratulations!  You joined the Axelar network and downloaded the blockchain.
 
 Learn what you can do with Axelar:
 
-* [Basic management of your Axelar node](basic.md)
+* [Basic management of your Axelar node](/setup/basic)
 * Tutorial: transfer UST or LUNA tokens from the Terra blockchain to EVM-compatible blockchains such as Ethereum, Avalanche, Fantom, Moonbeam, Polygon.

@@ -22,7 +22,7 @@ kill -9 $(pgrep -f "axelard start")
 
 ## Backup your chain data
 
-!> :fire: Your node must be stopped in order to properly backup chain data.
+!> Your node must be stopped in order to properly backup chain data.
 
 ```bash
 cp -r ~/.axelar_testnet ~/.axelar_testnet_backup
@@ -64,6 +64,8 @@ echo my-secret-password | ~/.axelar_testnet/bin/axelard keys show valiator -a --
 
 Let `{MY_ADDRESS}` denote the address of your `validator` account.
 
+> [!TIP] Your balance will appear only after you have downloaded the blockchain and exited `catching_up` mode.
+
 **Docker only:**
 ```bash
 docker exec axelar-core sh -c 'echo my-secret-password | axelard q bank balances {MY_ADDRESS}'
@@ -74,13 +76,7 @@ docker exec axelar-core sh -c 'echo my-secret-password | axelard q bank balances
 echo my-secret-password | ~/.axelar_testnet/bin/axelard q bank balances {MY_ADDRESS} --home ~/.axelar_testnet/.core
 ```
 
-If this is a new account then you should see no token balances:
-```
-balances: []
-pagination:
-  next_key: null
-  total: "0"
-```
+If this is a new account then you should see no token balances.
 
 ## Testnet only: send AXL tokens
 
@@ -103,4 +99,3 @@ echo my-secret-password | ~/.axelar_testnet/bin/axelard tx bank send {MY_ADDRESS
 ```
 
 > [!TIP] `AXL` token amounts are typically denominated in `uaxl` where `1 AXL = 1000000uaxl`.
-
