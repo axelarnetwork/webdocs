@@ -4,7 +4,7 @@ Start your Axelar node and download the blockchain.
 
 [TODO add mainnet]
 
-!> :fire: [TODO fix] The Axelar Network is under development. **Do not transfer any real assets over the Axelar testnet.** Only use testnet tokens that you're not afraid to lose. Axelar is not responsible for any assets lost, frozen, or unrecoverable in any state or condition.
+!> The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
 > [!NOTE] Choose to run your Axelar node in docker mode or binary mode.
 >
