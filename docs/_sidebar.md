@@ -1,5 +1,5 @@
 - [**Setup**](/parent-pages/setup.md)
-  - [Join the Axelar testnet for the first time](/setup/join.md)
+  - [Join the Axelar network for the first time](/setup/join.md)
   - [Basic management of your Axelar node](/setup/basic.md)
   
 - [**Resources**](/parent-pages/resources.md)

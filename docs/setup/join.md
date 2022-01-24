@@ -81,12 +81,12 @@ In a new terminal window:
 
 **Testnet:**
 ```bash
-tail -f $HOME/.axelar_testnet/logs/axelard.log
+tail -f ~/.axelar_testnet/logs/axelard.log
 ```
 
 **Mainnet:**
 ```bash
-tail -f $HOME/.axelar/logs/axelard.log
+tail -f ~/.axelar/logs/axelard.log
 ```
 
 ## Switch your Axelar node version
