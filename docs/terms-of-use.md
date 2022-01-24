@@ -1,6 +1,6 @@
 # Terms of use
 
-All goods or services provided through the Satellite application (the “Protocol”) are provided on an “as is,” “as available” basis. The Protocol is constantly under active development, and it is currently undergoing its “beta” testing phase, meaning that while the core features of the Protocol have been implemented, undetected bugs, errors, and vulnerabilities may remain undiscovered until this phase of testing is complete.
+All goods or services provided through the Axelar network (the “Protocol”) are provided on an “as is,” “as available” basis. The Protocol is constantly under active development, and it is currently undergoing its “beta” testing phase, meaning that while the core features of the Protocol have been implemented, undetected bugs, errors, and vulnerabilities may remain undiscovered until this phase of testing is complete.
 
 The Protocol may now or in the future contain undetected errors, bugs, or vulnerabilities. It is possible that Axelar, Inc. (the “Company”) or the Axelar Foundation (the “Foundation”) will not detect errors in the Protocol or the underlying technology until after code has been fully released for external or internal use. Any errors, bugs, vulnerabilities, or other design defects discovered in the Protocol’s code after release may result in a negative experience for the Protocol’s users.
 
