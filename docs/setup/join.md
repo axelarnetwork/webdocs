@@ -37,15 +37,15 @@ Launch a new Axelar testnet node with version `0.10.7` of axelar-core:
 
 **Testnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -e host -a v0.10.7
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.10.7
 ```
 
 **Mainnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -e host -a v0.10.7 -n mainnet
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.10.7 -n mainnet
 ```
 
-Your Axelar network node will launch and begin downloading the blockchain.
+Your Axelar node will launch and begin downloading the blockchain.
 
 ## Backup your secret keys
 
@@ -75,7 +75,7 @@ BACKUP but do NOT DELETE the Tendermint consensus secret key (this is needed on 
 
 ## View logs
 
-View the streaming logs for your Axelar network node:
+View the streaming logs for your Axelar node:
 
 In a new terminal window:
 
@@ -91,7 +91,7 @@ tail -f $HOME/.axelar/logs/axelard.log
 
 ## Switch your Axelar node version
 
-Your Axelar network node will download the blockchain until it reaches the `UPGRADE_HEIGHT` listed below.
+Your Axelar node will download the blockchain until it reaches the `UPGRADE_HEIGHT` listed below.
 
 Network | `UPGRADE_HEIGHT` 
 ------- | -------- 
@@ -106,23 +106,23 @@ panic: UPGRADE "v0.13" NEEDED at height: UPGRADE_HEIGHT:
 
 You need to launch your Axelar node again with version `0.13.2` of axelar-core:
 
-**testnet:**
+**Testnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -e host
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh
 ```
 
-**Binary:**
+**Mainnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -e host -n mainnet
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -n mainnet
 ```
 
-Your Axelar testnet node will launch and resume downloading the blockchain.
+Your Axelar node will launch and resume downloading the blockchain.
 
 ## Test whether your blockchain is downloaded
 
-Eventually your Axelar testnet node will download the entire Axelar blockchain and exit `catching_up` mode.  At that time your logs will show a new block added to the blockchain every 5 seconds.
+Eventually your Axelar node will download the entire Axelar blockchain and exit `catching_up` mode.  At that time your logs will show a new block added to the blockchain every 5 seconds.
 
-You can test whether your Axelar testnet node has exited `catching_up` mode:
+You can test whether your Axelar node has exited `catching_up` mode:
 
 ```bash
 curl localhost:26657/status | jq '.result.sync_info'
