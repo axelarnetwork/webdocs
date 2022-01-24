@@ -12,12 +12,6 @@ You have launched your Axelar node as per [Join the Axelar network for the first
 
 Stop your currently running Axelar node:
 
-**Docker only:**
-```bash
-docker stop axelar-core
-```
-
-**Binary only:**
 ```bash
 kill -9 $(pgrep -f "axelard start")
 ```
@@ -26,8 +20,14 @@ kill -9 $(pgrep -f "axelard start")
 
 !> Your node must be stopped in order to properly backup chain data.
 
+**Testnet:**
 ```bash
 cp -r ~/.axelar_testnet ~/.axelar_testnet_backup
+```
+
+**Mainnet:**
+```bash
+cp -r ~/.axelar ~/.axelar_mainnet_backup
 ```
 
 ## Resume your Axelar node
@@ -36,14 +36,14 @@ Resume your stopped Axelar node.
 
 > [!TIP] If your node is still in `catching_up` mode then you might need to use the `-a` flag in the following command to specify a different version of axelar-core depending on your current progress downloading the blockchain.  See [Join the Axelar testnet for the first time](join.md).
 
-**Docker only:**
+**Testnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -e docker
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh
 ```
 
-**Binary only:**
+**Mainnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -e host
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -n mainnet
 ```
 
 ## Learn your address
@@ -52,14 +52,14 @@ KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -e host
 
 Learn the address of your `validator` account:
 
-**Docker only:**
+**Testnet:**
 ```bash
-docker exec axelar-core sh -c 'echo my-secret-password | axelard keys show validator -a'
+echo my-secret-password | ~/.axelar_testnet/bin/axelard keys show validator -a --home ~/.axelar_testnet/.core
 ```
 
-**Binary only:**
+**Mainnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard keys show valiator -a --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar/bin/axelard keys show validator -a --home ~/.axelar/.core
 ```
 
 ## Check your AXL balance
@@ -68,14 +68,14 @@ Let `{MY_ADDRESS}` denote the address of your `validator` account.
 
 > [!TIP] Your balance will appear only after you have downloaded the blockchain and exited `catching_up` mode.
 
-**Docker only:**
-```bash
-docker exec axelar-core sh -c 'echo my-secret-password | axelard q bank balances {MY_ADDRESS}'
-```
-
-**Binary only:**
+**Testnet:**
 ```bash
 echo my-secret-password | ~/.axelar_testnet/bin/axelard q bank balances {MY_ADDRESS} --home ~/.axelar_testnet/.core
+```
+
+**Mainnet:**
+```bash
+echo my-secret-password | ~/.axelar/bin/axelard q bank balances {MY_ADDRESS} --home ~/.axelar/.core
 ```
 
 If this is a new account then you should see no token balances.
