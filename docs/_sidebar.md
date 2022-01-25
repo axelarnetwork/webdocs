@@ -1,6 +1,6 @@
 - [**Setup**](/parent-pages/setup.md)
-  - [Setup with Docker](/setup/setup-with-docker.md)
-  - [Setup with Binaries](/setup/setup-with-binaries.md)
+  - [Join the Axelar network for the first time](/setup/join.md)
+  - [Basic management of your Axelar node](/setup/basic.md)
   
 - [**Resources**](/parent-pages/resources.md)
   - [Mainnet Release](/resources/mainnet-releases.md)
@@ -49,6 +49,6 @@
   - [Too many open files](/faqs/Problem8.md)
   - [No commands to sign found](/faqs/ex5-problem.md)
 
-  
+- [Terms of use](/terms-of-use.md)  
   
 

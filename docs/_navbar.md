@@ -2,6 +2,7 @@
   * [Axelar Network](https://axelar.network/)
   * [Community Forum](https://community.axelar.network/)
   * [Testnet Portal](https://axelar.knack.com/testnet-portal#welcome-page/)
+  * [Terms of use](/terms-of-use)
 
 * Community
   * [Discord](https://discord.gg/aRZ3Ra6f7D)
