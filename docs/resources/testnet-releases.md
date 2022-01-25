@@ -46,3 +46,9 @@ Asset symbol | Ethereum | non-Ethereum EVM | Cosmos/IBC
 AXL | 100 AXL | 10 AXL | 0.1 AXL
 UST | 100 UST | 10 UST | 0.1 UST
 LUNA | 1 LUNA | 0.1 LUNA | 0.001 LUNA
+
+# Transaction Fees
+
+The Network will assess a processing fee of __0.1%__ percent on any transaction through the protocol. For example, a transfer of 100 of asset X from Chain Y to Chain Z will result in 99.9 of token X in the destination address (specified by the user) on Chain Z. 
+
+Additionally, users should be prepared to pay for any transaction fees assessed by the source chain when transferring funds into a deposit account. These fees are typically in the form of native tokens in that chain.
