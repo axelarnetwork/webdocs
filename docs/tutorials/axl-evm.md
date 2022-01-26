@@ -18,9 +18,6 @@ Transfer AXL tokens from Axelar to EVM-compatible chains and back using the term
     - **Mainnet:** You are responsible for obtaining your own tokens.
 - `{EVM_DEST_ADDR}` is an address controlled by you on the external EVM chain `{EVM_CHAIN}`.  (In your Metamask, for example.)  This is where your AXL tokens will be sent.
 - `{AMOUNT}` is the amount of AXL tokens you wish to transfer, denominated in `uaxl`.  Recall that `1 AXL = 1000000 uaxl`.  See [Testnet releases](/resources/testnet-releases.md) or [Mainnet releases](/resources/mainnet-releases.md) for minimum transfer amounts.
-* `{EVM_GATEWAY_ADDR}` is the address of a special smart contract on `{EVM_CHAIN}`.  Find the address at the following link listed under _`{EVM_CHAIN}` Axelar Gateway contract address_:
-    - [Testnet releases](/resources/testnet-releases.md)
-    - [Mainnet releases](/resources/mainnet-releases.md)
 
 ## Send tokens from Axelar to an EVM chain
 
