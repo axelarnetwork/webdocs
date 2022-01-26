@@ -21,9 +21,6 @@ Transfer AXL tokens from Axelar to EVM-compatible chains and back using the term
 * `{EVM_GATEWAY_ADDR}` is the address of a special smart contract on `{EVM_CHAIN}`.  Find the address at the following link listed under _`{EVM_CHAIN}` Axelar Gateway contract address_:
     - [Testnet releases](/resources/testnet-releases.md)
     - [Mainnet releases](/resources/mainnet-releases.md)
-<!-- * `{AXELAR_PATH}` is the directory of your Axelar node data:
-    - **Testnet:** default: `~/.axelar_testnet`
-    - **Mainnet:** default: `~/.axelar` -->
 
 ## Send tokens from Axelar to an EVM chain
 
