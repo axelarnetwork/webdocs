@@ -1,52 +1,42 @@
-# Exercise 4
-Transfer UST from Terra to EVM compatible chains via Terra CLI and Axelar Network CLI
+# Transfer UST to EVM chains and back
 
-## Level
-Intermediate
+Transfer UST tokens from Terra to EVM-compatible chains and back using the terminal.
 
-## Disclaimer
-!> :fire: Axelar Network is a work in progress. At no point in time should you transfer any real assets using Axelar. Only use testnet tokens that you're not afraid to lose. Axelar is not responsible for any assets lost, frozen, or unrecoverable in any state or condition. If you find a problem, please submit an issue to this repository following the template.
-
+!> The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
 ## Prerequisites
-- Complete all steps from [Setup with Docker](/setup/setup-with-docker.md) or [Setup with Binaries](/setup/setup-with-binaries.md)
-- Golang (Follow the [official docs](https://golang.org/doc/install) to install)
-- For Ubuntu/Debian systems: install build-essential with `apt-get install build-essential`
 
-## Useful links
-- [Axelar faucet](http://faucet.testnet.axelar.dev/)
-- Latest docker image: https://hub.docker.com/repository/docker/axelarnet/axelar-core
-- [Extra commands to query Axelar Network state](/resources/extra-commands.md)
-
-## Joining the Axelar testnet
-
-Follow the instructions in [Setup with Docker](/setup/setup-with-docker.md) or [Setup with Binaries](/setup/setup-with-binaries.md) to make sure your node is up to date, and you received some test coins to your account.
+- Skill level: intermediate
+- All prerequisites from [Transfer AXL to EVM chains and back](/tutorials/axl-evm.md) tutorial
+- Install Golang as per [Download and install - The Go Programming Language](https://go.dev/doc/install)
+- **Ubuntu/Debian only:** install build-essential with `apt-get install build-essential`
 
 ## Connect to the Terra testnet
 
-1. On a new terminal window, clone terra repository from Github:
+Clone terra repository from Github and build from source:
+
 ```bash
 git clone https://github.com/terra-money/core/
 cd core
 git checkout v0.5.11
-```
-2. Build from source
-```bash
 make install
 ```
-3. Verify it is properly installed:
+
+Verify `terrad` is properly installed:
+
 ```bash
 terrad version --long
 ```
 
- > :bulb: If you get `-bash: terrad: command not found`, make sure you do the following:
- > 
- >```bash
- >export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
- >source .profile
->```
+> [!TIP] If you see something like `terrad: command not found` then you might need to add `GOPATH` to your `PATH`:
+> ```bash
+> export PATH=$PATH:/usr/local/go/bin:$GOPATH/bin
+> source .profile
+> ```
 
-4. Initialize the node
+Initialize your Terra node
+
+# DONE TO HERE
 
  [moniker] can be any name you like
  ```bash
