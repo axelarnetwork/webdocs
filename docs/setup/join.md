@@ -139,4 +139,3 @@ Congratulations!  You joined the Axelar network and downloaded the blockchain.
 Learn what you can do with Axelar:
 
 * [Basic management of your Axelar node](/setup/basic)
-* Tutorial: transfer UST or LUNA tokens from the Terra blockchain to EVM-compatible blockchains such as Ethereum, Avalanche, Fantom, Moonbeam, Polygon.

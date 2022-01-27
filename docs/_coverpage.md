@@ -5,7 +5,6 @@
 
 
 [**Setup**](/parent-pages/setup.md)
-[**Tutorials**](/parent-pages/tutorials.md)
 [**Resources**](/parent-pages/resources.md)
 [**Validator Zone**](/parent-pages/validators.md)
 [**Terms of use**](/terms-of-use.md)
