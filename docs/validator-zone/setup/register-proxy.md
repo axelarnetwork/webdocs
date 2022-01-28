@@ -1,6 +1,26 @@
 # Register broadcaster proxy
 -----------
 
+# TODO Notes
+
+
+```
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx snapshot register-proxy axelar108qdrl6p83a7mggfm2wm4rjclsr2xuzf8kkqzr --from validator --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+```
+
+```
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx staking create-validator --amount 1000000uaxl --moniker "eris" --commission-rate="0.10" --commission-max-rate="0.20" --commission-max-change-rate="0.01" --min-self-delegation="1" --pubkey="$(~/.axelar_testnet/bin/axelard tendermint show-validator --home ~/.axelar_testnet/.core)" --from validator --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+```
+
+```
+axelard health-check --tofnd-host tofnd --operator-addr $(cat /root/shared/validator.bech) --node http://axelar-core:26657
+```
+
+```
+echo my-secret-password | ~/.axelar_testnet/bin/axelard health-check --tofnd-host localhost --operator-addr axelarvaloper1vq8p2he73z28uwseeqnapxdasnsr8t793j3jrl --home ~/.axelar_testnet/.vald
+```
+# OLD
+
 Axelar validators exchange messages with one another via the Axelar blockchain.  Each validator sends these messages from a separate `broadcaster` account.
 
 

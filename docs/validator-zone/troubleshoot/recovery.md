@@ -1,6 +1,16 @@
 # [TODO: test and verify] Recover validator from mnemonic or secret keys
 ------------
 
+# TODO: build tofnd from source?
+
+[TODO: new section on building tofnd?]
+```
+tofnd binary release is only available for linux-amd64
+For other platforms, build your own from the tofnd repo and place it at: /Users/gus/.axelar_testnet/bin/tofnd-v0.8.2.
+```
+
+# OLD
+
 This document describes the steps necessary to ensure that a validator node can be restored in case its state is lost. In order to achieve this, it is necessary that the following data is safely backed up:
 
 * Tendermint validator key
