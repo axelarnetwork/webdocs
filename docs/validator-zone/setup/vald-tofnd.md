@@ -2,36 +2,29 @@
 -----------
 
 Axelar validators need two companion processes called `vald` and `tofnd`.
-Launch these processes for the first time by running, if using Docker, `./join/launch-validator-tools.sh`,
-or if using binaries `./join/launch-validator-tools-with-binaries.sh`.  The output should be something like:
 
-```yaml
-Tofnd & Vald running.
+## Choose a tofnd password
 
-Proxy address: axelar1xg93jnefgz3gsnuyqrmq2q288z8st3cf43jecs
+Similar to your Axelar keyring, your `tofnd` storage is encrypted with a password you choose.  Your password must have at least 8 characters.
 
-To become a validator get some uaxl tokens from the faucet and stake them
+In what follows you will execute a shell script to launch the companion processes.  Your keyring and `tofnd` passwords are supplied to the shell script via `KEYRING_PASSWORD` and `TOFND_PASSWORD` environment variables.
 
+!> In the following instructions you must substitute your chosen keyring and `tofnd` passwords for:
+> * `my-secret-password`
+> * `my-tofnd-password`
 
-- name: broadcaster
-  type: local
-  address: axelar1xg93jnefgz3gsnuyqrmq2q288z8st3cf43jecs
-  pubkey: axelarpub1addwnpepqg648uzk668g0e93y9sekaufgdp96fksjugk6e6c3eddypzc8qm525yhx2m
-  mnemonic: ""
-  threshold: 0
-  pubkeys: []
+## Launch companion processes
 
+Launch `vald`, `tofnd` for the first time:
 
-**Important** write this mnemonic phrase in a safe place.
-It is the only way to recover your account if you ever forget your password.
+**Testnet:**
+```bash
+KEYRING_PASSWORD=my-secret-password TOFND_PASSWORD=my-tofnd-password ./scripts/validator-tools-host.sh
+```
 
-admit come proud swear view stomach industry elephant extend bracket reveal dinner july absorb beef stick say pact sick
-Do not forget to also backup the tofnd mnemonic (/Users/talalashraf/.tofnd/import)
-
-To follow tofnd execution, run 'docker logs -f tofnd'
-To follow vald execution, run 'docker logs -f vald'
-To stop tofnd, run 'docker stop tofnd'
-To stop vald, run 'docker stop vald'
+**Mainnet:**
+```bash
+KEYRING_PASSWORD=my-secret-password TOFND_PASSWORD=my-tofnd-password ./scripts/validator-tools-host.sh -n mainnet
 ```
 
 Save a copy of your `broadcaster` mnemonic in a safe place.  See [Backup](/validator-zone/setup/backup) for detailed instructions.
