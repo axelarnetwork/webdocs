@@ -10,8 +10,8 @@ Similar to your Axelar keyring, your `tofnd` storage is encrypted with a passwor
 In what follows you will execute a shell script to launch the companion processes.  Your keyring and `tofnd` passwords are supplied to the shell script via `KEYRING_PASSWORD` and `TOFND_PASSWORD` environment variables.
 
 !> In the following instructions you must substitute your chosen keyring and `tofnd` passwords for:
-> * `my-secret-password`
-> * `my-tofnd-password`
+!> * `my-secret-password`
+!> * `my-tofnd-password`
 
 ## Launch companion processes
 

@@ -8,7 +8,7 @@ Convert your existing Axelar node into a validator by staking AXL tokens and att
 
 ## Prerequisites
 
-* **Hardware:** Minimum: 16 cores, 16GB RAM, 1.5 TB drive. Recommended: 32 cores, 32 GB RAM, 2 TB+ drive.
+- **Hardware:** Minimum: 16 cores, 16GB RAM, 1.5 TB drive. Recommended: 32 cores, 32 GB RAM, 2 TB+ drive.
 - Downloaded the Axelar blockchain and be comfortable with basic node management as per [Setup instructions](/parent-pages/setup.md).
 - Your Axelar node has an account named `validator` that you control.  Let `{VALIDATOR_ADDR}` denote the address of your `validator` account.
 - Backup your `validator` secret mnemonic and your Tendermint consensus secret key as per [Join the Axelar network for the first time](/setup/join.md)
