@@ -45,6 +45,7 @@
   - [Too many open files](/faqs/Problem8.md)
   - [No commands to sign found](/faqs/ex5-problem.md)
 
-- [Terms of use](/terms-of-use.md)  
+- [Terms of use](/terms-of-use.md)
+- [Bug bounty](/bug-bounty.md)
   
 
