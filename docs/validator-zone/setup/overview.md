@@ -2,19 +2,16 @@
 -----------
 An Axelar network validator participates in block creation, multi-party cryptography protocols, and voting.
 
-Convert your existing Axelar network node into a validator by staking AXL tokens and attaching external blockchains (such as Bitcoin, EVM chains, Cosmos chains).
+Convert your existing Axelar node into a validator by staking AXL tokens and attaching external EVM-compatible blockchains.
 
-!> :fire: Axelar Network is a work in progress. At no point in time should you transfer any real assets using Axelar. Only use testnet tokens that you're not afraid to lose. Axelar is not responsible for any assets lost, frozen, or unrecoverable in any state or condition. If you find a problem, please submit an issue to this repository following the template.
-
+!> The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
 ## Prerequisites
 
-- Set up an ordinary (non-validator) Axelar node as per one of:
-    * [Setup with Docker](/setup/setup-with-docker.md)
-    * [Setup with Binaries](/setup/setup-with-binaries.md)
-- Your Axelar node currently has an account named `validator` but so far that's just a name.  You've already funded your `validator` account with some AXL tokens from the [Axelar faucet](http://faucet.testnet.axelar.network/).
-- Ensure you have the right tag checked out for the axelarate-community repo, check in the testnet-releases.md
-- Minimum validator hardware requirements: 16 cores, 16GB RAM, 1.5 TB drive. Recommended 32 cores, 32 GB RAM, 2 TB+ drive
+* **Hardware:** Minimum: 16 cores, 16GB RAM, 1.5 TB drive. Recommended: 32 cores, 32 GB RAM, 2 TB+ drive.
+- Downloaded the Axelar blockchain and be comfortable with basic node management as per [Setup instructions](/parent-pages/setup.md).
+- Your Axelar node has an account named `validator` that you control.  Let `{VALIDATOR_ADDR}` denote the address of your `validator` account.
+- Backup your `validator` secret mnemonic and your Tendermint consensus secret key as per [Join the Axelar network for the first time](/setup/join.md)
 
 ## Steps to become a validator
 
