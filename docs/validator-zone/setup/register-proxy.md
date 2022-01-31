@@ -5,8 +5,6 @@ Axelar validators exchange messages with one another via the Axelar blockchain. 
 
 !> A validator can only register one `broadcaster` address throughout its lifetime.  This `broadcaster` address cannot be changed after it has been registered.  If you need to register a different proxy address then you must also create an entirely new validator.
 
-Let `{BROADCASTER_ADDR}` denote the address of your `broadcaster` account.
-
 ## Learn your broadcaster account address
 
 Your `broadcaster` address `{BROADCASTER_ADDR}` is stored in a text file:
