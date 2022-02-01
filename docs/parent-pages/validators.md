@@ -29,7 +29,7 @@
 <a href="../#/validator-zone/troubleshoot/troubleshoot-homepage">
 <img src="../_media/troubleshoot.png"
    width=300" height="300">
-     <center><h1>Troubleshoot</h1></center>
+     <center><h1>[TODO update] Troubleshoot</h1></center>
 </a>
 </center>
 
