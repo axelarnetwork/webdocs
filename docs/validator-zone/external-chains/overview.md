@@ -78,33 +78,33 @@ Substitute your Ethereum RPC address for `my_ethereum_host`.  Be sure to set `st
 
 Stop your companion processes `vald`, `tofnd` and then restart them.
 
-!> :fire: Do not stop the `axelar-core` container.  If you stop `axelar-core` then you risk downtime for Tendermint consensus, which can result in penalties.
+!> Do not stop the `axelar-core` process.  If you stop `axelar-core` then you risk downtime for Tendermint consensus, which can result in penalties.
 
-!> :fire: If `vald`, `tofnd` are stopped for too long then your validator might fail to produce a heartbeat transaction when needed.  The risk of this event can be reduced to near-zero if you promptly restart these processes shortly after a recent round of heartbeat transactions.
+!> If `vald`, `tofnd` are stopped for too long then your validator might fail to produce a heartbeat transaction when needed.  The risk of this event can be reduced to near-zero if you promptly restart these processes shortly after a recent round of heartbeat transactions.
 
-> Heartbeat events are emitted every 50 blocks.  Your validator typically responds to heartbeat events within 1-2 blocks.  It should be safe to restart `vald`, `tofnd` at block heights that are 5-10 mod 50.
-
-> :bookmark: These instructions are for docker only.  Instructions for binaries are similar.
-
-In a host terminal:
+> [!TIP] Heartbeat events are emitted every 50 blocks.  Your validator typically responds to heartbeat events within 1-2 blocks.  It should be safe to restart `vald`, `tofnd` at block heights that are 5-10 mod 50.
 
 ```bash
-docker stop vald tofnd
+kill -9 $(pgrep tofnd)
+kill -9 $(pgrep -f "axelard vald-start")
 ```
 
 Immediately resume your companion processes `vald`, `tofnd`:
+
+**Testnet:**
 ```bash
-./join/launch-validator-tools.sh
+KEYRING_PASSWORD=my-secret-password TOFND_PASSWORD=my-tofnd-password ./scripts/validator-tools-host.sh
+```
+
+**Mainnet:**
+```bash
+KEYRING_PASSWORD=my-secret-password TOFND_PASSWORD=my-tofnd-password ./scripts/validator-tools-host.sh -n mainnet
 ```
 
 ## Check your connections to new chains in vald
 
-Check your `vald` logs to see that your validator node has successfully connected to the new EVM chains you added.
+Check your `vald` logs to see that your validator node has successfully connected to the new EVM chains you added.  [[How to view logs.]](/validator-zone/setup/vald-tofnd.md)
 
-In docker:
-```bash
-docker logs -f vald 2>&1 | grep "EVM bridge for chain"
-```
 You should see something like:
 ```log
 2021-11-25T01:25:54Z INF Successfully connected to EVM bridge for chain Ethereum module=vald
@@ -118,23 +118,10 @@ You should see something like:
 
 For each external blockchain you selected earlier you must inform the Axelar network of your intent to maintain that chain.  This is accomplished via the `register-chain-maintainer` command.
 
+> [!TIP] You only need to register as a chain maintainer once.  If you've already done it for chain C then you do not need to do it again for chain C.
 
-> You only need to register as a chain maintainer once.  If you've already done it for chain C then you do not need to do it again for chain C.
-
-
-In the `vald` container:
-```bash
-axelard tx nexus register-chain-maintainer [chains] --from [broadcaster] --node [axelar-core host]
-```
-
-### Example: Ethereum
+Example: multiple EVM chains in one command:
 
 ```bash
-axelard tx nexus register-chain-maintainer ethereum --from broadcaster --node http://axelar-core:26657
-```
-
-Output should be something like:
-
-```json5
-{"height":"2397","txhash":"65DA177E1F674E1F11AAA9DFBA2D522BA80E82EFD5271F95E7FDCE990544BA9D","codespace":"","code":0,"data":"0A2F0A2D2F6E657875732E763162657461312E5265676973746572436861696E4D61696E7461696E657252657175657374","raw_log":"[{\"events\":[{\"type\":\"chainMaintainer\",\"attributes\":[{\"key\":\"module\",\"value\":\"nexus\"},{\"key\":\"action\",\"value\":\"register\"},{\"key\":\"chain\",\"value\":\"ethereum\"},{\"key\":\"chainMaintainerAddress\",\"value\":\"axelarvaloper1ylmsql3xc7t3qvgqjq44ntragzqn07p70j06j5\"}]},{\"type\":\"message\",\"attributes\":[{\"key\":\"action\",\"value\":\"RegisterChainMaintainer\"}]}]}]","logs":[{"msg_index":0,"log":"","events":[{"type":"chainMaintainer","attributes":[{"key":"module","value":"nexus"},{"key":"action","value":"register"},{"key":"chain","value":"ethereum"},{"key":"chainMaintainerAddress","value":"axelarvaloper1ylmsql3xc7t3qvgqjq44ntragzqn07p70j06j5"}]},{"type":"message","attributes":[{"key":"action","value":"RegisterChainMaintainer"}]}]}],"info":"","gas_wanted":"200000","gas_used":"61475","tx":null,"timestamp":""}
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx nexus register-chain-maintainer avalanche ethereum fantom moonbeam polygon --from broadcaster --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.vald --gas auto --gas-adjustment 1.5
 ```
