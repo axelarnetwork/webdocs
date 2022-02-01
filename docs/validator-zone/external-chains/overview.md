@@ -122,6 +122,12 @@ For each external blockchain you selected earlier you must inform the Axelar net
 
 Example: multiple EVM chains in one command:
 
+**Testnet:**
 ```bash
 echo my-secret-password | ~/.axelar_testnet/bin/axelard tx nexus register-chain-maintainer avalanche ethereum fantom moonbeam polygon --from broadcaster --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.vald --gas auto --gas-adjustment 1.5
+```
+
+**Mainnet:**
+```bash
+echo my-secret-password | ~/.axelar/bin/axelard tx nexus register-chain-maintainer avalanche ethereum fantom moonbeam polygon --from broadcaster --chain-id axelar-dojo-1 --home ~/.axelar/.vald --gas auto --gas-adjustment 1.5
 ```
