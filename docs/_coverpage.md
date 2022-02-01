@@ -1,6 +1,6 @@
 <img src="_media/axelar-rotating-logo.gif">
 
-# **Axelar network documentation**
+# Axelar network documentation
 
 ## Connecting web3**
 
