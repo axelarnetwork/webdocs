@@ -26,3 +26,19 @@ KEYRING_PASSWORD=my-secret-password TOFND_PASSWORD=my-tofnd-password ./scripts/v
 ```
 
 !> You created new secret key material.  You must backup this data.  Failure to backup this data could result in loss of funds.  See [Backup](/validator-zone/setup/backup) for detailed instructions.
+
+## View logs
+
+View the streaming logs for `vald`, `tofnd`:
+
+**Testnet:**
+```bash
+tail -f ~/.axelar_testnet/logs/vald.log
+tail -f ~/.axelar_testnet/logs/tofnd.log
+```
+
+**Mainnet:**
+```bash
+tail -f ~/.axelar/logs/vald.log
+tail -f ~/.axelar/logs/tofnd.log
+```
