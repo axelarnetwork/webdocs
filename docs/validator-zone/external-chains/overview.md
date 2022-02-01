@@ -21,7 +21,7 @@ As a validator for the Axelar network, your Axelar node will vote on the status 
 
 ## Add external chain info to your validator's configuration
 
-Edit the file `~/axelarate-community/join/config.toml`: set the `rpc_addr` and `start-with-bridge` entries corresponding to the external chain you wish to connect.
+Edit the file `~/axelarate-community/configuration/config.toml`: set the `rpc_addr` and `start-with-bridge` entries corresponding to the external chain you wish to connect.
 
 Your `config.toml` file should already contain a snippet like the following:
 
@@ -76,13 +76,13 @@ Substitute your Ethereum RPC address for `my_ethereum_host`.  Be sure to set `st
 
 ## Restart your companion processes
 
-Stop your companion processes `vald`, `tofnd` and then restart them.
-
 !> Do not stop the `axelar-core` process.  If you stop `axelar-core` then you risk downtime for Tendermint consensus, which can result in penalties.
 
 !> If `vald`, `tofnd` are stopped for too long then your validator might fail to produce a heartbeat transaction when needed.  The risk of this event can be reduced to near-zero if you promptly restart these processes shortly after a recent round of heartbeat transactions.
 
 > [!TIP] Heartbeat events are emitted every 50 blocks.  Your validator typically responds to heartbeat events within 1-2 blocks.  It should be safe to restart `vald`, `tofnd` at block heights that are 5-10 mod 50.
+
+Stop your companion processes `vald`, `tofnd`.
 
 ```bash
 kill -9 $(pgrep tofnd)
