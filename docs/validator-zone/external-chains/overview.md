@@ -21,7 +21,7 @@ As a validator for the Axelar network, your Axelar node will vote on the status 
 
 ## Add external chain info to your validator's configuration
 
-Edit the file `~/axelarate-community/configuration/config.toml`: set the `rpc_addr` and `start-with-bridge` entries corresponding to the external chain you wish to connect.
+In the `axelarate-community` git repo edit the file `configuration/config.toml`: set the `rpc_addr` and `start-with-bridge` entries corresponding to the external chain you wish to connect.
 
 Your `config.toml` file should already contain a snippet like the following:
 
