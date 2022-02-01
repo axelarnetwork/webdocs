@@ -2,7 +2,7 @@
 
 # Axelar network documentation
 
-## Connecting web3**
+## Connecting web3
 
 [**Setup**](/parent-pages/setup.md)
 [**Resources**](/parent-pages/resources.md)
