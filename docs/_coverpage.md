@@ -1,7 +1,8 @@
 <img src="_media/axelar-rotating-logo.gif">
 
-# **Axelar Testnet Docs**
-> **Unlocking cross-chain communication**
+# Axelar network documentation
+
+## Connecting web3
 
 [**Setup**](/parent-pages/setup.md)
 [**Resources**](/parent-pages/resources.md)
