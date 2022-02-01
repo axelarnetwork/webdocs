@@ -6,6 +6,7 @@
 
 [**Setup**](/parent-pages/setup.md)
 [**Resources**](/parent-pages/resources.md)
+[**Tutorials**](/parent-pages/tutorials.md)
 [**Validator Zone**](/parent-pages/validators.md)
 
 ![](_media/Axelar-background.jpeg)
