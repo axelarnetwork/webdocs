@@ -11,7 +11,7 @@
 
 - [**Tutorials**](/parent-pages/tutorials.md) 
   - [Transfer UST from Terra to EVM chains and back](/tutorials/ust-evm)
-  - [Transfer AXL from Axelar to EVM chains and back](/tutorials/axl-evm)
+  - [Transfer AXL from Axelar to EVM chains and back](/tutorials/axl-to-evm)
 
 - [**Validator Zone**](/parent-pages/validators.md)
   - [**Setup**](/validator-zone/setup/setup-homepage.md)
