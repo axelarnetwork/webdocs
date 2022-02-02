@@ -21,7 +21,7 @@
 
 Optional: Verify that your `validator` account has sufficient balance as per [Basic management of your Axelar node](/setup/basic.md).
 
-Create a temporary deposit address on Axelar:
+Link your `{EVM_DEST_ADDR}` to a new temporary deposit address on Axelar:
 
 **Testnet:**
 ```bash
