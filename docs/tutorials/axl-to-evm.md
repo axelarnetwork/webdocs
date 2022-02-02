@@ -1,6 +1,4 @@
-# Transfer AXL to EVM chains and back
-
-Transfer AXL tokens from Axelar to EVM-compatible chains and back using the terminal.
+# Transfer AXL tokens from Axelar to an EVM chain using the terminal
 
 !> The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
@@ -42,8 +40,14 @@ successfully linked {AXELAR_TEMP_ADDR} and {EVM_DEST_ADDR}
 
 Optional: query your new `{AXELAR_TEMP_ADDR}`:
 
+**Testnet:**
 ```bash
 ~/.axelar_testnet/bin/axelard q nexus latest-deposit-address axelarnet {EVM_CHAIN} {EVM_DEST_ADDR}
+```
+
+**Mainnet:**
+```bash
+~/.axelar/bin/axelard q nexus latest-deposit-address axelarnet {EVM_CHAIN} {EVM_DEST_ADDR}
 ```
 
 Send `{AMOUNT}` of `uaxl` to the new `{AXELAR_TEMP_ADDR}`.
