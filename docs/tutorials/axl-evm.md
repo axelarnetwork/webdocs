@@ -58,44 +58,97 @@ echo my-secret-password | ~/.axelar_testnet/bin/axelard tx bank send validator {
 echo my-secret-password | ~/.axelar/bin/axelard tx bank send validator {AXELAR_TEMP_ADDR} {AMOUNT}uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
 ```
 
-That's all!
+> [!NOTE]
+> Third-party monitoring tools will automatically complete the remaining steps of this process.
+>
+> Wait a few minutes then check your Metamask for the AXL tokens.  Don't forget to import the AXL token into Metamask so you can see your balance as described in [Metamask for EVM chains](/resources/metamask.md).
 
-Wait a few minutes for the process to complete.  Then check your Metamask for the AXL tokens.  Don't forget to import the AXL token into Metamask so you can see your balance as described in [Metamask for EVM chains](/resources/metamask.md).
+!> If you attempt the remaining steps while third-party monitoring tools are active then your commands are likely to conflict with third-party commands.  In this case you are likely to observe errors.  Deeper investigation might be needed to resolve conflicts and complete the transfer.
+!>
+!> The remaining steps are needed only if there are no active third-party monitoring tools and you wish to complete the process manually.
 
-Congratulations!  You have transferred AXL tokens from Axelar to an external EVM chain!
-
-## Redeem tokens from an EVM chain back to Axelar
-
-Create a temporary deposit address on the EVM chain:
+Confirm the deposit transaction.  Look for `{TX_HASH}` in the output of the previous command.
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm link {EVM_CHAIN} axelarnet {VALIDATOR_ADDR} uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet confirm-deposit {TX_HASH} {AMOUNT}uaxl {AXELAR_TEMP_ADDR} --from validator --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**
 ```bash
-echo my-secret-password | ~/.axelar/bin/axelard tx evm link {EVM_CHAIN} axelarnet {VALIDATOR_ADDR} uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
+echo my-secret-password | ~/.axelar/bin/axelard tx axelarnet confirm-deposit {TX_HASH} {AMOUNT}uaxl {AXELAR_TEMP_ADDR} --from validator --chain-id axelar-dojo-1 --home ~/.axelar/.core
+```
+
+Create and sign pending transfers for `{EVM_CHAIN}`.
+
+**Testnet:**
+```bash
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm create-pending-transfers {EVM_CHAIN} --from validator --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core --gas auto --gas-adjustment 1.5
+
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm sign-commands {EVM_CHAIN} --from validator --gas auto --gas-adjustment 1.2 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+```
+
+**Mainnet:**
+```bash
+echo my-secret-password | ~/.axelar/bin/axelard tx evm create-pending-transfers {EVM_CHAIN} --from validator --chain-id axelar-dojo-1 --home ~/.axelar/.core --gas auto --gas-adjustment 1.5
+
+echo my-secret-password | ~/.axelar/bin/axelard tx evm sign-commands {EVM_CHAIN} --from validator --gas auto --gas-adjustment 1.2 --chain-id axelar-dojo-1 --home ~/.axelar/.core
 ```
 
 Output should contain
 
 ```
-successfully linked {EVM_TEMP_ADDR} and {VALIDATOR_ADDR}
+successfully started signing batched commands with ID {BATCH_ID}
 ```
 
-Optional: query your new `{EVM_TEMP_ADDR}`:
+> [!NOTE|label:Troubleshoot]
+> If after performing the above steps you get the following error
+> ```bash
+> Error: rpc error: code = InvalidArgument desc = failed to execute message; message index: 0: no commands to sign found: bridge error: invalid request
+> ```
+> Check [this page](/faqs/ex5-problem.md) for detailed answer on how to resolve it.
 
+Get the `execute_data`:
+
+**Testnet:**
 ```bash
-~/.axelar_testnet/bin/axelard q nexus latest-deposit-address axelarnet {EVM_CHAIN} {VALIDATOR_ADDR}
+~/.axelar_testnet/bin/axelard q evm batched-commands {EVM_CHAIN} {BATCH_ID}
 ```
 
-Use Metamask to send your wrapped AXL tokens on `{EVM_CHAIN}` to the new temporary deposit address `{EVM_TEMP_ADDR}`.
+**Mainnet:**
+```bash
+~/.axelar/bin/axelard q evm batched-commands {EVM_CHAIN} {BATCH_ID}
+```
 
-That's all!
+Wait for `status: BATCHED_COMMANDS_STATUS_SIGNED` and copy the `execute_data`.
 
-Wait a few minutes for the process to complete.  Some EVM chains might take more time than others to allow for sufficient block confirmations.
+Use Metamask to send a transaction on `{EVM_CHAIN}` with the `execute_data` to the Axelar gateway contract address `{GATEWAY_ADDR}`.
 
-Then check your AXL balance as per [Basic management of your Axelar node](/setup/basic.md).
+!> Post your transaction to the correct chain!  Set your Metamask network to `{EVM_CHAIN}`.  
 
-Congratulations!  You have transferred AXL tokens from the external EVM chain back to Axelar!
+!> Manually increase the gas limit to 5 million gas (5000000).  If you don't do this then the transaction will fail due to insufficient gas and you will not receive your tokens.
+!>
+!> Before you click "confirm": select "EDIT", change "Gas Limit" to 5000000, and "Save"
+
+> [!TIP]
+> Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
+>
+> ### 1. Documentation
+> [Testnet resources](https://docs.axelar.dev/#/resources/testnet-releases), [Mainnet resources](https://docs.axelar.dev/#/resources/mainnet-releases).
+>
+> ### 2. Terminal
+> **Testnet:**
+> ```bash
+> ~/.axelar_testnet/bin/axelard q evm gateway-address {EVM_CHAIN}
+> ```
+> 
+> **Mainnet:**
+> ```bash
+> ~/.axelar/bin/axelard q evm gateway-address {EVM_CHAIN}
+> ```
+
+To send a transaction to `{GATEWAY_ADDR}`, paste hex from `execute_data` above into "Hex Data" field.  (Do not send tokens!)
+
+You should see `{AMOUNT}` of asset AXL in your `{EVM_CHAIN}` Metamask account.
+    
+Congratulations!  You have transferred AXL tokens from Axelar to an external EVM chain!
