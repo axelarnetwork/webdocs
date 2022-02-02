@@ -102,11 +102,7 @@ successfully started signing batched commands with ID {BATCH_ID}
 ```
 
 > [!NOTE|label:Troubleshoot]
-> If after performing the above steps you get the following error
-> ```bash
-> Error: rpc error: code = InvalidArgument desc = failed to execute message; message index: 0: no commands to sign found: bridge error: invalid request
-> ```
-> Check [this page](/faqs/ex5-problem.md) for detailed answer on how to resolve it.
+> If after performing the above steps you see the error `no commands to sign found` then check [this page](/faqs/ex5-problem.md) for detailed instructions on how to resolve it.
 
 Get the `execute_data`:
 
@@ -147,7 +143,7 @@ Use Metamask to send a transaction on `{EVM_CHAIN}` with the `execute_data` to t
 > ~/.axelar/bin/axelard q evm gateway-address {EVM_CHAIN}
 > ```
 
-To send a transaction to `{GATEWAY_ADDR}`, paste hex from `execute_data` above into "Hex Data" field.  (Do not send tokens!)
+To send a transaction to `{GATEWAY_ADDR}` using Metamask: paste hex from `execute_data` above into "Hex Data" field.  (Do not send tokens!)
 
 You should see `{AMOUNT}` of asset AXL in your `{EVM_CHAIN}` Metamask account.
     
