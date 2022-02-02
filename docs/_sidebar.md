@@ -8,7 +8,13 @@
   - [Extra Commands](/resources/extra-commands.md)
   - [Useful Links](/resources/useful-links.md)
   - [Metamask for EVM chains](/resources/metamask.md)
-   
+
+- [**Tutorials**](/parent-pages/tutorials.md) 
+  - Transfer UST from Terra to EVM chains
+  - Redeem UST from EVM chains to Terra
+  - [Transfer AXL from Axelar to EVM chains](/tutorials/axl-to-evm)
+  - [Redeem AXL from EVM chains to Axelar](/tutorials/axl-from-evm)
+
 - [**Validator Zone**](/parent-pages/validators.md)
   - [**Setup**](/validator-zone/setup/setup-homepage.md)
     - [Overview](/validator-zone/setup/overview.md)
