@@ -10,8 +10,8 @@
   - [Metamask for EVM chains](/resources/metamask.md)
 
 - [**Tutorials**](/parent-pages/tutorials.md) 
-  - Transfer UST from Terra to EVM chains
-  - Redeem UST from EVM chains to Terra
+  - [Transfer UST from Terra to EVM chains](/tutorials/ust-to-evm)
+  - [Redeem UST from EVM chains to Terra](/tutorials/ust-from-evm)
   - [Transfer AXL from Axelar to EVM chains](/tutorials/axl-to-evm)
   - [Redeem AXL from EVM chains to Axelar](/tutorials/axl-from-evm)
 
