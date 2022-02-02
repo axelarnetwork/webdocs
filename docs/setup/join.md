@@ -104,7 +104,7 @@ After your blockchain has reached `UPGRADE_HEIGHT` you will see a panic in the l
 panic: UPGRADE "v0.13" NEEDED at height: UPGRADE_HEIGHT: 
 ```
 
-You need to launch your Axelar node again with version `0.13.2` of axelar-core:
+You need to launch your Axelar node again with version `0.13.4` of axelar-core:
 
 **Testnet:**
 ```bash
