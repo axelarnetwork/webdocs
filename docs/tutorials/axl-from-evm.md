@@ -1,4 +1,4 @@
-# Redeem AXL tokens from an EVM chain back to Axelar using the terminal
+# Redeem AXL tokens from an EVM chain to Axelar using the terminal
 
 !> The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
