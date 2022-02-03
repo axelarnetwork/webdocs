@@ -132,7 +132,7 @@ Use Metamask to send a transaction on `{EVM_CHAIN}` with the `execute_data` to t
 !>
 !> Before you click "confirm": select "EDIT", change "Gas Limit" to 5000000, and "Save"
 
-> [!TIP]
+> [!TIP] [TODO refactor into "resources"]
 > Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 >
 > ### 1. Documentation
