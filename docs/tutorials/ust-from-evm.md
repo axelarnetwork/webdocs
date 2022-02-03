@@ -1,52 +1,41 @@
-# Redeem AXL tokens from an EVM chain to Axelar using the terminal
+# Redeem UST tokens from an EVM chain to Terra using the terminal
 
 !> The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
 ## Prerequisites
 
 - Skill level: intermediate
-- Prerequisites for [Transfer AXL tokens from Axelar to an EVM chain using the terminal](/tutorials/axl-to-evm)
+- Prerequisites for [Transfer UST tokens from Terra to an EVM chain using the terminal](/tutorials/ust-to-evm)
+- `{TERRA_DEST_ADDR}` is an address controlled by you on the Terra chain.  This is where your UST tokens will be redeemed.
 
-## Redeem AXL tokens from an EVM chain
+## Redeem UST tokens from an EVM chain
 
-Link your Axelar `validator` account to a new temporary deposit address on the EVM chain:
+Link your `{TERRA_DEST_ADDR}` address to a new temporary deposit address on the EVM chain:
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm link {EVM_CHAIN} axelarnet {VALIDATOR_ADDR} uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm link {EVM_CHAIN} terra {TERRA_DEST_ADDR} uusd --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**
 ```bash
-echo my-secret-password | ~/.axelar/bin/axelard tx evm link {EVM_CHAIN} axelarnet {VALIDATOR_ADDR} uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
+echo my-secret-password | ~/.axelar/bin/axelard tx evm link {EVM_CHAIN} terra {TERRA_DEST_ADDR} uusd --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
 ```
 
 Output should contain
 
 ```
-successfully linked {EVM_TEMP_ADDR} and {VALIDATOR_ADDR}
-```
-
-Optional: query your new `{EVM_TEMP_ADDR}`:
-
-**Testnet:**
-```bash
-~/.axelar_testnet/bin/axelard q nexus latest-deposit-address {EVM_CHAIN} axelarnet {VALIDATOR_ADDR}
-```
-
-**Mainnet:**
-```bash
-~/.axelar/bin/axelard q nexus latest-deposit-address {EVM_CHAIN} axelarnet {VALIDATOR_ADDR}
+successfully linked {EVM_TEMP_ADDR} and {TERRA_DEST_ADDR}
 ```
 
 Use Metamask to send some wrapped AXL tokens on `{EVM_CHAIN}` to the new temporary deposit address `{EVM_TEMP_ADDR}`.  Save the transaction hash `{EVM_TX_HASH}` for later.
 
-!> :fire: Send only `Axelar` ERC20 tokens to `{EVM_TEMP_ADDR}`.  Any other token sent to `{EVM_TEMP_ADDR}` will be lost.
+!> :fire: Send only `Axelar Wrapped UST` ERC20 tokens to `{EVM_TEMP_ADDR}`.  Any other token sent to `{EVM_TEMP_ADDR}` will be lost.
 
 > [!NOTE]
 > Third-party monitoring tools will automatically complete the remaining steps of this process.
 >
-> Wait a few minutes then check your Axelar `validator` account AXL token balance as per [Basic management of your Axelar node](/setup/basic.md).
+> Wait a few minutes then check your Terra `{TERRA_DEST_ADDR}` account UST token balance.
 
 !> If you attempt the remaining steps while third-party monitoring tools are active then your commands are likely to conflict with third-party commands.  In this case you are likely to observe errors.  Deeper investigation might be needed to resolve conflicts and complete the transfer.
 !>
@@ -67,18 +56,6 @@ echo my-secret-password | ~/.axelar/bin/axelard tx evm confirm-erc20-deposit {EV
 ```
 
 Wait for confirmation on Axelar.
-
-Optional: Search the axelar-core logs for confirmation:
-
-**Testnet:**
-```
-tail -f ~/.axelar_testnet/logs/axelard.log | grep -a -e "deposit confirmation"
-```
-
-**Mainnet:**
-```
-tail -f ~/.axelar/logs/axelard.log | grep -a -e "deposit confirmation"
-```
 
 Create and sign pending transfers for `{EVM_CHAIN}`.
 
@@ -104,6 +81,7 @@ successfully started signing batched commands with ID {BATCH_ID}
 
 > [!NOTE|label:Troubleshoot]
 > If after performing the above steps you see the error `no commands to sign found` then check [this page](/faqs/ex5-problem.md) for detailed instructions on how to resolve it.
+
 
 Get the `execute_data`:
 
@@ -146,20 +124,20 @@ Use Metamask to send a transaction on `{EVM_CHAIN}` with the `execute_data` to t
 
 To send a transaction to `{GATEWAY_ADDR}` using Metamask: paste hex from `execute_data` above into "Hex Data" field.  (Do not send tokens!)
 
-Optional: Check your Axelar `validator` account AXL token balance as per [Basic management of your Axelar node](/setup/basic.md) so that you can observe balance change.
-
-Execute the pending transfer:
+Execute the pending IBC transfer:
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet execute-pending-transfers --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet route-ibc-transfers --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**
 ```bash
-echo my-secret-password | ~/.axelar/bin/axelard tx axelarnet execute-pending-transfers --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
+echo my-secret-password | ~/.axelar/bin/axelard tx axelarnet route-ibc-transfers --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
 ```
 
-You should see the redeemed `{AMOUNT}` of AXL token (minus transaction fees) in your Axelar `validator` account.
+Wait a few minutes for the IBC relayer to relay your transaction to Terra.
 
-Congratulations!  You have redeemed AXL tokens from the external EVM chain back to Axelar!
+You should see the redeemed `{AMOUNT}` of UST token (minus transaction fees) in your Terra `{TERRA_DEST_ADDR}` account.
+
+Congratulations!  You have redeemed UST tokens from the external EVM chain back to Terra!
