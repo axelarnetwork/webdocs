@@ -41,7 +41,7 @@ Optional: query your new `{EVM_TEMP_ADDR}`:
 
 Use Metamask to send some wrapped AXL tokens on `{EVM_CHAIN}` to the new temporary deposit address `{EVM_TEMP_ADDR}`.  Save the transaction hash `{EVM_TX_HASH}` for later.
 
-!> :fire" Send only `Axelar` ERC20 tokens to `{EVM_TEMP_ADDR}`.  Any other token sent to `{EVM_TEMP_ADDR}` will be lost.
+!> :fire: Send only `Axelar` ERC20 tokens to `{EVM_TEMP_ADDR}`.  Any other token sent to `{EVM_TEMP_ADDR}` will be lost.
 
 > [!NOTE]
 > Third-party monitoring tools will automatically complete the remaining steps of this process.
