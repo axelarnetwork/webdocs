@@ -35,7 +35,7 @@ Axelar -> Cosmoshub IBC channel id | `channel-1`
 Core Version  | Start Height | End Height
 ------------- | ------------- | -------------
 v0.10.7 | 0 | 14700
-v0.13.5 | 14701 | N/A
+v0.13.6 | 14701 | N/A
 
 # Minimum transfer amounts
 

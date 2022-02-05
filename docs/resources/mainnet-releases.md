@@ -33,7 +33,7 @@ Axelar -> Terra IBC channel id | `channel-0`
 Core Version  | Start Height | End Height
 ------------- | ------------- | -------------
 v0.10.7 | 0 | 384000
-v0.13.5 | 384001 | N/A
+v0.13.6 | 384001 | N/A
 
 # Minimum transfer amounts
 
