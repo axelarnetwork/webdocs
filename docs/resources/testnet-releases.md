@@ -3,7 +3,7 @@
 
 Variable  | Value
 ------------- | -------------
-`axelar-core` version | `v0.13.4`
+`axelar-core` version | `v0.13.5`
 `tofnd` version | `v0.8.2`
 Ethereum Axelar Gateway contract address | `0x81b450CA8F0e842EcC361FD64270aeb5A374A0d8`
 Ethereum AXL token address | `0xBf96Dfc6AE44e880681b7221deE21E900BC0F21c`
@@ -27,13 +27,15 @@ Moonbeam UST token address | `0x1c84ea8C5Fd26f8e49aF418De742982980d88593`
 Moonbeam LUNA token address | `0x3a89372397265fAFd704fb8DA373926901CEFA19`
 Terra -> Axelar IBC channel id | `channel-55`
 Axelar -> Terra IBC channel id | `channel-0`
+Cosmoshub -> Axelar IBC channel id | `channel-221`
+Axelar -> Cosmoshub IBC channel id | `channel-1`
 
 # Upgrade Path
 
 Core Version  | Start Height | End Height
 ------------- | ------------- | -------------
 v0.10.7 | 0 | 14700
-v0.13.4 | 14701 | N/A
+v0.13.5 | 14701 | N/A
 
 # Minimum transfer amounts
 
