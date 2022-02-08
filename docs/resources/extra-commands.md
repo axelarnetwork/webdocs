@@ -1,4 +1,4 @@
-# Extra Commands
+# [TODO revise] Extra Commands
 -------
 Extra commands to query Axelar network's internal state. For those interested in learning more.
 
@@ -7,7 +7,7 @@ Extra commands to query Axelar network's internal state. For those interested in
 
 
 ## Prerequisites
-- Complete all steps from [Setup with Docker](/setup/setup-with-docker.md) or [Setup with Binaries](/setup/setup-with-binaries.md)
+- Complete all steps from [Node Setup](/setup/)
 - Attempted or completed some exercises and have a basic understanding of the asset transfer workflow
 
 ## Commands
