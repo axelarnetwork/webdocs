@@ -61,12 +61,12 @@ BACKUP and DELETE the `validator` account secret mnemonic:
 
 **Testnet:**
 ```
-~/.axelar_testnet/shared/validator.txt
+~/.axelar_testnet/validator.txt
 ```
 
 **Mainnet:**
 ```
-~/.axelar/shared/validator.txt
+~/.axelar/validator.txt
 ```
 
 BACKUP but do NOT DELETE the Tendermint consensus secret key (this is needed on node restarts):
