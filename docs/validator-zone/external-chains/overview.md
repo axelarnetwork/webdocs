@@ -124,7 +124,7 @@ Example: multiple EVM chains in one command:
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx nexus register-chain-maintainer avalanche ethereum fantom moonbeam polygon --from broadcaster --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.vald --gas auto --gas-adjustment 1.5
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx nexus register-chain-maintainer avalanche ethereum fantom moonbeam polygon --from broadcaster --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.vald --gas auto --gas-adjustment 1.5
 ```
 
 **Mainnet:**

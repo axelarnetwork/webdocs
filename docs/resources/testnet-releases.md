@@ -3,7 +3,7 @@
 
 Variable  | Value
 ------------- | -------------
-`axelar-core` version | `v0.13.7`
+`axelar-core` version | `v0.13.6`
 `tofnd` version | `v0.8.2`
 Ethereum Axelar Gateway contract address | `0x81b450CA8F0e842EcC361FD64270aeb5A374A0d8`
 Ethereum AXL token address | `0xBf96Dfc6AE44e880681b7221deE21E900BC0F21c`
@@ -35,7 +35,7 @@ Axelar -> Cosmoshub IBC channel id | `channel-1`
 Core Version  | Start Height | End Height
 ------------- | ------------- | -------------
 v0.10.7 | 0 | 14700
-v0.13.7 | 14701 | N/A
+v0.13.6 | 14701 | N/A
 
 # Minimum transfer amounts
 

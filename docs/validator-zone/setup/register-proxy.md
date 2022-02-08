@@ -28,7 +28,7 @@ Go to [Axelar faucet](http://faucet.testnet.axelar.dev/) and send some free AXL 
 
 **Testnet:**
 ```
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx snapshot register-proxy {BROADCASTER_ADDR} --from validator --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx snapshot register-proxy {BROADCASTER_ADDR} --from validator --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**

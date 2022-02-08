@@ -13,7 +13,7 @@ Make your `validator` account into an Axelar validator by staking AXL tokens:
 
 **Testnet:**
 ```
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx staking create-validator --amount {STAKE_AMOUNT}uaxl --moniker "{MY_MONIKER}" --commission-rate="0.10" --commission-max-rate="0.20" --commission-max-change-rate="0.01" --min-self-delegation="1" --pubkey="$(~/.axelar_testnet/bin/axelard tendermint show-validator --home ~/.axelar_testnet/.core)" --from validator --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx staking create-validator --amount {STAKE_AMOUNT}uaxl --moniker "{MY_MONIKER}" --commission-rate="0.10" --commission-max-rate="0.20" --commission-max-change-rate="0.01" --min-self-delegation="1" --pubkey="$(~/.axelar_testnet/bin/axelard tendermint show-validator --home ~/.axelar_testnet/.core)" --from validator --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**
@@ -53,7 +53,7 @@ echo my-secret-password | ~/.axelar/bin/axelard keys show validator -a --bech va
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx staking delegate {VALOPER_ADDR} {STAKE_AMOUNT}uaxl --from validator --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx staking delegate {VALOPER_ADDR} {STAKE_AMOUNT}uaxl --from validator --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**

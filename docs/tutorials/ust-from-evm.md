@@ -14,7 +14,7 @@ Link your `{TERRA_DEST_ADDR}` address to a new temporary deposit address on the 
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm link {EVM_CHAIN} terra {TERRA_DEST_ADDR} uusd --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm link {EVM_CHAIN} terra {TERRA_DEST_ADDR} uusd --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**
@@ -47,7 +47,7 @@ Confirm the EVM chain transaction on Axelar.
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm confirm-erc20-deposit {EVM_CHAIN} {EVM_TX_HASH} {AMOUNT} {EVM_TEMP_ADDR} --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm confirm-erc20-deposit {EVM_CHAIN} {EVM_TX_HASH} {AMOUNT} {EVM_TEMP_ADDR} --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**
@@ -61,9 +61,9 @@ Create and sign pending transfers for `{EVM_CHAIN}`.
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm create-burn-tokens {EVM_CHAIN} --from validator --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core --gas auto --gas-adjustment 1.5
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm create-burn-tokens {EVM_CHAIN} --from validator --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core --gas auto --gas-adjustment 1.5
 
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm sign-commands {EVM_CHAIN} --from validator --gas auto --gas-adjustment 1.2 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx evm sign-commands {EVM_CHAIN} --from validator --gas auto --gas-adjustment 1.2 --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**
@@ -128,7 +128,7 @@ Execute the pending IBC transfer:
 
 **Testnet:**
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet route-ibc-transfers --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-2 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet route-ibc-transfers --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 **Mainnet:**
