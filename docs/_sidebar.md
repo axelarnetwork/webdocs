@@ -1,5 +1,6 @@
 - [**Setup**](/parent-pages/setup.md)
-  - [Join the Axelar network for the first time](/setup/join.md)
+  - [Join the Axelar network for the first time (quick sync)](/setup/join.md)
+  - [Join the Axelar network for the first time (peer sync)](/setup/join-peer.md)
   - [Basic management of your Axelar node](/setup/basic.md)
   
 - [**Resources**](/parent-pages/resources.md)
