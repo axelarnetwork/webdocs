@@ -1,10 +1,10 @@
-# Join the Axelar network for the first time (quick sync)
+# Join the Axelar network for the first time (peer sync)
 
 Start your Axelar node and download the blockchain.
 
 !> The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
-> [!TIP] These instructions syncronize your Axelar node quickly by downloading a recent snapshot of the blockchain.  If instead you prefer to syncronize your Axelar node using the Axelar peer-to-peer network then see [Join the Axelar network for the first time (peer sync)](setup/join-peer.md)
+> [!TIP] These instructions syncronize your Axelar node using the Axelar peer-to-peer network.  You can syncronize your node more quickly by downloading a recent snapshot of the blockchain as per [Join the Axelar network for the first time (quick sync)](setup/join.md).
 
 > [!NOTE] Choose to run your Axelar node on either testnet or mainnet.
 >
@@ -16,7 +16,6 @@ Start your Axelar node and download the blockchain.
 * **Hardware:** 4 cores, 8-16GB RAM, 512 GB drive, arm64 or amd64. Recommended 6-8 cores, 16-32 GB RAM, 1 TB+ drive.
 * **Software:**
     * Install [`jq`](https://stedolan.github.io/jq/download/).
-    * Install `lz4`: [MacOS](https://formulae.brew.sh/formula/lz4) | [Ubuntu](https://snapcraft.io/install/lz4/ubuntu)
     * Increase the maximum number of open files on your system.  Example: `ulimit -n 16384`.  You may wish to add this command to your shell profile so that you don't need to execute it next time you restart your machine.
 
 ## Choose a keyring password
@@ -48,12 +47,7 @@ KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.10.7
 KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.10.7 -n mainnet
 ```
 
-Your Axelar node will initialize your data folder
-
-* **Testnet:** `~/.axelar_testnet`
-* **Mainnet:** `~/.axelar`
-
-Then your Axelar node will begin downloading blocks in the blockchain one-by-one.
+Your Axelar node will launch and begin downloading the blockchain.
 
 ## Backup your secret keys
 
@@ -97,59 +91,22 @@ tail -f ~/.axelar_testnet/logs/axelard.log
 tail -f ~/.axelar/logs/axelard.log
 ```
 
-You should see log messages for each block in the blockchain that your node downloads.
+## Switch your Axelar node version
 
-## Stop your node, delete your blockchain data
+Your Axelar node will download the blockchain until it reaches the `UPGRADE_HEIGHT` listed below.
 
-You will not download the entire blockchain in this way.  Instead you will stop your node and swap in a recent snapshot of the entire blockchain.
+Network | `UPGRADE_HEIGHT` 
+------- | -------- 
+testnet | 14700
+mainnet | 384000
 
-Stop your currently running Axelar node:
+After your blockchain has reached `UPGRADE_HEIGHT` you will see a panic in the logs
 
-```bash
-kill -9 $(pgrep -f "axelard start")
+```
+panic: UPGRADE "v0.13" NEEDED at height: UPGRADE_HEIGHT: 
 ```
 
-Delete your `data` directory:
-
-**Testnet:**
-```bash
-rm -r ~/.axelar_testnet/.core/data
-```
-
-**Mainnet:**
-```bash
-rm -r ~/.axelar/.core/data
-```
-
-# Download the latest Axelar blockchain snapshot
-
-Download the latest Axelar blockchain snapshot for your chosen network (testnet or mainnet) from a provider:
-
-* [quicksync.io](https://quicksync.io/networks/axelar.html)
-* [staketab.com](https://cosmos-snap.staketab.com/axelar/) | [instructions](https://github.com/staketab/nginx-cosmos-snap/blob/main/docs/axelar.md)
-
-The following instructions assume you downloaded the `default` snapshot from `quicksync.io`.
-
-Let `{SNAPSHOT_FILE}` denote the file name of the snapshot you downloaded.  Example file names:
-
-* **Testnet:** `axelartestnet-lisbon-2-default.20220207.2240.tar.lz4`
-* **Mainnet:** `axelar-dojo-1-default.20220207.2210.tar.lz4`
-
-Decompress the downloaded snapshot into your `data` directory:
-
-**Testnet:**
-```bash
-lz4 -dc --no-sparse {SNAPSHOT_FILE} | tar xfC - ~/.axelar_testnet/.core
-```
-
-**Mainnet:**
-```bash
-lz4 -dc --no-sparse {SNAPSHOT_FILE} | tar xfC - ~/.axelar/.core
-```
-
-## Resume your node
-
-Resume your Axelar node with the latest version of axelar-core:
+You need to launch your Axelar node again with version `0.13.4` of axelar-core:
 
 **Testnet:**
 ```bash
@@ -161,7 +118,7 @@ KEYRING_PASSWORD=my-secret-password ./scripts/node.sh
 KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -n mainnet
 ```
 
-Your Axelar node will launch and resume downloading the blockchain.  You should see log messages for new blocks.
+Your Axelar node will launch and resume downloading the blockchain.
 
 ## Test whether your blockchain is downloaded
 
