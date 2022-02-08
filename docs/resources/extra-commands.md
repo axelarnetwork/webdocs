@@ -1,4 +1,4 @@
-# Extra Commands
+# [TODO revise] Extra Commands
 -------
 Extra commands to query Axelar network's internal state. For those interested in learning more.
 
