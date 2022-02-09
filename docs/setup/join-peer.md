@@ -35,12 +35,14 @@ git clone https://github.com/axelarnetwork/axelarate-community.git
 cd axelarate-community
 ```
 
-Launch a new Axelar testnet node with version `0.10.7` of axelar-core:
+Launch a new Axelar testnet node with version `0.13.6` of axelar-core:
 
 **Testnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.10.7
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.13.6 -n testnet
 ```
+
+Launch a new Axelar mainnet node with version `0.10.7` of axelar-core:
 
 **Mainnet:**
 ```bash
@@ -91,13 +93,12 @@ tail -f ~/.axelar_testnet/logs/axelard.log
 tail -f ~/.axelar/logs/axelard.log
 ```
 
-## Switch your Axelar node version
+## Switch your Axelar mainnet node version
 
 Your Axelar node will download the blockchain until it reaches the `UPGRADE_HEIGHT` listed below.
 
 Network | `UPGRADE_HEIGHT` 
 ------- | -------- 
-testnet | 14700
 mainnet | 384000
 
 After your blockchain has reached `UPGRADE_HEIGHT` you will see a panic in the logs
@@ -106,16 +107,11 @@ After your blockchain has reached `UPGRADE_HEIGHT` you will see a panic in the l
 panic: UPGRADE "v0.13" NEEDED at height: UPGRADE_HEIGHT: 
 ```
 
-You need to launch your Axelar node again with version `0.13.4` of axelar-core:
-
-**Testnet:**
-```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh
-```
+You need to launch your Axelar node again with version `0.13.6` of axelar-core:
 
 **Mainnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -n mainnet
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.13.6 -n mainnet
 ```
 
 Your Axelar node will launch and resume downloading the blockchain.

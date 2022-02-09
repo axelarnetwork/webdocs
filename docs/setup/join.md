@@ -36,12 +36,14 @@ git clone https://github.com/axelarnetwork/axelarate-community.git
 cd axelarate-community
 ```
 
-Launch a new Axelar testnet node with version `0.10.7` of axelar-core:
+Launch a new Axelar testnet node with version `0.13.6` of axelar-core:
 
 **Testnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.10.7
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.13.6 -n testnet
 ```
+
+Launch a new Axelar mainnet node with version `0.10.7` of axelar-core:
 
 **Mainnet:**
 ```bash
@@ -153,7 +155,7 @@ Resume your Axelar node with the latest version of axelar-core:
 
 **Testnet:**
 ```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -n testnet
 ```
 
 **Mainnet:**
