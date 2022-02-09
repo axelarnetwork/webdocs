@@ -5,10 +5,10 @@ Variable  | Value
 ------------- | -------------
 `axelar-core` version | `v0.13.6`
 `tofnd` version | `v0.8.2`
-Ethereum Axelar Gateway contract address | `0x81b450CA8F0e842EcC361FD64270aeb5A374A0d8`
-Ethereum AXL token address | `0xBf96Dfc6AE44e880681b7221deE21E900BC0F21c`
-Ethereum UST token address | `0x5f1E1bdc2c73EFA2eEEe6b30128d968791D1c55C`
-Ethereum LUNA token address | `0xB7454D02D4190dAe72be2051482aCF044435C5D8`
+Ethereum Axelar Gateway contract address | `0xBC6fcce7c5487d43830a219CA6E7B83238B41e71`
+Ethereum AXL token address | `0x321C017c08b681b1a34909eb159ed128772a5Bbe`
+Ethereum UST token address | `0x1487F3faefE78792CDC48D87FF32aaC6650fd85f`
+Ethereum LUNA token address | `0x7Aa125543B9D4a361f58aC1Ff3Bea86eAF6D948B`
 Avalanche Axelar Gateway contract address | `0x8F19fF12a38aDa314e6fC2611E75473BBb11FebE`
 Avalanche AXL token address | `0x5a3cF244040Ab7C8e6B192E8eb8eF6C78C9D612b`
 Avalanche UST token address | `0x0749e7902520ab6b3DBD28a1203A2d358700655e`
@@ -25,10 +25,10 @@ Moonbeam Axelar Gateway contract address | `0xd01C68e0cf45F99A6016f80a9C1783f497
 Moonbeam AXL token address | `0xa9d0D7b596AC9F1704E886892870daB084ECd220`
 Moonbeam UST token address | `0x1c84ea8C5Fd26f8e49aF418De742982980d88593`
 Moonbeam LUNA token address | `0x3a89372397265fAFd704fb8DA373926901CEFA19`
-Terra -> Axelar IBC channel id | `channel-55`
+Terra -> Axelar IBC channel id | `channel-78`
 Axelar -> Terra IBC channel id | `channel-0`
-Cosmoshub -> Axelar IBC channel id | `channel-221`
-Axelar -> Cosmoshub IBC channel id | `channel-1`
+Cosmoshub -> Axelar IBC channel id | `not yet available`
+Axelar -> Cosmoshub IBC channel id | `not yet available`
 
 # Minimum transfer amounts
 
