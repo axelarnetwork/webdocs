@@ -1,4 +1,4 @@
-# Join the Axelar network for the first time (peer sync)
+# Join the Axelar network for the first time (genesis sync)
 
 Start your Axelar node and download the blockchain.
 
