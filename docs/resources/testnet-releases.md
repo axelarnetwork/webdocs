@@ -30,13 +30,6 @@ Axelar -> Terra IBC channel id | `channel-0`
 Cosmoshub -> Axelar IBC channel id | `channel-221`
 Axelar -> Cosmoshub IBC channel id | `channel-1`
 
-# Upgrade Path
-
-Core Version  | Start Height | End Height
-------------- | ------------- | -------------
-v0.10.7 | 0 | 14700
-v0.13.6 | 14701 | N/A
-
 # Minimum transfer amounts
 
 For each asset X in (AXL, UST, LUNA) and each external chain Y in (Ethereum, non-Ethereum EVM, Cosmos/IBC): any transfer of asset X to chain Y must exceed the minimum amount given in the table below.  (If Y is the origin chain for asset X then this transfer is called "redeem"/"burn"; there is no minimum in this case.)
