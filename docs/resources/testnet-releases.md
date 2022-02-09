@@ -9,22 +9,22 @@ Ethereum Axelar Gateway contract address | `0xBC6fcce7c5487d43830a219CA6E7B83238
 Ethereum AXL token address | `0x321C017c08b681b1a34909eb159ed128772a5Bbe`
 Ethereum UST token address | `0x1487F3faefE78792CDC48D87FF32aaC6650fd85f`
 Ethereum LUNA token address | `0x7Aa125543B9D4a361f58aC1Ff3Bea86eAF6D948B`
-Avalanche Axelar Gateway contract address | `0x8F19fF12a38aDa314e6fC2611E75473BBb11FebE`
-Avalanche AXL token address | `0x5a3cF244040Ab7C8e6B192E8eb8eF6C78C9D612b`
-Avalanche UST token address | `0x0749e7902520ab6b3DBD28a1203A2d358700655e`
-Avalanche LUNA token address | `0x28EE721a8128ee8ff57f14b131535E05b88fd636`
-Fantom Axelar Gateway contract address | `0xdCE436d858Cfc7d46946d8f95B466e37FA897A4a`
-Fantom AXL token address | `0x0efE77aEf986684650c84C149e0e37196D9b7abc`
-Fantom UST token address | `0x243615425b166719A13875A5Dc044094DDF3dA4d`
-Fantom LUNA token address | `0x79e1b09d919AE79D039BB81BEB7c53C70f95719B`
-Polygon Axelar Gateway contract address | `0xa4dbF01D58C4C89B96194682e48b05c0dEC62201`
-Polygon AXL token address | `0x578aBd5AD95D0e85CB9b508295D4bC1B35496f8a`
-Polygon UST token address | `0x1912e95A44960c785e96d43651660aF55cA84ab8`
-Polygon LUNA token address | `0xaf11e7D46A146256D9178251CBe8A1e5E6218f90`
-Moonbeam Axelar Gateway contract address | `0xd01C68e0cf45F99A6016f80a9C1783f497902bAC`
-Moonbeam AXL token address | `0xa9d0D7b596AC9F1704E886892870daB084ECd220`
-Moonbeam UST token address | `0x1c84ea8C5Fd26f8e49aF418De742982980d88593`
-Moonbeam LUNA token address | `0x3a89372397265fAFd704fb8DA373926901CEFA19`
+Avalanche Axelar Gateway contract address | `not yet available`
+Avalanche AXL token address | `not yet available`
+Avalanche UST token address | `not yet available`
+Avalanche LUNA token address | `not yet available`
+Fantom Axelar Gateway contract address | `not yet available`
+Fantom AXL token address | `not yet available`
+Fantom UST token address | `not yet available`
+Fantom LUNA token address | `not yet available`
+Polygon Axelar Gateway contract address | `not yet available`
+Polygon AXL token address | `not yet available`
+Polygon UST token address | `not yet available`
+Polygon LUNA token address | `not yet available`
+Moonbeam Axelar Gateway contract address | `not yet available`
+Moonbeam AXL token address | `not yet available`
+Moonbeam UST token address | `not yet available`
+Moonbeam LUNA token address | `not yet available`
 Terra -> Axelar IBC channel id | `channel-78`
 Axelar -> Terra IBC channel id | `channel-0`
 Cosmoshub -> Axelar IBC channel id | `not yet available`
