@@ -4,7 +4,7 @@ Start your Axelar node and download the blockchain.
 
 !> The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
-> [!TIP] These instructions syncronize your Axelar node quickly by downloading a recent snapshot of the blockchain.  If instead you prefer to syncronize your Axelar node using the Axelar peer-to-peer network then see [Join the Axelar network for the first time (genesis sync)](setup/join-peer.md)
+> [!TIP] These instructions syncronize your Axelar node quickly by downloading a recent snapshot of the blockchain.  If instead you prefer to syncronize your Axelar node using the Axelar peer-to-peer network then see [Join the Axelar network for the first time (genesis sync)](setup/join-genesis.md)
 
 > [!NOTE] Choose to run your Axelar node on either testnet or mainnet.
 >
