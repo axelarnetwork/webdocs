@@ -4,8 +4,8 @@
 
 ## Connecting web3
 
-[Roles](/parent-pages/roles)
-[Reference](/parent-pages/reference)
+[Roles](roles)
+[Reference](reference)
 
 ![](_media/Axelar-background.jpeg)
 

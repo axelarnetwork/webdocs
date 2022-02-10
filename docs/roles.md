@@ -1,7 +1,7 @@
 # Roles
 ----
 
-* [End user](/parent-pages/user)
+* [End user](/user)
 * [Node operator](/node)
-* [Validator](/parent-pages/validator)
-* [Developer](/parent-pages/dev)
+* [Validator](/validator)
+* [Developer](/dev)
