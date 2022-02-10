@@ -7,10 +7,10 @@
 > [!NOTE|style:flat|label:Testnet Releases]
 > [Version numbers, contract addresses, minimum transfer amounts, etc.](/resources/testnet-releases)
 
-> [!NOTE|style:flat|label:[TODO revise] Extra Commands]
+> [!NOTE|style:flat|label:TODO revise Extra Commands]
 > [A few helpful commands](/resources/extra-commands)
 
-> [!NOTE|style:flat|label:[TODO revise] Useful Links]
+> [!NOTE|style:flat|label:TODO revise Useful Links]
 > [Looking for explorere or other links ?](/resources/useful-links)
 
 > [!NOTE|style:flat|label:Metamask For External EVM Chains]
