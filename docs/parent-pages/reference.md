@@ -1,4 +1,4 @@
-# Resources
+# Reference
 ----
 
 > [!NOTE|style:flat|label:Mainnet Releases]
