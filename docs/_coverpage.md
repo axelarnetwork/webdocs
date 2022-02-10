@@ -2,12 +2,10 @@
 
 # Axelar network documentation
 
-# Connecting web3
+## Connecting web3
 
-## Roles
-
-[**Roles**](/parent-pages/roles)
-[**Reference**](/parent-pages/reference)
+[Roles](/parent-pages/roles)
+[Reference](/parent-pages/reference)
 
 ![](_media/Axelar-background.jpeg)
 
