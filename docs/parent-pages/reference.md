@@ -1,21 +1,22 @@
 # Reference
 ----
 
-> [!NOTE|style:flat|label:Mainnet Releases]
-> [Version numbers, contract addresses, minimum transfer amounts, etc.](/resources/mainnet-releases)
-
-> [!NOTE|style:flat|label:Testnet Releases]
-> [Version numbers, contract addresses, minimum transfer amounts, etc.](/resources/testnet-releases)
-
-> [!NOTE|style:flat|label:TODO revise Extra Commands]
-> [A few helpful commands](/resources/extra-commands)
-
-> [!NOTE|style:flat|label:TODO revise Useful Links]
-> [Looking for explorere or other links ?](/resources/useful-links)
-
-> [!NOTE|style:flat|label:Metamask For External EVM Chains]
-> [Looking for chaind ids and RPCs to add chains in metamask ?](/resources/metamask)
-
-<!-- slide:break-40 -->
-
- <img src="_media/axelar-robot.png" alt="Smiley face" width="700" height="700" style="float:bottom">
+- [ER20 token addresses](/erc20-addresses)
+- Releases
+  - [Mainnet](/releases/mainnet.md)
+  - [Testnet](/releases/testnet.md)
+- [[TODO revise] Extra Commands](/reference/extra-commands.md)
+- [[TODO revise] Useful Links](/reference/useful-links.md)
+- [TODO revise] Technical FAQs
+  - [Checklist to ask for help](/faqs/Instructions.md)
+  - [Axelar core container fails to start](/faqs/Problem1.md)
+  - [/home/.axelar_testnet folder missing](/faqs/Problem2.md)
+  - [c2d2cli container gives an invalid IP Address error](/faqs/Problem3.md)
+  - [Broadcaster account is not found](/faqs/Problem4.md)
+  - [Transaction out of gas](/faqs/Problem5.md)
+  - [Troubleshooting Bitcoin deposit (Mint)](/faqs/Problem6.md)
+  - [No pending transfer for chain ethereum ](/faqs/Problem7.md)
+  - [Too many open files](/faqs/Problem8.md)
+  - [No commands to sign found](/faqs/ex5-problem.md)
+- [Terms of use](/terms-of-use.md)
+- [Bug bounty](/bug-bounty.md)

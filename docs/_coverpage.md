@@ -6,17 +6,8 @@
 
 ## Roles
 
-[**End user**](/parent-pages/user)
-[**Node operator**](/parent-pages/node)
-[**Validator**](/parent-pages/validator)
-[**Developer**](/parent-pages/dev)
-
-## Reference
-
-[**ER20 token addresses**](/erc20-addresses)
-[**Releases**](/parent-pages/releases)
-[**Terms of use**](/terms-of-use)
-[**Bug bounty**](/bug-bounty)
+[**Roles**](/parent-pages/roles)
+[**Reference**](/parent-pages/reference)
 
 ![](_media/Axelar-background.jpeg)
 
