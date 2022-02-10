@@ -1,4 +1,4 @@
-# [TODO: test and verify] Recover validator from mnemonic or secret keys
+# [TODO: revise] Recover validator from mnemonic or secret keys
 ------------
 
 # TODO: build tofnd from source?

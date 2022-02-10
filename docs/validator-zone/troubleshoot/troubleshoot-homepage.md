@@ -1,4 +1,4 @@
-# [TODO update] Troubleshoot
+# [TODO revise] Troubleshoot
 -----------
 
 ### Pages under Troubleshoot:
