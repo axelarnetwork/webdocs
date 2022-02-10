@@ -1,4 +1,4 @@
-# Useful Links
+# [TODO revise] Useful Links
 -----
 ### Network dashboards
 - https://monitor.testnet.axelar.dev
