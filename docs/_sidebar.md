@@ -1,7 +1,7 @@
 - [Roles](/parent-pages/roles)
   - [End user](/parent-pages/user)
     - [Metamask for EVM chains](/user/metamask.md)
-  - [Node operator](/parent-pages/node)
+  - [Node operator](/node)
     - [Join the Axelar network -- quick sync (recommended)](/node/join.md)
       - [Join the Axelar network -- genesis sync](/node/join-genesis.md)
     - [Basic management of your Axelar node](/node/basic)

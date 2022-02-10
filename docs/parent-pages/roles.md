@@ -2,6 +2,6 @@
 ----
 
 * [End user](/parent-pages/user)
-* [Node operator](/parent-pages/node)
+* [Node operator](/node)
 * [Validator](/parent-pages/validator)
 * [Developer](/parent-pages/dev)
