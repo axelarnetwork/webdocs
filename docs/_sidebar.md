@@ -24,6 +24,13 @@
     - [Fantom Node](/validator-zone/external-chains/fantom.md)
     - [Moonbeam Node](/validator-zone/external-chains/moonbeam.md)
     - [Polygon Node](/validator-zone/external-chains/polygon.md)
+      - [**[TODO revise] Troubleshoot**](/validator-zone/troubleshoot/troubleshoot-homepage.md)
+    - [Recovery](/validator-zone/troubleshoot/recovery.md)
+    - [Troubleshoot Start Up](/validator-zone/troubleshoot/troubleshoot.md)
+    - [Leave as a Validator](/validator-zone/troubleshoot/leave.md)
+    - [Unjail](/validator-zone/troubleshoot/unjail.md)
+    - [Missed too many blocks](/validator-zone/troubleshoot/missed-too-many-blocks.md)
+
 - [**Developer**](/parent-pages/dev)
 
 ## Reference
@@ -61,12 +68,6 @@
     - [Polygon Node](/validator-zone/external-chains/polygon.md)
     
     
-  - [**[TODO revise] Troubleshoot**](/validator-zone/troubleshoot/troubleshoot-homepage.md)
-    - [Recovery](/validator-zone/troubleshoot/recovery.md)
-    - [Troubleshoot Start Up](/validator-zone/troubleshoot/troubleshoot.md)
-    - [Leave as a Validator](/validator-zone/troubleshoot/leave.md)
-    - [Unjail](/validator-zone/troubleshoot/unjail.md)
-    - [Missed too many blocks](/validator-zone/troubleshoot/missed-too-many-blocks.md)
 
 - [[TODO revise] Technical FAQs](#)
   - [Checklist to ask for help](/faqs/Instructions.md)
