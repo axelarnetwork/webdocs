@@ -2,12 +2,21 @@
 
 # Axelar network documentation
 
-## Connecting web3
+# Connecting web3
 
-[**Setup**](/parent-pages/setup.md)
-[**Resources**](/parent-pages/resources.md)
-[**Tutorials**](/parent-pages/tutorials.md)
-[**Validator Zone**](/parent-pages/validators.md)
+## Roles
+
+[**End user**](/parent-pages/user)
+[**Node operator**](/parent-pages/node)
+[**Validator**](/parent-pages/validator)
+[**Developer**](/parent-pages/dev)
+
+## Reference
+
+[**ER20 token addresses**](/erc20-addresses)
+[**Releases**](/parent-pages/releases)
+[**Terms of use**](/terms-of-use)
+[**Bug bounty**](/bug-bounty)
 
 ![](_media/Axelar-background.jpeg)
 
