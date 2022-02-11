@@ -4,8 +4,10 @@
 
 ## Connecting web3
 
-[Roles](roles)
-[Reference](reference)
+[**Setup**](/parent-pages/setup.md)
+[**Resources**](/parent-pages/resources.md)
+[**Tutorials**](/parent-pages/tutorials.md)
+[**Validator Zone**](/parent-pages/validators.md)
 
 ![](_media/Axelar-background.jpeg)
 
