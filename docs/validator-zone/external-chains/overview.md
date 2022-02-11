@@ -9,11 +9,11 @@ As a validator for the Axelar network, your Axelar node will vote on the status 
 ## External chains you can support on Axelar
 
 * EVM-compatible chains
-    * [Avalanche](/validator/external-chains/avalanche) 
-    * [Ethereum](/validator/external-chains/ethereum)
-    * [Fantom](/validator/external-chains/fantom)
-    * [Moonbeam](/validator/external-chains/moonbeam)
-    * [Polygon](/validator/external-chains/polygon)
+    * [Avalanche](/validator-zone/external-chains/avalanche) 
+    * [Ethereum](/validator-zone/external-chains/ethereum)
+    * [Fantom](/validator-zone/external-chains/fantom)
+    * [Moonbeam](/validator-zone/external-chains/moonbeam)
+    * [Polygon](/validator-zone/external-chains/polygon)
     
     
 * Cosmos chains
@@ -33,7 +33,7 @@ Your `config.toml` file should already contain a snippet like the following:
 # 3. 'rpc_addr'              # EVM RPC endpoint URL; chain maintainers set their own endpoint
 # 4. `start-with-bridge`     # `true` to support this chain
 #
-# see https://docs.axelar.dev/#/validator/external-chains/overview
+# see https://docs.axelar.dev/#/validator-zone/external-chains/overview
 
 [[axelar_bridge_evm]]
 name = "Ethereum"
@@ -103,7 +103,7 @@ KEYRING_PASSWORD=my-secret-password TOFND_PASSWORD=my-tofnd-password ./scripts/v
 
 ## Check your connections to new chains in vald
 
-Check your `vald` logs to see that your validator node has successfully connected to the new EVM chains you added.  [[How to view logs.]](/validator/setup/vald-tofnd.md)
+Check your `vald` logs to see that your validator node has successfully connected to the new EVM chains you added.  [[How to view logs.]](/validator-zone/setup/vald-tofnd.md)
 
 You should see something like:
 ```log

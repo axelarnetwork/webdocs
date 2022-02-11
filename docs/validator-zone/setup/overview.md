@@ -15,16 +15,16 @@ Convert your existing Axelar node into a validator by staking AXL tokens and att
 
 ## Steps to become a validator
 
-1. [Launch companion processes for the first time](/validator/setup/vald-tofnd.md)
-2. [Back-up your validator mnemonics and secret keys](/validator/setup/backup.md)
-3. [Register broadcaster proxy](/validator/setup/register-proxy.md)
-4. [Stake AXL tokens on the Axelar network](/validator/setup/stake-axl-tokens.md)
-5. [Health check](/validator/setup/health-check.md)
-6. [Set up external chains](/validator/external-chains/overview.md)
+1. [Launch companion processes for the first time](/validator-zone/setup/vald-tofnd.md)
+2. [Back-up your validator mnemonics and secret keys](/validator-zone/setup/backup.md)
+3. [Register broadcaster proxy](/validator-zone/setup/register-proxy.md)
+4. [Stake AXL tokens on the Axelar network](/validator-zone/setup/stake-axl-tokens.md)
+5. [Health check](/validator-zone/setup/health-check.md)
+6. [Set up external chains](/validator-zone/external-chains/overview.md)
 
 ## Other setup-related tasks
 
-* [Troubleshoot start-up](/validator/troubleshoot/troubleshoot.md)
-* [Recover validator from mnemonic or secret keys](/validator/troubleshoot/recovery.md)
-* [Leave as a validator](/validator/troubleshoot/leave.md)
-* [Missed too many blocks](/validator/troubleshoot/missed-too-many-blocks.md)
+* [Troubleshoot start-up](/validator-zone/troubleshoot/troubleshoot.md)
+* [Recover validator from mnemonic or secret keys](/validator-zone/troubleshoot/recovery.md)
+* [Leave as a validator](/validator-zone/troubleshoot/leave.md)
+* [Missed too many blocks](/validator-zone/troubleshoot/missed-too-many-blocks.md)

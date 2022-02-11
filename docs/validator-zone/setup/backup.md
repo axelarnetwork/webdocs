@@ -11,7 +11,7 @@ You must store backup copies of the following data in a safe place:
 
 Items 1 and 2 were created when you completed [Join the Axelar network for the first time](/setup/join.md).
 
-Items 3 and 4 were created when you completed [Launch validator companion processes for the first time](/validator/setup/vald-tofnd.md).
+Items 3 and 4 were created when you completed [Launch validator companion processes for the first time](/validator-zone/setup/vald-tofnd.md).
 
 ## Validator account secret mnemonic
 
