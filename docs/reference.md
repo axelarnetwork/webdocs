@@ -1,7 +1,6 @@
 # Reference
 ----
 
-- [ER20 token addresses](/erc20-addresses)
 - Releases
   - [Mainnet](/releases/mainnet.md)
   - [Testnet](/releases/testnet.md)
