@@ -1,0 +1,21 @@
+# Reference
+----
+
+- Releases
+  - [Mainnet](/releases/mainnet.md)
+  - [Testnet](/releases/testnet.md)
+- [[TODO revise] Extra Commands](/reference/extra-commands.md)
+- [[TODO revise] Useful Links](/reference/useful-links.md)
+- [TODO revise] Technical FAQs
+  - [Checklist to ask for help](/faqs/Instructions.md)
+  - [Axelar core container fails to start](/faqs/Problem1.md)
+  - [/home/.axelar_testnet folder missing](/faqs/Problem2.md)
+  - [c2d2cli container gives an invalid IP Address error](/faqs/Problem3.md)
+  - [Broadcaster account is not found](/faqs/Problem4.md)
+  - [Transaction out of gas](/faqs/Problem5.md)
+  - [Troubleshooting Bitcoin deposit (Mint)](/faqs/Problem6.md)
+  - [No pending transfer for chain ethereum ](/faqs/Problem7.md)
+  - [Too many open files](/faqs/Problem8.md)
+  - [No commands to sign found](/faqs/ex5-problem.md)
+- [Terms of use](/terms-of-use.md)
+- [Bug bounty](/bug-bounty.md)
