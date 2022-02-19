@@ -1,5 +1,7 @@
-# [TODO revise] Useful Links
------
+# Useful Links
+
+[TODO revise]
+
 ### Network dashboards
 - https://monitor.testnet.axelar.dev
 - https://axelar.chainode.tech/

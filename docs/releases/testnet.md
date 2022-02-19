@@ -1,5 +1,4 @@
-# Info about the Axelar testnet
--------
+# Testnet
 
 Variable  | Value
 ------------- | -------------
@@ -30,7 +29,7 @@ Axelar -> Terra IBC channel id | `channel-0`
 Cosmoshub -> Axelar IBC channel id | `not yet available`
 Axelar -> Cosmoshub IBC channel id | `not yet available`
 
-# Minimum transfer amounts
+## Minimum transfer amounts
 
 For each asset X in (AXL, UST, LUNA) and each external chain Y in (Ethereum, non-Ethereum EVM, Cosmos/IBC): any transfer of asset X to chain Y must exceed the minimum amount given in the table below.  (If Y is the origin chain for asset X then this transfer is called "redeem"/"burn"; there is no minimum in this case.)
 
@@ -42,7 +41,7 @@ AXL | 100 AXL | 10 AXL | 0.1 AXL
 UST | 100 UST | 10 UST | 0.1 UST
 LUNA | 1 LUNA | 0.1 LUNA | 0.001 LUNA
 
-# Transaction Fees
+## Transaction Fees
 
 The Network will assess a processing fee of __0.1%__ percent on any transaction through the protocol. For example, a transfer of 100 of asset X from Chain Y to Chain Z will result in 99.9 of token X in the destination address (specified by the user) on Chain Z. 
 

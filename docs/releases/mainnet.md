@@ -1,5 +1,4 @@
-# Info about the Axelar mainnet
--------
+# Mainnet
 
 Variable  | Value
 ------------- | -------------
@@ -28,14 +27,14 @@ Moonbeam LUNA token address | `0x31DAB3430f3081dfF3Ccd80F17AD98583437B213`
 Terra -> Axelar IBC channel id | `channel-19`
 Axelar -> Terra IBC channel id | `channel-0`
 
-# Upgrade Path
+## Upgrade Path
 
 Core Version  | Start Height | End Height
 ------------- | ------------- | -------------
 v0.10.7 | 0 | 384000
 v0.13.6 | 384001 | N/A
 
-# Minimum transfer amounts
+## Minimum transfer amounts
 
 For each asset X in (AXL, UST, LUNA) and each external chain Y in (Ethereum, non-Ethereum EVM, Cosmos/IBC): any transfer of asset X to chain Y must exceed the minimum amount given in the table below.  (If Y is the origin chain for asset X then this transfer is called "redeem"/"burn"; there is no minimum in this case.)
 
@@ -47,7 +46,7 @@ AXL | 100 AXL | 10 AXL | 0.1 AXL
 UST | 100 UST | 10 UST | 0.1 UST
 LUNA | 1 LUNA | 0.1 LUNA | 0.001 LUNA
 
-# Transaction Fees
+## Transaction Fees
 
 The Network will assess a processing fee of __0.1%__ percent on any transaction through the protocol. For example, a transfer of 100 of asset X from Chain Y to Chain Z will result in 99.9 of token X in the destination address (specified by the user) on Chain Z. 
 

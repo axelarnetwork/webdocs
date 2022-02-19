@@ -1,14 +1,14 @@
-# [TODO revise] Extra Commands
--------
+# Extra Commands
+
+[TODO revise]
+
 Extra commands to query Axelar network's internal state. For those interested in learning more.
 
-## Disclaimer
-!> :fire: Axelar Network is a work in progress. At no point in time should you transfer any real assets using Axelar. Only use testnet tokens that you're not afraid to lose. Axelar is not responsible for any assets lost, frozen, or unrecoverable in any state or condition. If you find a problem, please submit an issue to this repository following the template.
+:::danger
 
+The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
 
-## Prerequisites
-- Complete all steps from [Node Setup](/setup/)
-- Attempted or completed some exercises and have a basic understanding of the asset transfer workflow
+:::
 
 ## Commands
 This document lists out additional commands that can be run at different points during the exercises. The commands are not neccesary to complete the asset transfer, but display additional information about the current network state, and can be useful for debugging or learning more about the network.
