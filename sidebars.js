@@ -86,7 +86,13 @@ const sidebars = {
             },
           ],
         },
-        'roles/dev',
+        {
+          type: 'category',
+          label: 'Developer',
+          items: [
+            'roles/dev/axelarjs',
+          ],
+        },
       ],
     },
     {
