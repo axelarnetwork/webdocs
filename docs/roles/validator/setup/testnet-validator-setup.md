@@ -40,7 +40,7 @@ echo export CHAIN_ID=axelar-testnet-lisbon-3 >> $HOME/.profile
 VALIDATOR_OPERATOR_ADDRESS=`axelard keys show validator --bech val --output json | jq -r .address`
 BROADCASTER_ADDRESS=`axelard keys show broadcaster --output json | jq -r .address`
 echo export VALIDATOR_OPERATOR_ADDRESS=$VALIDATOR_OPERATOR_ADDRESS >> $HOME/.profile 
-echo export BROADCASTER_ADDRESS=BROADCASTER_ADDRESS >> $HOME/.profile 
+echo export BROADCASTER_ADDRESS=$BROADCASTER_ADDRESS >> $HOME/.profile 
 # for keyring password it's better to edit the file and add it manually, so prevent getting it saved in bash history :)
 echo export KEYRING_PASSWORD=PUT_YOUR_KEYRING_PASSWORD_HERE >> $HOME/.profile 
 source $HOME/.profile
