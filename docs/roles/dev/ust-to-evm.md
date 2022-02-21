@@ -54,8 +54,6 @@ Send UST tokens from Terra to your temporary Axelar address `{AXELAR_TEMP_ADDR}`
 
 :::info
 
-[TODO better instructions for IBC]
-
 There are several ways to do IBC.
 
 ### IBC from a web wallet
@@ -194,8 +192,6 @@ Before you click "confirm": select "EDIT", change "Gas Limit" to 5000000, and "S
 :::
 
 :::tip
-
-[TODO refactor into "resources"]
 
 Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 ### 1. Documentation

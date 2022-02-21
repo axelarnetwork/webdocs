@@ -1,4 +1,4 @@
-# Bug bounty, disclosure of sercurity vulnerabilities
+# Bug bounty
 
 ### Bug bounty and disclosure of sercurity vulnerabilities
 Axelar is currently concluding collaborations with external partners on a process for disclosure of security vulnerabilities and a bug bounty program. In the meantime, here's what you need to know:
