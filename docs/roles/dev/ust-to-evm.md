@@ -54,8 +54,6 @@ Send UST tokens from Terra to your temporary Axelar address `{AXELAR_TEMP_ADDR}`
 
 :::info
 
-[TODO better instructions for IBC]
-
 There are several ways to do IBC.
 
 ### IBC from a web wallet
@@ -90,7 +88,7 @@ The remaining steps are needed only if there are no active third-party monitorin
 
 :::
 
-Verify the IBC transaction by checking the balances of `{AXELAR_TEMP_ADDR}` as per [Basic node management](basic.md).  Output should contain something like:
+Verify the IBC transaction by checking the balances of `{AXELAR_TEMP_ADDR}` as per [Basic node management](/roles/node/basic.md).  Output should contain something like:
 
 ```
 balances:
@@ -156,12 +154,6 @@ Output should contain
 successfully started signing batched commands with ID {BATCH_ID}
 ```
 
-:::note
-
-If after performing the above steps you see the error `no commands to sign found` then check [this page](/reference/faq/ex5-problem) for detailed instructions on how to resolve it.
-
-:::
-
 Get the `execute_data`:
 
 <Tabs groupId="network" className='hidden'>
@@ -200,8 +192,6 @@ Before you click "confirm": select "EDIT", change "Gas Limit" to 5000000, and "S
 :::
 
 :::tip
-
-[TODO refactor into "resources"]
 
 Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 ### 1. Documentation

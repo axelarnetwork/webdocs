@@ -1,5 +1,6 @@
-# Bug bounty, disclosure of sercurity vulnerabilities
+# Bug bounty
 
+### Bug bounty and disclosure of sercurity vulnerabilities
 Axelar is currently concluding collaborations with external partners on a process for disclosure of security vulnerabilities and a bug bounty program. In the meantime, here's what you need to know:
 
 * A _security vulnerability_ is a software bug that might compromise safety or liveness of the Axelar network. Examples include loss of funds or an unwanted network halt. Security vulnerabilities can have a range of severity levels.

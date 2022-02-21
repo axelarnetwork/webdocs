@@ -27,8 +27,9 @@ const sidebars = {
       items: [
         {
           type: 'category',
-          label: 'End user',
+          label: 'Satellite user',
           items: [
+            'roles/user/satellite',
             'roles/user/metamask',
           ],
         },
@@ -39,10 +40,6 @@ const sidebars = {
             'roles/node/join',
             'roles/node/join-genesis',
             'roles/node/basic',
-            'roles/node/ust-to-evm',
-            'roles/node/ust-from-evm',
-            'roles/node/axl-to-evm',
-            'roles/node/axl-from-evm',
           ],
         },
         {
@@ -73,17 +70,18 @@ const sidebars = {
                 'roles/validator/external-chains/polygon',
               ],
             },
-            {
-              type: 'category',
-              label: 'Troubleshoot',
-              items: [
-                'roles/validator/troubleshoot/recovery',
-                'roles/validator/troubleshoot/startup',
-                'roles/validator/troubleshoot/leave',
-                'roles/validator/troubleshoot/unjail',
-                'roles/validator/troubleshoot/missed-too-many-blocks',
-              ],
-            },
+            // Hide this section until the pages are updated and refreshed 
+            // {
+            //   type: 'category',
+            //   label: 'Troubleshoot',
+            //   items: [
+            //     'roles/validator/troubleshoot/recovery',
+            //     'roles/validator/troubleshoot/startup',
+            //     'roles/validator/troubleshoot/leave',
+            //     'roles/validator/troubleshoot/unjail',
+            //     'roles/validator/troubleshoot/missed-too-many-blocks',
+            //   ],
+            // },
           ],
         },
         {
@@ -91,6 +89,11 @@ const sidebars = {
           label: 'Developer',
           items: [
             'roles/dev/axelarjs',
+            'roles/dev/axelar-cli',
+            'roles/dev/ust-to-evm',
+            'roles/dev/ust-from-evm',
+            'roles/dev/axl-to-evm',
+            'roles/dev/axl-from-evm',
           ],
         },
       ],
@@ -105,32 +108,8 @@ const sidebars = {
         'releases/testnet',
       ],
     },
-    {
-      type: 'category',
-      label: 'Reference',
-      collapsible: true,
-      collapsed: false,
-      items: [
-        'reference/extra-commands',
-        'reference/useful-links',
-        {
-          type: 'category',
-          label: 'Technical FAQ',
-          items: [
-            'reference/faq/help',
-            'reference/faq/problem1',
-            'reference/faq/problem2',
-            'reference/faq/problem3',
-            'reference/faq/problem4',
-            'reference/faq/problem5',
-            'reference/faq/problem6',
-            'reference/faq/problem7',
-            'reference/faq/problem8',
-            'reference/faq/ex5-problem',
-          ],
-        },
-      ],
-    },
+    'useful-links',
+    'bug-bounty',
   ],
 };
 

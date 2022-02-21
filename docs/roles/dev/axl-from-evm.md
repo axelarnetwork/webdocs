@@ -82,7 +82,7 @@ Send only `Axelar` ERC20 tokens to `{EVM_TEMP_ADDR}`.  Any other token sent to `
 
 Third-party monitoring tools will automatically complete the remaining steps of this process.
 
-Wait a few minutes then check your Axelar `validator` account AXL token balance as per [Basic node management](basic).
+Wait a few minutes then check your Axelar `validator` account AXL token balance as per [Basic node management](/roles/node/basic).
 
 :::
 
@@ -165,12 +165,6 @@ Output should contain
 successfully started signing batched commands with ID {BATCH_ID}
 ```
 
-:::note
-
-If after performing the above steps you see the error `no commands to sign found` then check [this page](/reference/faq/ex5-problem) for detailed instructions on how to resolve it.
-
-:::
-
 Get the `execute_data`:
 
 <Tabs groupId="network" className='hidden'>
@@ -237,7 +231,7 @@ Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 
 To send a transaction to `{GATEWAY_ADDR}` using Metamask: paste hex from `execute_data` above into "Hex Data" field.  (Do not send tokens!)
 
-Optional: Check your Axelar `validator` account AXL token balance as per [Basic node management](basic) so that you can observe balance change.
+Optional: Check your Axelar `validator` account AXL token balance as per [Basic node management](/roles/node/basic) so that you can observe balance change.
 
 Execute the pending transfer:
 
