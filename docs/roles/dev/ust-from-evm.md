@@ -128,12 +128,6 @@ Output should contain
 successfully started signing batched commands with ID {BATCH_ID}
 ```
 
-:::note
-
-If after performing the above steps you see the error `no commands to sign found` then check [this page](/reference/faq/ex5-problem) for detailed instructions on how to resolve it.
-
-:::
-
 Get the `execute_data`:
 
 <Tabs groupId="network" className='hidden'>
