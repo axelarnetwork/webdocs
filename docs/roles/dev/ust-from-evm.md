@@ -67,6 +67,7 @@ Third-party monitoring tools will automatically complete the remaining steps of 
 Wait a few minutes then check your Terra `{TERRA_DEST_ADDR}` account UST token balance.
 
 :::
+<<<<<<< HEAD:docs/roles/dev/ust-from-evm.md
 
 :::caution
 
@@ -74,6 +75,15 @@ If you attempt the remaining steps while third-party monitoring tools are active
 
 The remaining steps are needed only if there are no active third-party monitoring tools and you wish to complete the process manually.
 
+=======
+
+:::caution
+
+If you attempt the remaining steps while third-party monitoring tools are active then your commands are likely to conflict with third-party commands.  In this case you are likely to observe errors.  Deeper investigation might be needed to resolve conflicts and complete the transfer.
+
+The remaining steps are needed only if there are no active third-party monitoring tools and you wish to complete the process manually.
+
+>>>>>>> main:docs/roles/node/ust-from-evm.md
 :::
 
 Do not proceed to the next step until you have waited for sufficiently many block confirmations on the EVM chain.  Block confirmation minimums can be found at [Testnet resources](/releases/testnet), [Mainnet resources](/releases/mainnet).
@@ -128,6 +138,15 @@ Output should contain
 successfully started signing batched commands with ID {BATCH_ID}
 ```
 
+<<<<<<< HEAD:docs/roles/dev/ust-from-evm.md
+=======
+:::note
+
+If after performing the above steps you see the error `no commands to sign found` then check [this page](/reference/faq/ex5-problem) for detailed instructions on how to resolve it.
+
+:::
+
+>>>>>>> main:docs/roles/node/ust-from-evm.md
 Get the `execute_data`:
 
 <Tabs groupId="network" className='hidden'>

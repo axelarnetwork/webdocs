@@ -88,6 +88,7 @@ const sidebars = {
           type: 'category',
           label: 'Developer',
           items: [
+            'roles/dev/axelarjs',
             'roles/dev/axelar-cli',
             'roles/dev/ust-to-evm',
             'roles/dev/ust-from-evm',
