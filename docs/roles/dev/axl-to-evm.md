@@ -16,11 +16,7 @@ The Axelar network is under active development.  Use at your own risk with funds
 ## Prerequisites
 
 - Skill level: intermediate
-<<<<<<< HEAD:docs/roles/dev/axl-to-evm.md
 - You have downloaded the Axelar blockchain and are comfortable with [Basic node management](/roles/node/basic).
-=======
-- You have downloaded the Axelar blockchain and are comfortable with [Basic node management](basic).
->>>>>>> main:docs/roles/node/axl-to-evm.md
 - Your Axelar node has an account named `validator` that you control.  Let `{VALIDATOR_ADDR}` denote the address of your `validator` account.
 - Select an EVM chain `{EVM_CHAIN}` from: Ethereum, Avalanche, Fantom, Moonbeam, Polygon.
 - Complete steps from [Metamask for EVM chains](../user/metamask) to connect your Metamask to `{EVM_CHAIN}`.
@@ -41,11 +37,7 @@ The Axelar network is under active development.  Use at your own risk with funds
 
 ## Send AXL tokens from Axelar to an EVM chain
 
-<<<<<<< HEAD:docs/roles/dev/axl-to-evm.md
 Optional: Verify that your `validator` account has sufficient balance as per [Basic node management](/roles/node/basic).
-=======
-Optional: Verify that your `validator` account has sufficient balance as per [Basic node management](basic).
->>>>>>> main:docs/roles/node/axl-to-evm.md
 
 Link your `{EVM_DEST_ADDR}` to a new temporary deposit address on Axelar:
 
@@ -173,15 +165,6 @@ Output should contain
 successfully started signing batched commands with ID {BATCH_ID}
 ```
 
-<<<<<<< HEAD:docs/roles/dev/axl-to-evm.md
-=======
-:::note
-
-If after performing the above steps you see the error `no commands to sign found` then check [this page](/reference/faq/ex5-problem) for detailed instructions on how to resolve it.
-
-:::
-
->>>>>>> main:docs/roles/node/axl-to-evm.md
 Get the `execute_data`:
 
 <Tabs groupId="network" className='hidden'>
