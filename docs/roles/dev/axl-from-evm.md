@@ -231,7 +231,7 @@ Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 
 To send a transaction to `{GATEWAY_ADDR}` using Metamask: paste hex from `execute_data` above into "Hex Data" field.  (Do not send tokens!)
 
-Optional: Check your Axelar `validator` account AXL token balance as per [Basic node management](basic) so that you can observe balance change.
+Optional: Check your Axelar `validator` account AXL token balance as per [Basic node management](/roles/node/basic) so that you can observe balance change.
 
 Execute the pending transfer:
 

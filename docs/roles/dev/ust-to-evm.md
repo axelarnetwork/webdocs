@@ -90,7 +90,7 @@ The remaining steps are needed only if there are no active third-party monitorin
 
 :::
 
-Verify the IBC transaction by checking the balances of `{AXELAR_TEMP_ADDR}` as per [Basic node management](basic.md).  Output should contain something like:
+Verify the IBC transaction by checking the balances of `{AXELAR_TEMP_ADDR}` as per [Basic node management](/roles/node/basic.md).  Output should contain something like:
 
 ```
 balances:

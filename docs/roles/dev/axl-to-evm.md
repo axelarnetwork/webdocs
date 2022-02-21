@@ -37,7 +37,7 @@ The Axelar network is under active development.  Use at your own risk with funds
 
 ## Send AXL tokens from Axelar to an EVM chain
 
-Optional: Verify that your `validator` account has sufficient balance as per [Basic node management](basic).
+Optional: Verify that your `validator` account has sufficient balance as per [Basic node management](/roles/node/basic).
 
 Link your `{EVM_DEST_ADDR}` to a new temporary deposit address on Axelar:
 
