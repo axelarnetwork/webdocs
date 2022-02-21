@@ -1,6 +1,6 @@
 # Using Satellite
 
-Using Satellite to transfer assets across chains
+Using Satellite to transfer assets across chains.
 
 ## What is Satellite?
 
@@ -14,7 +14,7 @@ Satellite is used to transfers real assets across main networks. When using it f
 
 :::
 
-[Visit Satellite](https://satellite.axelar.network/)
+Click here to [Visit Satellite](https://satellite.axelar.network/)
 
 For a step-by-step walkthrough on how to use Satellite, check out the following tutorials created by the Axelar Team.
 
