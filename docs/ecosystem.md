@@ -1,4 +1,4 @@
-# Useful Links
+# Ecosystem tools and wallets
 
 ### Mainnet dashboards
 - [Axelar Scan](https://axelar.coinhippo.io/)

@@ -17,3 +17,6 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
     dark: useBaseUrl('/img/axelar-dark.png'),
   }}
 />
+
+* [Dashboards, wallets, faucet](/ecosystem)
+* Token contract addresses, releases: [Mainnet](/releases/mainnet) | [Testnet](/releases/testnet)

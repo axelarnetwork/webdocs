@@ -108,7 +108,7 @@ const sidebars = {
         'releases/testnet',
       ],
     },
-    'useful-links',
+    'ecosystem',
     'bug-bounty',
   ],
 };
