@@ -137,37 +137,61 @@ tail -f ~/.axelar_testnet/logs/axelard.log
 </TabItem>
 </Tabs>
 
+## Follow the upgrade path
+
+Your Axelar node will download the blockchain until it reaches the first `UPGRADE_HEIGHT` listed below.
+
 <Tabs groupId="network" className='hidden'>
 <TabItem value="mainnet" label="Mainnet" default>
 
-## Switch your Axelar mainnet node version
-
-Your Axelar node will download the blockchain until it reaches the `UPGRADE_HEIGHT` listed below.
-
-Network | `UPGRADE_HEIGHT` 
-------- | -------- 
-mainnet | 384000
-
-After your blockchain has reached `UPGRADE_HEIGHT` you will see a panic in the logs
-
-```
-panic: UPGRADE "v0.13" NEEDED at height: UPGRADE_HEIGHT: 
-```
-
-Launch your Axelar node again with version `0.13.6` of axelar-core:
-
-```bash
-KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a v0.13.6 -n mainnet
-```
-
-Your Axelar node will launch and resume downloading the blockchain.
+`CORE_VERSION`  | Start Height | `UPGRADE_HEIGHT`
+------------- | ------------- | -------------
+v0.10.7 | 0 | 384000
+v0.13.6 | 384001 | N/A
 
 </TabItem>
 
 <TabItem value="testnet" label="Testnet">
 
+[Note: testnet initial block height is 690489, not 0.]
+
+`CORE_VERSION`  | Start Height | `UPGRADE_HEIGHT`
+------------- | ------------- | -------------
+v0.13.6 | 690489 | 897350
+v0.14.0 | 897351 | N/A
+
 </TabItem>
 </Tabs>
+
+After your blockchain has reached `UPGRADE_HEIGHT` you will see a panic in the logs like
+
+```
+panic: UPGRADE {NAME} NEEDED at height: {UPGRADE_HEIGHT}: 
+```
+
+Launch your Axelar node again with the `CORE_VERSION` listed below:
+
+<Tabs groupId="network" className='hidden'>
+<TabItem value="mainnet" label="Mainnet" default>
+
+```bash
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a {CORE_VERSION} -n mainnet
+```
+
+</TabItem>
+
+<TabItem value="testnet" label="Testnet">
+
+```bash
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a {CORE_VERSION} -n testnet
+```
+
+</TabItem>
+</Tabs>
+
+Your Axelar node will launch and resume downloading the blockchain.
+
+Repeat this process for each entry in the table.
 
 ## Test whether your blockchain is downloaded
 
