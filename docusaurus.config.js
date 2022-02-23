@@ -12,7 +12,7 @@ const config = {
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/folder.ico',
+  favicon: 'img/icon_32x32.png',
   // organizationName: 'axelarnetwork', // Usually your GitHub org/user name.
   // projectName: 'axelar-core', // Usually your repo name.
 
