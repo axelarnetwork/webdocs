@@ -26,8 +26,8 @@ Moonbeam UST token address | `0xD34007Bb8A54B2FBb1D6647c5AbA04D507ABD21d`
 Moonbeam LUNA token address | `0xa1cF442E73045F1ea9960499FC8771454a01019D`
 Terra -> Axelar IBC channel id | `channel-78`
 Axelar -> Terra IBC channel id | `channel-0`
-Cosmoshub -> Axelar IBC channel id | `not yet available`
-Axelar -> Cosmoshub IBC channel id | `not yet available`
+Osmosis -> Axelar IBC channel id | `channel-185`
+Axelar -> Osmosis IBC channel id | `channel-2`
 
 ## Minimum transfer amounts
 
