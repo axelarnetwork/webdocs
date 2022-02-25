@@ -1,10 +1,12 @@
-# AxelarJS SDK
+---
+slug: /roles/dev/sdk
+---
 
-## Overview
+# Overview
 
 The AxelarJS SDK empowers developers to make requests into the Axelar network from a frontend.
 
-### Example use case: asset transfer
+## Example use case: asset transfer
 
 AxelarJS enables the transfer of crypto assets across any blockchain supported by Axelar.
 
