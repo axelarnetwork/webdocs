@@ -4,11 +4,11 @@ Variable  | Value
 ------------- | -------------
 `axelar-core` version | `v0.14.1`
 `tofnd` version | `v0.8.2`
-Ethereum Axelar Gateway contract address | `0xBC6fcce7c5487d43830a219CA6E7B83238B41e71`
-Ethereum AXL token address | `0x321C017c08b681b1a34909eb159ed128772a5Bbe`
-Ethereum UST token address | `0x1487F3faefE78792CDC48D87FF32aaC6650fd85f`
-Ethereum LUNA token address | `0x7Aa125543B9D4a361f58aC1Ff3Bea86eAF6D948B`
-Ethereum Fake USDC token address | `0x772dF70ff68C8dEa1863794824410e90e46Cd433`
+Ropsten Ethereum Axelar Gateway contract address | `0xBC6fcce7c5487d43830a219CA6E7B83238B41e71`
+Ropsten Ethereum AXL token address | `0x321C017c08b681b1a34909eb159ed128772a5Bbe`
+Ropsten Ethereum UST token address | `0x1487F3faefE78792CDC48D87FF32aaC6650fd85f`
+Ropsten Ethereum LUNA token address | `0x7Aa125543B9D4a361f58aC1Ff3Bea86eAF6D948B`
+Ropsten Ethereum Fake USDC token address | `0x772dF70ff68C8dEa1863794824410e90e46Cd433`
 Avalanche Axelar Gateway contract address | `0xC249632c2D40b9001FE907806902f63038B737Ab`
 Avalanche AXL token address | `0x46Cc87ea84586C03bB2109ED9B33F998d40B7623`
 Avalanche UST token address | `0x43F4600b552089655645f8c16D86A5a9Fa296bc3`
