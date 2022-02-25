@@ -9,9 +9,10 @@ Transfer UST tokens from Terra to an EVM chain using the terminal.
 
 :::danger
 
-The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
+The Axelar network is under active development. Use at your own risk with funds you're comfortable using. See [Terms of use](/terms-of-use).
 
 :::
+
 ## Prerequisites
 
 - Skill level: intermediate
@@ -46,6 +47,7 @@ echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet link {EVM_C
 </Tabs>
 
 Output should contain
+
 ```
 successfully linked {AXELAR_TEMP_ADDR} and {EVM_DEST_ADDR}
 ```
@@ -58,7 +60,8 @@ There are several ways to do IBC.
 
 ### IBC from a web wallet
 
-Use a web wallet such as Keplr.  See [Transfer Terra assets to EVM chains using Satellite | Axelar Network](https://axelar.network/transfer-terra-assets-to-evm-chains-using-satellite).
+Use a web wallet such as Keplr. See [Transfer Terra assets to EVM chains using Satellite | Axelar Network](https://axelar.network/transfer-terra-assets-to-evm-chains-using-satellite).
+
 ### IBC from the terminal
 
 You need shell access to a Terra node with at least `{AMOUNT}` balance of UST tokens in an account called `terra-validator`.
@@ -76,19 +79,19 @@ Wait a few minutes for the IBC relayer to relay your transaction to Axelar.
 
 Third-party monitoring tools will automatically complete the remaining steps of this process.
 
-Wait a few minutes then check your Metamask for the UST tokens.  Don't forget to import the UST token into Metamask so you can see your balance as described in [Metamask for EVM chains](../user/metamask).
+Wait a few minutes then check your Metamask for the UST tokens. Don't forget to import the UST token into Metamask so you can see your balance as described in [Metamask for EVM chains](/roles/user/metamask).
 
 :::
 
 :::caution
 
-If you attempt the remaining steps while third-party monitoring tools are active then your commands are likely to conflict with third-party commands.  In this case you are likely to observe errors.  Deeper investigation might be needed to resolve conflicts and complete the transfer.
+If you attempt the remaining steps while third-party monitoring tools are active then your commands are likely to conflict with third-party commands. In this case you are likely to observe errors. Deeper investigation might be needed to resolve conflicts and complete the transfer.
 
 The remaining steps are needed only if there are no active third-party monitoring tools and you wish to complete the process manually.
 
 :::
 
-Verify the IBC transaction by checking the balances of `{AXELAR_TEMP_ADDR}` as per [Basic node management](/roles/node/basic.md).  Output should contain something like:
+Verify the IBC transaction by checking the balances of `{AXELAR_TEMP_ADDR}` as per [Basic node management](/roles/node/basic.md). Output should contain something like:
 
 ```
 balances:
@@ -98,7 +101,7 @@ balances:
 
 :::note
 
-You will not see `UST`, `uusd` or a similar token denomination for `{IBC_DENOM}`.  IBC token denominations look something like `ibc/6F4968A73F90CF7DE6394BF937D6DF7C7D162D74D839C13F53B41157D315E05F`
+You will not see `UST`, `uusd` or a similar token denomination for `{IBC_DENOM}`. IBC token denominations look something like `ibc/6F4968A73F90CF7DE6394BF937D6DF7C7D162D74D839C13F53B41157D315E05F`
 
 :::
 
@@ -106,7 +109,7 @@ Get `{IBC_DENOM}` from [Testnet resources](/releases/testnet) or [Mainnet resour
 
 The remaining steps are similar to [Transfer AXL tokens from Axelar to an EVM chain using the terminal](axl-to-evm).
 
-Confirm the deposit transaction.  Look for `{TX_HASH}` in the output of the previous command.
+Confirm the deposit transaction. Look for `{TX_HASH}` in the output of the previous command.
 
 <Tabs groupId="network" className='hidden'>
 <TabItem value="mainnet" label="Mainnet" default>
@@ -179,13 +182,13 @@ Use Metamask to send a transaction on `{EVM_CHAIN}` with the `execute_data` to t
 
 :::danger
 
-Post your transaction to the correct chain!  Set your Metamask network to `{EVM_CHAIN}`.  
+Post your transaction to the correct chain! Set your Metamask network to `{EVM_CHAIN}`.
 
 :::
 
 :::caution
 
-Manually increase the gas limit to 5 million gas (5000000).  If you don't do this then the transaction will fail due to insufficient gas and you will not receive your tokens.
+Manually increase the gas limit to 5 million gas (5000000). If you don't do this then the transaction will fail due to insufficient gas and you will not receive your tokens.
 
 Before you click "confirm": select "EDIT", change "Gas Limit" to 5000000, and "Save"
 
@@ -194,9 +197,11 @@ Before you click "confirm": select "EDIT", change "Gas Limit" to 5000000, and "S
 :::tip
 
 Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
+
 ### 1. Documentation
 
 [Testnet resources](/releases/testnet), [Mainnet resources](/releases/mainnet).
+
 ### 2. Terminal
 
 <Tabs groupId="network" className='hidden'>
@@ -218,8 +223,8 @@ Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 
 :::
 
-To send a transaction to `{GATEWAY_ADDR}` using Metamask: paste hex from `execute_data` above into "Hex Data" field.  (Do not send tokens!)
+To send a transaction to `{GATEWAY_ADDR}` using Metamask: paste hex from `execute_data` above into "Hex Data" field. (Do not send tokens!)
 
 You should see `{AMOUNT}` of asset AXL in your `{EVM_CHAIN}` Metamask account.
-    
-Congratulations!  You have transferred AXL tokens from Axelar to an external EVM chain!
+
+Congratulations! You have transferred AXL tokens from Axelar to an external EVM chain!

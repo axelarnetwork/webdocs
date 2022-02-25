@@ -1,4 +1,8 @@
-# Axelar Network CLI
+---
+slug: /roles/dev/cli
+---
+
+# Overview
 
 To see a list of Axelar Network CLI commands that can be run, go to our [CLI documentation](https://github.com/axelarnetwork/axelar-core/tree/main/docs/cli)
 

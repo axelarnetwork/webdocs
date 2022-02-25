@@ -88,12 +88,25 @@ const sidebars = {
           type: 'category',
           label: 'Developer',
           items: [
-            'roles/dev/axelarjs',
-            'roles/dev/axelar-cli',
-            'roles/dev/ust-to-evm',
-            'roles/dev/ust-from-evm',
-            'roles/dev/axl-to-evm',
-            'roles/dev/axl-from-evm',
+            {
+              type: 'category',
+              label: 'AxelarJS SDK',
+              items: [
+                'roles/dev/sdk/axelarjs',
+                'roles/dev/sdk/deposit-address-demo',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'CLI',
+              items: [
+                'roles/dev/cli/axelar-cli',
+                'roles/dev/cli/ust-to-evm',
+                'roles/dev/cli/ust-from-evm',
+                'roles/dev/cli/axl-to-evm',
+                'roles/dev/cli/axl-from-evm',
+              ],
+            },
           ],
         },
       ],
