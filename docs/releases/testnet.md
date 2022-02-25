@@ -45,6 +45,7 @@ Asset symbol | Ethereum | non-Ethereum EVM | Cosmos/IBC
 AXL | 100 AXL | 10 AXL | 0.1 AXL
 UST | 100 UST | 10 UST | 0.1 UST
 LUNA | 1 LUNA | 0.1 LUNA | 0.001 LUNA
+USDC | 100 USDC | 10 USDC | 0.1 USDC
 
 ## Transaction Fees
 
