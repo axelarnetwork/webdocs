@@ -40,4 +40,6 @@ AxelarJS employs security measures to protect our services from abuse. Currently
 
 ## Demo
 
-See AxelarJS in action: [deposit-address-demo](https://github.com/axelarnetwork/deposit-address-demo)
+See AxelarJS in action: [Deposit address demo](sdk/deposit-address-demo)
+
+Run the demo on your machine: [deposit-address-demo GitHub repo](https://github.com/axelarnetwork/deposit-address-demo)

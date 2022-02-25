@@ -93,6 +93,7 @@ const sidebars = {
               label: 'AxelarJS SDK',
               items: [
                 'roles/dev/sdk/axelarjs',
+                'roles/dev/sdk/deposit-address-demo',
               ],
             },
             {
