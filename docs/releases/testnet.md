@@ -31,8 +31,8 @@ Moonbeam LUNA token address | `0xa1cF442E73045F1ea9960499FC8771454a01019D`
 Moonbeam Fake USDC token address | `0x80C65A8CAf599e9630984bC53b60F886006D2860`
 Terra -> Axelar IBC channel id | `channel-78`
 Axelar -> Terra IBC channel id | `channel-0`
-Osmosis -> Axelar IBC channel id | `channel-185`
-Axelar -> Osmosis IBC channel id | `channel-2`
+Osmosis -> Axelar IBC channel id | `channel-184`
+Axelar -> Osmosis IBC channel id | `channel-3`
 
 ## Minimum transfer amounts
 
