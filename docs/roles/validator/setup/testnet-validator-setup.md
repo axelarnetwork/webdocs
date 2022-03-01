@@ -1,88 +1,176 @@
-# Testnet Validator Instructions
+# Manual setup
 
-## install jq
-```bash
-sudo apt install jq
+```mdx-code-block
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
 ```
-## Get Binaries
-```bash
-# create a directory where we will store our binaries temporarily
-mkdir binaries && cd binaries
-# get axelar-core binary
-wget https://github.com/axelarnetwork/axelar-core/releases/download/v0.13.6/axelard-linux-amd64-v0.13.6
-# get tofnd binary
-wget https://github.com/axelarnetwork/tofnd/releases/download/v0.9.1/tofnd-linux-amd64-v0.9.1
 
-# rename it
+## Prerequisites
+
+- Ubuntu (tested on 18.04)
+- `sudo apt-get install wget liblz4-tool aria2 jq -y`
+
+## Get Binaries
+
+```bash
+# create a temp dir for binaries
+mkdir binaries && cd binaries
+
+# get axelard, tofnd binaries and rename
+wget https://github.com/axelarnetwork/axelar-core/releases/download/v0.13.6/axelard-linux-amd64-v0.13.6
+wget https://github.com/axelarnetwork/tofnd/releases/download/v0.9.1/tofnd-linux-amd64-v0.9.1
 mv axelard-linux-amd64-v0.13.6 axelard
 mv tofnd-linux-amd64-v0.9.1 tofnd
-# change permissions
+
+# make binaries executable
 chmod +x *
+
 # move to usr bin
 sudo mv * /usr/bin/
+
+# clean up temp dir
+cd .. && rmdir binaries
+
 # check versions
 axelard version
 tofnd --help
 ```
-## create keys
+
+## Generate keys
+
 ```bash
 axelard keys add broadcaster
 axelard keys add validator
 tofnd -m create
-# save and delete
-cat .tofnd/export
-rm .tofnd/export
 ```
-## Set variables
+
+Your `tofnd` secret mnemonic is in a file `.tofnd/export`. Save this mnemonic somewhere safe and delete the file `.tofnd/export`.
+
+## Set environment variables
+
+<Tabs groupId="network">
+<TabItem value="mainnet" label="Mainnet" default>
+
 ```bash
-echo export MONIKER=PUT_YOUR_MONIKER_HERE >> $HOME/.profile 
-echo export CHAIN_ID=axelar-testnet-lisbon-3 >> $HOME/.profile 
+echo export CHAIN_ID=axelar-dojo-1 >> $HOME/.profile
+```
+
+</TabItem>
+
+<TabItem value="testnet" label="Testnet">
+
+```bash
+echo export CHAIN_ID=axelar-testnet-lisbon-3 >> $HOME/.profile
+```
+
+</TabItem>
+</Tabs>
+
+```bash
+echo export MONIKER=PUT_YOUR_MONIKER_HERE >> $HOME/.profile
 VALIDATOR_OPERATOR_ADDRESS=`axelard keys show validator --bech val --output json | jq -r .address`
 BROADCASTER_ADDRESS=`axelard keys show broadcaster --output json | jq -r .address`
-echo export VALIDATOR_OPERATOR_ADDRESS=$VALIDATOR_OPERATOR_ADDRESS >> $HOME/.profile 
-echo export BROADCASTER_ADDRESS=$BROADCASTER_ADDRESS >> $HOME/.profile 
-# for keyring password it's better to edit the file and add it manually, so prevent getting it saved in bash history :)
-echo export KEYRING_PASSWORD=PUT_YOUR_KEYRING_PASSWORD_HERE >> $HOME/.profile 
+echo export VALIDATOR_OPERATOR_ADDRESS=$VALIDATOR_OPERATOR_ADDRESS >> $HOME/.profile
+echo export BROADCASTER_ADDRESS=$BROADCASTER_ADDRESS >> $HOME/.profile
+```
+
+:::caution Protect your keyring password
+
+The following instructions instruct you to store your keyring plaintext password in a file on disk. This instruction is safe only if you can prevent unauthorized access to the file. Use your discretion---substitute your own preferred method for securing your keyring password.
+
+:::
+
+Choose a secret `{KEYRING_PASSWORD}` and add the following line to `$HOME/.profile`:
+
+```
+echo export KEYRING_PASSWORD=PUT_YOUR_KEYRING_PASSWORD_HERE >> $HOME/.profile
+```
+
+Apply your changes
+
+```bash
 source $HOME/.profile
 ```
 
-## configuration setup
+## Configuration setup
+
+Initialize your Axelar node, fetch configuration, genesis, seeds.
+
+<Tabs groupId="network">
+<TabItem value="mainnet" label="Mainnet" default>
+
 ```bash
-# have to make two tabs here, one for mainnet and one testnet
 axelard init $MONIKER --chain-id $CHAIN_ID
-# download modified config used in axelar - suggest team to do it in `init`
 wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml -O $HOME/.axelar/config/config.toml
 wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml -O $HOME/.axelar/config/app.toml
+wget https://axelar-mainnet.s3.us-east-2.amazonaws.com/genesis.json -O $HOME/.axelar/config/genesis.json
+wget https://axelar-mainnet.s3.us-east-2.amazonaws.com/seeds.txt -O $HOME/.axelar/config/seeds.txt
 
-# download genesis file
-wget https://axelar-testnet.s3.us-east-2.amazonaws.com/genesis.json -O $HOME/.axelar/config/genesis.json
-# download latest seeds
-wget https://axelar-testnet.s3.us-east-2.amazonaws.com/seeds.txt -O $HOME/.axelar/config/seeds.txt
 # enter seeds to your config.json file
 sed -i.bak 's/seeds = \"\"/seeds = \"'$(cat $HOME/.axelar/config/seeds.txt)'\"/g' $HOME/.axelar/config/config.toml
+
 # set external ip to your config.json file
 sed -i.bak 's/external_address = \"\"/external_address = \"'"$(curl -4 ifconfig.co)"':26656\"/g' $HOME/.axelar/config/config.toml
 ```
 
+</TabItem>
+
+<TabItem value="testnet" label="Testnet">
+
+```bash
+axelard init $MONIKER --chain-id $CHAIN_ID
+wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml -O $HOME/.axelar_testnet/config/config.toml
+wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml -O $HOME/.axelar_testnet/config/app.toml
+wget https://axelar-testnet.s3.us-east-2.amazonaws.com/genesis.json -O $HOME/.axelar_testnet/config/genesis.json
+wget https://axelar-testnet.s3.us-east-2.amazonaws.com/seeds.txt -O $HOME/.axelar_testnet/config/seeds.txt
+
+# enter seeds to your config.json file
+sed -i.bak 's/seeds = \"\"/seeds = \"'$(cat $HOME/.axelar_testnet/config/seeds.txt)'\"/g' $HOME/.axelar_testnet/config/config.toml
+
+# set external ip to your config.json file
+sed -i.bak 's/external_address = \"\"/external_address = \"'"$(curl -4 ifconfig.co)"':26656\"/g' $HOME/.axelar_testnet/config/config.toml
+```
+
+</TabItem>
+</Tabs>
 
 ## Sync From Snapshot
+
+<Tabs groupId="network">
+<TabItem value="mainnet" label="Mainnet" default>
+
 ```bash
-# have to make two tabs here, one for mainnet and one testnet
 axelard unsafe-reset-all
-sudo apt-get update -y
-sudo apt-get install wget liblz4-tool aria2 -y
-URL=`curl https://quicksync.io/axelar.json|jq -r '.[] |select(.file=="axelartestnet-lisbon-3-pruned")|.url'`
+URL=`curl https://quicksync.io/axelar.json | jq -r '.[] |select(.file=="axelar-dojo-1-pruned")|.url'`
 echo $URL
 cd $HOME/.axelar/
 wget -O - $URL | lz4 -d | tar -xvf -
 cd $HOME
 ```
 
+</TabItem>
+
+<TabItem value="testnet" label="Testnet">
+
+```bash
+axelard unsafe-reset-all
+URL=`curl https://quicksync.io/axelar.json | jq -r '.[] |select(.file=="axelartestnet-lisbon-3-pruned")|.url'`
+echo $URL
+cd $HOME/.axelar_testnet/
+wget -O - $URL | lz4 -d | tar -xvf -
+cd $HOME
+```
+
+</TabItem>
+</Tabs>
+
 ## Create services
 
-### Axelar
+Use `systemctl` to set up services for `axelard`, `tofnd`, `vald`.
+
+### axelard
+
 ```bash
-# axelard service
 sudo tee <<EOF >/dev/null /etc/systemd/system/axelard.service
 [Unit]
 Description=Axelard Cosmos daemon
@@ -99,11 +187,12 @@ LimitNOFILE=4096
 WantedBy=multi-user.target
 EOF
 
-
 cat /etc/systemd/system/axelard.service
 sudo systemctl enable axelard
 ```
-### tofnd service
+
+### tofnd
+
 ```bash
 sudo tee <<EOF >/dev/null /etc/systemd/system/tofnd.service
 [Unit]
@@ -125,10 +214,10 @@ cat /etc/systemd/system/tofnd.service
 sudo systemctl enable tofnd
 ```
 
-### Vald service
+### vald
 
 ```bash
-# check if we need chain-id in vald service
+# TODO is --chain-id necessary?
 sudo tee <<EOF >/dev/null /etc/systemd/system/vald.service
 [Unit]
 Description=Vald daemon
@@ -149,17 +238,22 @@ sudo systemctl enable vald
 ```
 
 ## Start all services
-```bash
-# first start axelard and make sure its all caught up with the latest block height
-# then start tofnd as vald listens on tofnd port
-# at last start vald
 
+Order of operations:
+
+1. `axelard`: ensure it's fully synced before proceeding
+2. `tofnd`: required for `vald`
+3. `vald`
+
+```bash
 sudo systemctl daemon-reload
 sudo systemctl restart axelard
 sudo systemctl restart tofnd
 sudo systemctl restart vald
 ```
+
 ## Check logs
+
 ```bash
 # change log settings to persistent
 sed -i 's/#Storage=auto/Storage=persistent/g' /etc/systemd/journald.conf
@@ -170,14 +264,20 @@ journalctl -u tofnd.service -f -n 100
 journalctl -u vald.service -f -n 100
 ```
 
-## Register proxy
+## Register broadcaster proxy
+
+:::note
+
+Fund your `validator` and `broadcaster` accounts before proceeding.
+
+:::
+
 ```bash
-# make sure you fund your validator and broadcaster address before moving ahead
-# first register the broadcaster address with your validator account
 axelard tx snapshot register-proxy $BROADCASTER_ADDRESS --from validator --chain-id $CHAIN_ID
 ```
 
 ## Create validator
+
 ```bash
 # set temporary variables for create-validator command
 IDENTITY="YOUR_KEYBASE_IDENTITY"
@@ -198,7 +298,6 @@ axelard tx staking create-validator --yes \
  --chain-id $CHAIN_ID
 ```
 
-## register external chains
-```bash
-axelard tx nexus register-chain-maintainer ethereum --from broadcaster --chain-id $CHAIN_ID 
-```
+## Register external chains
+
+See [Support external chains](../external-chains/overview.md).
