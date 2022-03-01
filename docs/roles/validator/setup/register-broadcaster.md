@@ -5,11 +5,11 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
-Axelar validators exchange messages with one another via the Axelar blockchain.  Each validator sends these messages from a separate `broadcaster` account.
+Axelar validators exchange messages with one another via the Axelar blockchain. Each validator sends these messages from a separate `broadcaster` account.
 
 :::caution
 
-A validator can only register one `broadcaster` address throughout its lifetime.  This `broadcaster` address cannot be changed after it has been registered.  If you need to register a different proxy address then you must also create an entirely new validator.
+A validator can only register one `broadcaster` address throughout its lifetime. This `broadcaster` address cannot be changed after it has been registered. If you need to register a different proxy address then you must also create an entirely new validator.
 
 :::
 
@@ -41,10 +41,10 @@ Your `broadcaster` address `{BROADCASTER_ADDR}` is stored in a text file:
 </TabItem>
 </Tabs>
 
-## Fund your broadcaster account
+## Fund your validator and broadcaster accounts
 
 **Testnet:**
-Go to [Axelar faucet](http://faucet.testnet.axelar.dev/) and send some free AXL testnet tokens to `{BROADCASTER_ADDR}`.
+Go to [Axelar faucet](http://faucet.testnet.axelar.dev/) and send some free AXL testnet tokens to both `{BROADCASTER_ADDR}` and `{VALIDATOR_ADDR}`.
 
 ## Register your broadcaster account
 
