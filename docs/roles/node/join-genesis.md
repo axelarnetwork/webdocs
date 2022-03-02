@@ -3,41 +3,44 @@
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
+import UpgradePathMainnet from '/md/mainnet/upgrade-path.md'
+import UpgradePathTestnet from '/md/testnet/upgrade-path.md'
 ```
 
 Start your Axelar node and download the blockchain.
 
 :::danger
 
-The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
+The Axelar network is under active development. Use at your own risk with funds you're comfortable using. See [Terms of use](/terms-of-use).
 
 :::
 
 :::tip
 
-These instructions syncronize your Axelar node using the Axelar peer-to-peer network.  You can syncronize your node more quickly by downloading a recent snapshot of the blockchain as per [Quick sync](join).
+These instructions syncronize your Axelar node using the Axelar peer-to-peer network. You can syncronize your node more quickly by downloading a recent snapshot of the blockchain as per [Quick sync](join).
 
 :::
 
 ## Prerequisites
 
-* **Operating system:**  MacOS or Ubuntu (tested on 18.04)
-* **Hardware:** 4 cores, 8-16GB RAM, 512 GB drive, arm64 or amd64. Recommended 6-8 cores, 16-32 GB RAM, 1 TB+ drive.
-* **Software:**
-    * Install [`jq`](https://stedolan.github.io/jq/download/).
-    * Increase the maximum number of open files on your system.  Example: `ulimit -n 16384`.  You may wish to add this command to your shell profile so that you don't need to execute it next time you restart your machine.
+- **Operating system:** MacOS or Ubuntu (tested on 18.04)
+- **Hardware:** 4 cores, 8-16GB RAM, 512 GB drive, arm64 or amd64. Recommended 6-8 cores, 16-32 GB RAM, 1 TB+ drive.
+- **Software:**
+  - Install [`jq`](https://stedolan.github.io/jq/download/).
+  - Increase the maximum number of open files on your system. Example: `ulimit -n 16384`. You may wish to add this command to your shell profile so that you don't need to execute it next time you restart your machine.
 
 ## Choose a keyring password
 
-Your Axelar keyring is encrypted with a password you choose.  Your password must have at least 8 characters.
+Your Axelar keyring is encrypted with a password you choose. Your password must have at least 8 characters.
 
-In what follows you will execute a shell script to join the Axelar network.  Your keyring password is supplied to the shell script via a `KEYRING_PASSWORD` environment variable.
+In what follows you will execute a shell script to join the Axelar network. Your keyring password is supplied to the shell script via a `KEYRING_PASSWORD` environment variable.
 
 :::caution
 
 In the following instructions you must substitute your chosen keyring password for `my-secret-password`.
 
 :::
+
 ## Join the Axelar network
 
 Clone the [`axelerate-community`](https://github.com/axelarnetwork/axelarate-community) repo:
@@ -141,24 +144,16 @@ tail -f ~/.axelar_testnet/logs/axelard.log
 
 Your Axelar node will download the blockchain until it reaches the first `UPGRADE_HEIGHT` listed below.
 
-<Tabs groupId="network" className='hidden'>
+<Tabs groupId="network">
 <TabItem value="mainnet" label="Mainnet" default>
 
-`CORE_VERSION`  | Start Height | `UPGRADE_HEIGHT`
-------------- | ------------- | -------------
-v0.10.7 | 0 | 384000
-v0.13.6 | 384001 | N/A
+<UpgradePathMainnet />
 
 </TabItem>
 
 <TabItem value="testnet" label="Testnet">
 
-[Note: testnet initial block height is 690489, not 0.]
-
-`CORE_VERSION`  | Start Height | `UPGRADE_HEIGHT`
-------------- | ------------- | -------------
-v0.13.6 | 690489 | 897350
-v0.14.1 | 897351 | N/A
+<UpgradePathTestnet />
 
 </TabItem>
 </Tabs>
@@ -166,7 +161,7 @@ v0.14.1 | 897351 | N/A
 After your blockchain has reached `UPGRADE_HEIGHT` you will see a panic in the logs like
 
 ```
-panic: UPGRADE {NAME} NEEDED at height: {UPGRADE_HEIGHT}: 
+panic: UPGRADE {NAME} NEEDED at height: {UPGRADE_HEIGHT}:
 ```
 
 Launch your Axelar node again with the `CORE_VERSION` listed below:
@@ -195,7 +190,7 @@ Repeat this process for each entry in the table.
 
 ## Test whether your blockchain is downloaded
 
-Eventually your Axelar node will download the entire Axelar blockchain and exit `catching_up` mode.  At that time your logs will show a new block added to the blockchain every 5 seconds.
+Eventually your Axelar node will download the entire Axelar blockchain and exit `catching_up` mode. At that time your logs will show a new block added to the blockchain every 5 seconds.
 
 You can test whether your Axelar node has exited `catching_up` mode:
 
@@ -204,14 +199,15 @@ curl localhost:26657/status | jq '.result.sync_info'
 ```
 
 Look for the field `catching_up`:
-* `true`: you are still downloading the blockchain.
-* `false`: you have finished downloading the blockchain.
+
+- `true`: you are still downloading the blockchain.
+- `false`: you have finished downloading the blockchain.
 
 ## Next steps
 
-Congratulations!  You joined the Axelar network and downloaded the blockchain.
+Congratulations! You joined the Axelar network and downloaded the blockchain.
 
 Learn what you can do with Axelar:
 
-* [Basic node management](basic)
-* Tutorial: transfer UST or LUNA tokens from the Terra blockchain to EVM-compatible blockchains such as Avalanche, Ethereum, Fantom, Moonbeam, Polygon.
+- [Basic node management](basic)
+- Tutorial: transfer UST or LUNA tokens from the Terra blockchain to EVM-compatible blockchains such as Avalanche, Ethereum, Fantom, Moonbeam, Polygon.

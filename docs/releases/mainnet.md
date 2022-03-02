@@ -31,10 +31,6 @@ import UpgradePath from '/md/mainnet/upgrade-path.md'
 | Terra -> Axelar IBC channel id            | `channel-19`                                 |
 | Axelar -> Terra IBC channel id            | `channel-0`                                  |
 
-## Upgrade Path
-
-<UpgradePath />
-
 ## Minimum transfer amounts
 
 For each asset X in (AXL, UST, LUNA) and each external chain Y in (Ethereum, non-Ethereum EVM, Cosmos/IBC): any transfer of asset X to chain Y must exceed the minimum amount given in the table below. (If Y is the origin chain for asset X then this transfer is called "redeem"/"burn"; there is no minimum in this case.)
@@ -52,3 +48,7 @@ If the total amount of asset X sent to a deposit address A is smaller than the m
 The Network will assess a processing fee of **0.1%** percent on any transaction through the protocol. For example, a transfer of 100 of asset X from Chain Y to Chain Z will result in 99.9 of token X in the destination address (specified by the user) on Chain Z.
 
 Additionally, users should be prepared to pay for any transaction fees assessed by the source chain when transferring funds into a deposit account. These fees are typically in the form of native tokens in that chain.
+
+## Upgrade Path
+
+<UpgradePath />
