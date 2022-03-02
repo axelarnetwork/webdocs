@@ -1,7 +1,7 @@
 # Mainnet
 
 ```mdx-code-block
-import UpgradePath from './upgrade.md'
+import UpgradePath from '/md/mainnet/upgrade-path.md'
 ```
 
 | Variable                                  | Value                                        |
