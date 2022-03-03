@@ -46,17 +46,17 @@ const config = {
           srcDark: 'img/logo-dark.png'
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          // },
-          // {
-          //   href: 'https://github.com/facebook/docusaurus',
-          //   label: 'GitHub',
-          //   position: 'right',
-          // },
+          {
+            type: 'doc',
+            docId: 'intro',
+            position: 'left',
+            label: 'Tutorial',
+          },
+          {
+            href: 'https://github.com/facebook/docusaurus',
+            label: 'GitHub',
+            position: 'right',
+          },
         ],
       },
       footer: {
@@ -106,6 +106,10 @@ const config = {
               {
                 label: 'Telegram',
                 href: 'https://t.me/axelarcommunity',
+              },
+              {
+                label: 'Community discussions',
+                href: 'https://community.axelar.network',
               },
             ],
           },
