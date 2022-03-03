@@ -48,9 +48,9 @@ const config = {
         items: [
           // {
           //   type: 'doc',
-          //   docId: 'intro',
+          //   docId: 'ecosystem',
           //   position: 'left',
-          //   label: 'Tutorial',
+          //   label: 'Dashboards and Tools',
           // },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
@@ -106,6 +106,10 @@ const config = {
               {
                 label: 'Telegram',
                 href: 'https://t.me/axelarcommunity',
+              },
+              {
+                label: 'Community Discussions',
+                href: 'https://community.axelar.network',
               },
             ],
           },

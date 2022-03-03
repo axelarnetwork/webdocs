@@ -1,22 +1,24 @@
-# Ecosystem tools and wallets
+# Dashboards and Tools
 
-### Mainnet dashboards
-- [Axelar Scan](https://axelar.coinhippo.io/)
+## Dashboards
+
+### Mainnet
+
+- [Axelarscan](https://axelarscan.io/)
 - [Big Dipper](https://axelar-mainnet.chainode.tech/)
 - [Mintscan](https://www.mintscan.io/axelar/blocks)
 - [Metrika](https://app.metrika.co/dashboard/axelar)
 
-### Testnet dashboards
-- [Axelar Scan](https://axelar-testnet.coinhippo.io/)
+### Testnet
+
+- [Axelarscan](https://testnet.axelarscan.io/)
 - [Big Dipper](https://axelar-testnet.chainode.tech/)
 - [Mintscan](https://testnet.mintscan.io/axelar-testnet)
 
+## Testnet faucet
 
-### Testnet faucet
-- https://faucet.testnet.axelar.dev 
+- https://faucet.testnet.axelar.dev
 
-### Keplr wallet
+## Keplr wallet
+
 - https://wallet.keplr.app/
-
-### Community discussions
-- https://community.axelar.network 
