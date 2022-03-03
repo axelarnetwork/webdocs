@@ -18,5 +18,5 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
   }}
 />
 
-* [Dashboards, wallets, faucet](/ecosystem)
+* [Dashboards and Tools](/ecosystem)
 * Token contract addresses, releases: [Mainnet](/releases/mainnet) | [Testnet](/releases/testnet)
