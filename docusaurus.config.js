@@ -116,6 +116,20 @@ const config = {
         theme: lightCodeTheme,
         darkTheme: darkCodeTheme,
       },
+      // Enable the Algolia search bar
+      algolia: {
+        // insert API keys from DocSearch crawler after activating account and configuring Dashboard
+        appId: 'YOUR_APP_ID',
+        apiKey: 'YOUR_SEARCH_API_KEY',
+        indexName: 'YOUR_INDEX_NAME',
+        
+        contextualSearch: true,
+        externalUrlRegex: 'external\\.com|domain\\.com',
+        searchParameters: {},
+        searchPagePath: 'search',
+  
+        //... other Algolia params
+      },
     }),
 };
 
