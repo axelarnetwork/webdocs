@@ -6,12 +6,6 @@ slug: /roles/dev/sdk
 
 The AxelarJS SDK empowers developers to make requests into the Axelar network from a frontend.
 
-:::note Coming soon!
-
-The `axelarjs-sdk` nodejs repo is currently private and can be accessed only with a NPM token. The repo will be made public shortly.
-
-:::
-
 ## Example use case: asset transfer
 
 AxelarJS enables the transfer of crypto assets across any blockchain supported by Axelar.
@@ -39,8 +33,6 @@ These microservices facilitate the relay of cross-chain transactions that run on
 AxelarJS is under active development. The API might change. Please ensure you pull the latest from this repo post issues to Github.
 
 ### User access restrictions
-
-The `axelarjs-sdk` nodejs repo is currently private and can be accessed only with a NPM token. The repo will be made public shortly.
 
 AxelarJS employs security measures to protect our services from abuse. Currently every invocation of `getDepositAddress` requires frontend users to connect to a Web3 wallet and sign a message with a one-time code. Invocations to the API are also rate limited.
 
