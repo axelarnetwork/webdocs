@@ -48,15 +48,15 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: 'intro',
+            docId: '/ecosystem',
             position: 'left',
-            label: 'Tutorial',
+            label: 'Dashboards and Tools',
           },
-          {
-            href: 'https://github.com/facebook/docusaurus',
-            label: 'GitHub',
-            position: 'right',
-          },
+          // {
+          //   href: 'https://github.com/facebook/docusaurus',
+          //   label: 'GitHub',
+          //   position: 'right',
+          // },
         ],
       },
       footer: {
