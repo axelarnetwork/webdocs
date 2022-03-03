@@ -48,7 +48,7 @@ const config = {
         items: [
           {
             type: 'doc',
-            docId: '/ecosystem',
+            docId: 'ecosystem',
             position: 'left',
             label: 'Dashboards and Tools',
           },
