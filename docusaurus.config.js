@@ -46,12 +46,12 @@ const config = {
           srcDark: 'img/logo-dark.png'
         },
         items: [
-          {
-            type: 'doc',
-            docId: 'ecosystem',
-            position: 'left',
-            label: 'Dashboards and Tools',
-          },
+          // {
+          //   type: 'doc',
+          //   docId: 'ecosystem',
+          //   position: 'left',
+          //   label: 'Dashboards and Tools',
+          // },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',
