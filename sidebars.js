@@ -122,6 +122,7 @@ const sidebars = {
         'releases/testnet',
       ],
     },
+    'ecosytem',
     'bug-bounty',
   ],
 };
