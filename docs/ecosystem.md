@@ -1,5 +1,3 @@
-# Ecosystem tools and wallets
-
 ### Mainnet dashboards
 - [Axelar Scan](https://axelar.coinhippo.io/)
 - [Big Dipper](https://axelar-mainnet.chainode.tech/)
@@ -17,6 +15,3 @@
 
 ### Keplr wallet
 - https://wallet.keplr.app/
-
-### Community discussions
-- https://community.axelar.network 

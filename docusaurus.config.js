@@ -46,12 +46,12 @@ const config = {
           srcDark: 'img/logo-dark.png'
         },
         items: [
-          // {
-          //   type: 'doc',
-          //   docId: 'intro',
-          //   position: 'left',
-          //   label: 'Tutorial',
-          // },
+          {
+            type: 'doc',
+            docId: 'ecosystem',
+            position: 'left',
+            label: 'Dashboards and Tools',
+          },
           // {
           //   href: 'https://github.com/facebook/docusaurus',
           //   label: 'GitHub',
@@ -106,6 +106,10 @@ const config = {
               {
                 label: 'Telegram',
                 href: 'https://t.me/axelarcommunity',
+              },
+              {
+                label: 'Community Discussions',
+                href: 'https://community.axelar.network',
               },
             ],
           },
