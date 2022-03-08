@@ -13,8 +13,6 @@ Most Axelar roles (end user, node operator, validator, etc) do not need the info
 
 :::
 
-[TODO link to video for chain deployment?]
-
 A controller is a special Axelar account with privileges to execute certain `axelard` CLI commands for administrative tasks such as
 
 - Add a new EVM chain to the Axelar network
@@ -49,7 +47,7 @@ Prepare a JSON file `evm-chain.json` with information about the new EVM chain. E
 Make Axelar aware of the new EVM chain.
 
 ```bash
-axelard tx evm add-chain Avalanche multisig path/to/evm-chain-params.json --from controller
+axelard tx evm add-chain Avalanche multisig path/to/evm-chain.json --from controller
 ```
 
 Call a validator vote to confirm new EVM chain.
@@ -133,9 +131,7 @@ Deploy the above bytecode to a smart contract on the EVM chain.
 
 :::tip
 
-Deploy the gateway contract however you wish. One option is to use [version 5 of MyEtherWallet](https://v5.myetherwallet.com/) with Metamask. You need native tokens for the EVM chain to pay gas.
-
-[TODO link to deployment video?]
+Deploy the gateway contract however you wish. One option is to use [version 5 of MyEtherWallet](https://v5.myetherwallet.com/) with Metamask as suggested in the video [Onboarding Avalanche to the Axelar Network](https://www.youtube.com/watch?v=iZgqneh7s88).
 
 :::
 
@@ -144,7 +140,7 @@ Note the following from your deployment transaction:
 - `{EVM_GATEWAY_TX_HASH}` transaction ID on the EVM chain
 - `{EVM_GATEWAY_ADDR}` address of the new gateway smart contract on the EVM chain
 
-Wait until the transaction `{EVM_GATEWAY_TX_HASH}` has received enough block confirmations on the EVM chain. (This number was set in the `confirmation_height` in the file `evm-chain-params.json` when you executed `add-chain`.)
+Wait until the transaction `{EVM_GATEWAY_TX_HASH}` has received enough block confirmations on the EVM chain. (This number was set in the `confirmation_height` in the file `evm-chain.json` when you executed `add-chain`.)
 
 Call a validator vote to confirm gateway deployment.
 
@@ -177,7 +173,7 @@ Send the batched commands to the gateway contract on the new EVM chain just like
 
 - Note the `{EVM_TOKEN_TX_HASH}` for the transaction.
 
-Wait until the transaction `{EVM_TOKEN_TX_HASH}` has received enough block confirmations on the EVM chain. (This number was set in the `confirmation_height` in the file `evm-chain-params.json` when you executed `add-chain`.)
+Wait until the transaction `{EVM_TOKEN_TX_HASH}` has received enough block confirmations on the EVM chain. (This number was set in the `confirmation_height` in the file `evm-chain.json` when you executed `add-chain`.)
 
 For each token call a validator vote to confirm deployment of the ERC-20 contract.
 
