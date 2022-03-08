@@ -1,4 +1,4 @@
-# Testnet network upgrade
+# Testnet network upgrade: 2022-mar-08
 
 Validator instructions for 2022-mar-08 testnet upgrade to axelar-core `v0.15.0`.
 
@@ -30,8 +30,8 @@ Example using join scripts in [axelarate-community git repo](https://github.com/
 # in axelarate-community repo
 git checkout main
 git pull
-KEYRING_PASSWORD="pw-1" ./scripts/node.sh
-KEYRING_PASSWORD="pw-1" TOFND_PASSWORD="pw-2" ./scripts/validator-tools-host.sh
+KEYRING_PASSWORD="pw-1" ./scripts/node.sh -n testnet
+KEYRING_PASSWORD="pw-1" TOFND_PASSWORD="pw-2" ./scripts/validator-tools-host.sh -n testnet
 ```
 
 The join scripts should automatically pull the new binary from [Testnet releases](https://docs.axelar.dev/releases/testnet). Or you can add the flag `-a v0.15.0` to force a specific version.

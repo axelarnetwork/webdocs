@@ -119,12 +119,16 @@ const sidebars = {
       collapsed: false,
       items: [
         'releases/mainnet',
-        'releases/testnet',
         {
           type: 'category',
           label: 'Testnet',
+          link: {type: 'doc', id: 'releases/testnet'},
           items: [
-            'releases/testnet/upgrade',
+            {
+              type: 'doc',
+              id: 'releases/testnet/upgrade',
+              label: 'Upgrade', // sidebar label
+            },
           ],
         },
       ],
