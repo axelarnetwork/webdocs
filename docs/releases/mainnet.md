@@ -30,6 +30,10 @@ import UpgradePath from '/md/mainnet/upgrade-path.md'
 | Moonbeam LUNA token address               | `0x31DAB3430f3081dfF3Ccd80F17AD98583437B213` |
 | Terra -> Axelar IBC channel id            | `channel-19`                                 |
 | Axelar -> Terra IBC channel id            | `channel-0`                                  |
+| Osmosis -> Axelar IBC channel id          | `channel-208`                                |
+| Axelar -> Osmosis IBC channel id          | `channel-3`                                  |
+| Cosmoshub -> Axelar IBC channel id        | `channel-293`                                |
+| Axelar -> Cosmoshub IBC channel id        | `channel-2`                                  |
 
 ## Minimum transfer amounts
 

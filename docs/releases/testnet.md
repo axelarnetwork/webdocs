@@ -6,7 +6,7 @@ import UpgradePath from '/md/testnet/upgrade-path.md'
 
 | Variable                                         | Value                                        |
 | ------------------------------------------------ | -------------------------------------------- |
-| `axelar-core` version                            | `v0.14.1`                                    |
+| `axelar-core` version                            | `v0.15.0`                                    |
 | `tofnd` version                                  | `v0.8.2`                                     |
 | Ropsten Ethereum Axelar Gateway contract address | `0xBC6fcce7c5487d43830a219CA6E7B83238B41e71` |
 | Ropsten Ethereum AXL token address               | `0x321C017c08b681b1a34909eb159ed128772a5Bbe` |
@@ -37,6 +37,8 @@ import UpgradePath from '/md/testnet/upgrade-path.md'
 | Axelar -> Terra IBC channel id                   | `channel-0`                                  |
 | Osmosis -> Axelar IBC channel id                 | `channel-184`                                |
 | Axelar -> Osmosis IBC channel id                 | `channel-3`                                  |
+| Cosmoshub -> Axelar IBC channel id               | `channel-238`                                |
+| Axelar -> Cosmoshub IBC channel id               | `channel-4`                                  |
 
 ## Minimum transfer amounts
 
