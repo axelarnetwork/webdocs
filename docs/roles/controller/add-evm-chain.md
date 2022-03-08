@@ -16,7 +16,7 @@ For clarity, this article targets the Avalanche EVM chain. Substitute your own E
 ## Prerequisites
 
 - Prerequisites for [Controller operations](../controller.md)
-- Axelar validators with enough stake have configured their nodes to support the new EVM chain as per [Support external chains](validator/external-chains/overview.md).
+- Axelar validators with enough stake have configured their nodes to support the new EVM chain as per [Support external chains](../validator/external-chains/overview.md).
 - You will deploy smart contracts to the new EVM chain---you need enough native tokens to pay gas fees on that chain. Example: if deploying to Avalanche then you need AVAX tokens, etc.
 
 ## Add the new EVM chain
@@ -38,11 +38,11 @@ Call a validator vote to confirm new EVM chain.
 axelard tx evm confirm-chain avalanche --from controller
 ```
 
-Each validator votes `true` or `false` according to whether it is configured to support the new EVM chain as per [Support external chains](validator/external-chains/overview.md).
+Each validator votes `true` or `false` according to whether it is configured to support the new EVM chain as per [Support external chains](../validator/external-chains/overview.md).
 
 Optional: check your logs for messages of the form `EVM chain Avalanche confirmation result is true`.
 
-Now that the new EVM chain has been added, validators need to register as maintainers for the new chain as per [Support external chains](validator/external-chains/overview.md).
+Now that the new EVM chain has been added, validators need to register as maintainers for the new chain as per [Support external chains](../validator/external-chains/overview.md).
 
 If a large enough portion of validator stake has registered as a maintainer of the new EVM chain then that chain can be activated by a special transaction signed by the Axelar governance account. Contact the Axelar team to request such a transaction.
 
