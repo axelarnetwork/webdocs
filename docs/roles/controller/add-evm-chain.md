@@ -1,28 +1,25 @@
-# Add a new EVM chain to the Axelar network
+# Add a new EVM chain
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
-## Prerequisites
-
-- [Controller operations](overview.md)
-- Axelar validators with enough stake have configured their nodes to support your desired new EVM chain as per [Support external chains](validator/external-chains/overview.md).
-- You will deploy smart contracts to the new EVM chain---you need enough native tokens to pay gas fees on that chain. Example: if deploying to Avalanche then you need AVAX tokens, etc.
+Learn how to add a new EVM chain to the Axelar network.
 
 :::tip Example
 
-For clarity, this article targets the following chains and tokens:
-
-- EVM chain: Avalanche
-- tokens: UST, LUNA (Terra native tokens), AXL (Axelar native token)
-
-Substitute your own EVM chain and tokens as desired.
+For clarity, this article targets the Avalanche EVM chain. Substitute your own EVM chain as desired.
 
 :::
 
-## Add a new EVM chain to the Axelar network
+## Prerequisites
+
+- Prerequisites for [Controller operations](../controller.md)
+- Axelar validators with enough stake have configured their nodes to support the new EVM chain as per [Support external chains](validator/external-chains/overview.md).
+- You will deploy smart contracts to the new EVM chain---you need enough native tokens to pay gas fees on that chain. Example: if deploying to Avalanche then you need AVAX tokens, etc.
+
+## Add the new EVM chain
 
 Prepare a JSON file `evm-chain.json` with information about the new EVM chain. Examples of files that have already been used to add EVM chains to Axelar:
 

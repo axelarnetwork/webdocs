@@ -1,10 +1,28 @@
-# Deploy a Cosmos token to any EVM chain
+# Deploy a new Cosmos token
 
-[TODO fix]
+Learn how to deploy a new Cosmos token to any EVM chain supported by Axelar.
 
-The new EVM chain has a gateway. It remains only to deploy a new ERC-20 token contract for each asset you wish to support on the new chain. In this example we will deploy contracts for AXL, UST, and LUNA tokens.
+:::tip Example
 
-Create Axelar commands to deploy ERC-20 token contracts for AXL, UST, LUNA.
+For clarity, this article deploys the following tokens to the following EVM chains:
+
+- Cosmos tokens: UST, LUNA (Terra native tokens), AXL (Axelar native token)
+- EVM chains: Avalanche
+
+Substitute your own Cosmos tokens and EVM chains as desired.
+
+Repeat these instructions for each additional EVM chain.
+
+:::
+
+## Prerequisites
+
+- Prerequisites for [Controller operations](../controller.md)
+- You will deploy smart contracts to the EVM chain---you need enough native tokens to pay gas fees on that chain. Example: if deploying to Avalanche then you need AVAX tokens, etc.
+
+## Deploy and confirm ERC-20 token contracts
+
+Create Axelar gateway commands to deploy ERC-20 token contracts for AXL, UST, LUNA.
 
 ```bash
 axelard tx evm create-deploy-token avalanche axelarnet uaxl "Axelar" AXL 6 0 10000000 --from controller

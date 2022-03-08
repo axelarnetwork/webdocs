@@ -1,13 +1,9 @@
----
-slug: /roles/controller
----
-
 # Controller operations
 
 Learn how to:
 
-- [Add a new EVM chain to the Axelar network](add-evm-chain.md)
-- [Add a new Cosmos token or ERC-20 token to Axelar network](deploy-tokens.md)
+- [Add a new EVM chain to the Axelar network](controller/add-evm-chain)
+- [Add a new Cosmos token or ERC-20 token to Axelar network](controller/deploy-token)
 - [coming soon] Initiate keygen and key rotation among validators for a EVM chain
 
 A _controller_ is a special Axelar account with privileges to execute certain `axelard` CLI commands for the above tasks.
