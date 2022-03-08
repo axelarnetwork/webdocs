@@ -5,24 +5,9 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
-Learn how to add support for a new EVM chain to Axelar.
-
-:::note Most participants do not need this information
-
-Most Axelar roles (end user, node operator, validator, etc) do not need the information in this article. Many CLI commands in this article can be executed only from a controller account on Axelar network.
-
-:::
-
-A controller is a special Axelar account with privileges to execute certain `axelard` CLI commands for administrative tasks such as
-
-- Add a new EVM chain to the Axelar network
-- Deploy a new token to a EVM chain
-- Initiate keygen and key rotation among validators for a EVM chain
-
 ## Prerequisites
 
-- Your fully-synced Axelar node has an account you control named `controller`. You might also have an account named `validator`. All accounts have enough AXL tokens to pay transaction fees for Axelar network.
-- Your `controller` account is a registered controller on the Axelar network.
+- [Controller operations](overview.md)
 - Axelar validators with enough stake have configured their nodes to support your desired new EVM chain as per [Support external chains](validator/external-chains/overview.md).
 - You will deploy smart contracts to the new EVM chain---you need enough native tokens to pay gas fees on that chain. Example: if deploying to Avalanche then you need AVAX tokens, etc.
 
@@ -149,38 +134,3 @@ axelard tx evm confirm-gateway-deployment avalanche {EVM_GATEWAY_TX_HASH} {EVM_G
 ```
 
 Optional: check your logs for messages of the form `Avalanche gateway confirmation result is true`.
-
-## Deploy ERC-20 token contracts
-
-The new EVM chain has a gateway. It remains only to deploy a new ERC-20 token contract for each asset you wish to support on the new chain. In this example we will deploy contracts for AXL, UST, and LUNA tokens.
-
-Create Axelar commands to deploy ERC-20 token contracts for AXL, UST, LUNA.
-
-```bash
-axelard tx evm create-deploy-token avalanche axelarnet uaxl "Axelar" AXL 6 0 10000000 --from controller
-axelard tx evm create-deploy-token avalanche terra uusd "Axelar Wrapped UST" UST 6 0 10000000 --from controller
-axelard tx evm create-deploy-token avalanche terra uluna "Axelar Wrapped LUNA" LUNA 6 0 100000 --from controller
-```
-
-Sign the above token deployment commands into a batch for the gateway.
-This transaction does not need controller permission---you may sign it with any account, such as your node's `validator` account.
-
-```bash
-axelard tx evm sign-commands avalanche --from validator
-```
-
-Send the batched commands to the gateway contract on the new EVM chain just like any other batch as described in [Send AXL to an EVM chain](dev/cli/axl-to-evm.md). [TODO refactor batch command deployment into a self-contained doc]
-
-- Note the `{EVM_TOKEN_TX_HASH}` for the transaction.
-
-Wait until the transaction `{EVM_TOKEN_TX_HASH}` has received enough block confirmations on the EVM chain. (This number was set in the `confirmation_height` in the file `evm-chain.json` when you executed `add-chain`.)
-
-For each token call a validator vote to confirm deployment of the ERC-20 contract.
-
-```bash
-axelard tx evm confirm-erc20-token avalanche axelarnet uaxl {EVM_TOKEN_TX_HASH} --from controller
-axelard tx evm confirm-erc20-token avalanche terra uusd {EVM_TOKEN_TX_HASH} --from controller
-axelard tx evm confirm-erc20-token avalanche terra uluna {EVM_TOKEN_TX_HASH} --from controller
-```
-
-Optional: check your logs for messages of the form `token XXX deployment confirmation result on chain avalanche is true`.
