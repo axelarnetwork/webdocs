@@ -37,7 +37,7 @@ This transaction does not need controller permission---you may sign it with any 
 axelard tx evm sign-commands avalanche --from validator
 ```
 
-Send the batched commands to the gateway contract on the new EVM chain just like any other batch as described in [Send AXL to an EVM chain](dev/cli/axl-to-evm.md). [TODO refactor batch command deployment into a self-contained doc]
+Send the batched commands to the gateway contract on the new EVM chain just like any other batch as described in [Send AXL to an EVM chain](../dev/cli/axl-to-evm.md). [TODO refactor batch command deployment into a self-contained doc]
 
 - Note the `{EVM_TOKEN_TX_HASH}` for the transaction.
 
