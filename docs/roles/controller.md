@@ -41,7 +41,10 @@ Substitute your own EVM chain and tokens as desired.
 
 ## Add a new EVM chain to the Axelar network
 
-Prepare a JSON file `evm-chain-params.json` with information about the new EVM chain. See axelarate-community repo [link] for examples of files that have already been used to add EVM chains to Axelar.
+Prepare a JSON file `evm-chain.json` with information about the new EVM chain. Examples of files that have already been used to add EVM chains to Axelar:
+
+- [Mainnet examples](https://github.com/axelarnetwork/axelarate-community/tree/main/resources/mainnet/evm-chain-params)
+- [Testnet examples](https://github.com/axelarnetwork/axelarate-community/tree/main/resources/testnet/evm-chain-params)
 
 Make Axelar aware of the new EVM chain.
 
