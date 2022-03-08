@@ -120,6 +120,13 @@ const sidebars = {
       items: [
         'releases/mainnet',
         'releases/testnet',
+        {
+          type: 'category',
+          label: 'Testnet',
+          items: [
+            'releases/testnet/upgrade',
+          ],
+        },
       ],
     },
     'ecosystem',
