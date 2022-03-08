@@ -136,6 +136,18 @@ const sidebars = {
     'ecosystem',
     'bug-bounty',
   ],
+
+  controllerSidebar: [
+    {
+      type: 'category',
+      label: 'Controller',
+      link: {type: 'doc', id: 'roles/controller'},
+      items: [
+        'roles/controller/add-evm-chain',
+        'roles/controller/deploy-token',    
+      ],
+    },
+  ],
 };
 
 module.exports = sidebars;
