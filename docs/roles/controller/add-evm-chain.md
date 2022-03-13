@@ -26,6 +26,8 @@ Prepare a JSON file `evm-chain.json` with information about the new EVM chain. E
 - [Mainnet examples](https://github.com/axelarnetwork/axelarate-community/tree/main/resources/mainnet/evm-chain-params)
 - [Testnet examples](https://github.com/axelarnetwork/axelarate-community/tree/main/resources/testnet/evm-chain-params)
 
+The params file above specifies the contract bytecode in base64 to be used for the gateway, token, and the burnable contracts. These can be obtained by compiling the appropriate version of the [contracts repo](https://github.com/axelarnetwork/solidity-cgp-gateway).
+
 Make Axelar aware of the new EVM chain.
 
 ```bash
