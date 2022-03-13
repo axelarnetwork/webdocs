@@ -53,7 +53,7 @@ axelard tx evm sign-commands avalanche --from validator
 
 Submit `execute_data` shown below to the gateway contract on Avalanche.
 
-``bash
+```bash
 axelard q evm latest-batched-commands avalanche
 ```
 
