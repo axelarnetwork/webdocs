@@ -53,7 +53,7 @@ axelard tx evm sign-commands avalanche --from validator
 
 Submit `execute_data` shown below to the gateway contract on Avalanche.
 
-``bash
+```bash
 axelard q evm latest-batched-commands avalanche
 ```
 
@@ -61,7 +61,7 @@ axelard q evm latest-batched-commands avalanche
 axelard q evm gateway-address avalanche
 ```
 
-Submitting this batched data is similar to the description in `Send AXL to an EVM chain`.
+Submitting this batched data is similar to the description in [Send AXL to an EVM chain](../dev/cli/axl-to-evm.md).
 
 - Note the `[EVM_TOKEN_TX_HASH]` for the transaction to the gateway contract.
 
