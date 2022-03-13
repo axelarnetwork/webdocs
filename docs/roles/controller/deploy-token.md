@@ -20,8 +20,7 @@ Repeat these instructions for each additional EVM chain.
 
 - Prerequisites for [Controller operations](../controller.md)
 - You will deploy smart contracts to the EVM chain---you need enough native tokens to pay gas fees on that chain. Example: if deploying to Avalanche then you need AVAX tokens, etc.
-- The EVM chain has been added to the network using instructions [here](./add-evm-chain.md).
-- For a Cosmos token, it's been registered on the Cosmos chain in the network.
+- The EVM chain has been added to the network.
 
 ## Deploy and confirm ERC-20 token contracts
 
@@ -64,7 +63,7 @@ axelard q evm gateway-address avalanche
 
 Submitting this batched data is similar to the description in [Send AXL to an EVM chain](../dev/cli/axl-to-evm.md).
 
-- Note the `{EVM_TOKEN_TX_HASH}` for the transaction to the gateway contract.
+- Note the `[EVM_TOKEN_TX_HASH]` for the transaction to the gateway contract.
 
 Wait until the transaction `[EVM_TOKEN_TX_HASH]` has received enough block confirmations on the EVM chain. (This number was set in the `confirmation_height` in the file `evm-chain.json` when you executed `add-chain`.)
 
