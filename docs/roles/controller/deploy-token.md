@@ -30,7 +30,6 @@ If registering a token whose native chain is different than the EVM chain being 
 
 ```bash
 axelard tx evm create-deploy-token avalanche [native chain] [asset] [erc-20 token name] [erc-20 symbol] [decimals] [capacity] --from controller --gas auto --gas-adjustment 1.4
-
 axelard tx evm create-deploy-token avalanche terra uusd "Axelar Wrapped UST" UST 6 0 --from controller --gas auto --gas-adjustment 1.4
 ```
 
@@ -40,7 +39,6 @@ Retrieve the ERC-20 info from it's token contract. For `WAVAX`, it can found [he
 
 ```bash
 axelard tx evm create-deploy-token avalanche [native chain] [asset] [erc-20 token name] [erc-20 symbol] [decimals] [capacity] --address [token contract] --from controller --gas auto --gas-adjustment 1.4
-
 axelard tx evm create-deploy-token avalanche terra wavax-wei "Wrapped AVAX" WAVAX 18 0 --address 0xb31f66aa3c1e785363f0875a1b74e27b85fd66c7 --from controller --gas auto --gas-adjustment 1.4
 ```
 
@@ -71,7 +69,6 @@ For each token call a validator vote to confirm deployment of the ERC-20 contrac
 
 ```bash
 axelard tx evm confirm-erc20-token avalanche terra uusd [EVM_TOKEN_TX_HASH] --from controller --gas auto --gas-adjustment 1.4
-
 axelard tx evm confirm-erc20-token avalanche avalanche wavax-wei [EVM_TOKEN_TX_HASH] --from controller --gas auto --gas-adjustment 1.4
 ```
 
