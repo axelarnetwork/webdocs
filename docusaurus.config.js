@@ -67,7 +67,7 @@ const config = {
             items: [
               {
                 label: 'Bug bounty',
-                href: 'https://immunefi.com/bounty/axelarnetwork/',
+                href: 'bug-bounty',
               },
               {
                 label: 'Terms of use',
