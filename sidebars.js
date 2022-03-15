@@ -134,7 +134,11 @@ const sidebars = {
       ],
     },
     'ecosystem',
-    'bug-bounty',
+    {
+      type: 'link',
+      label: 'Bug bounty',
+      href: 'https://immunefi.com/bounty/axelarnetwork/',
+    },
   ],
 
   controllerSidebar: [
