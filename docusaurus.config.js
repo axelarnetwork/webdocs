@@ -67,7 +67,7 @@ const config = {
             items: [
               {
                 label: 'Bug bounty',
-                href: 'bug-bounty',
+                href: '/bug-bounty',
               },
               {
                 label: 'Terms of use',
