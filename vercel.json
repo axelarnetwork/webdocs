@@ -7,10 +7,6 @@
     {
       "source": "/resources/testnet-releases",
       "destination": "/releases/testnet"
-    },
-    {
-      "source": "/bug-bounty",
-      "destination": "https://immunefi.com/bounty/axelarnetwork/"
     }
   ]
 }
