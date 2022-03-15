@@ -1,12 +1,16 @@
 {
-    "redirects": [
-        {
-            "source": "/resources/mainnet-releases",
-            "destination": "/releases/mainnet"
-        },
-        {
-            "source": "/resources/testnet-releases",
-            "destination": "/releases/testnet"
-        }
-    ]
+  "redirects": [
+    {
+      "source": "/resources/mainnet-releases",
+      "destination": "/releases/mainnet"
+    },
+    {
+      "source": "/resources/testnet-releases",
+      "destination": "/releases/testnet"
+    },
+    {
+      "source": "/bug-bounty",
+      "destination": "https://immunefi.com/bounty/axelarnetwork/"
+    }
+  ]
 }
