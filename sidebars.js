@@ -89,14 +89,7 @@ const sidebars = {
           type: 'category',
           label: 'Developer',
           items: [
-            {
-              type: 'category',
-              label: 'AxelarJS SDK',
-              items: [
-                'roles/dev/sdk/axelarjs',
-                'roles/dev/sdk/deposit-address-demo',
-              ],
-            },
+            'roles/dev/sdk',
             {
               type: 'category',
               label: 'CLI',
