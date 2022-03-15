@@ -7,13 +7,13 @@ import TabItem from '@theme/TabItem';
 
 Stake AXL tokens on the Axelar network.
 
-Choose an amount `{STAKE_AMOUNT}` of AXL tokens you wish to stake.  `{STAKE_AMOUNT}` is denominated in `uaxl` where `1 AXL = 1000000 uaxl`.
+Choose an amount `{STAKE_AMOUNT}` of AXL tokens you wish to stake. `{STAKE_AMOUNT}` is denominated in `uaxl` where `1 AXL = 1000000 uaxl`.
 
-* You need at least 1 AXL to participate in consensus on the Axelar network
-* You need enough stake to get into the "active set" of size 50: if 50 or more other validators have more stake than you then you cannot participate in consensus.
-* Optional: you need at least 2% of total bonded stake to participate in multi-party cryptography protocols with other validators.
+- You need at least 1 AXL to participate in consensus on the Axelar network
+- You need enough stake to get into the "active set" of size 50: if 50 or more other validators have more stake than you then you cannot participate in consensus.
+- Optional: you need at least 2% of total bonded stake to participate in multi-party cryptography protocols with other validators.
 
-Choose a moniker `{MY_MONIKER}` for your validator.  There are many other parameters you may choose for your validator.  For simplicity these instructions specify default values for all other parameters.
+Choose a moniker `{MY_MONIKER}` for your validator. There are many other parameters you may choose for your validator. For simplicity these instructions specify default values for all other parameters.
 
 Make your `validator` account into an Axelar validator by staking AXL tokens:
 

@@ -3,6 +3,7 @@
 Set up your Fantom Opera node.
 
 ## Prerequisites
+
 - [Setup your Axelar validator](/roles/validator/setup)
 - Minimum hardware requirements: 4 vCPU+, 100GB+ free storage space.
 - MacOS or Ubuntu 18.04+
@@ -11,6 +12,7 @@ Set up your Fantom Opera node.
 - [Official Documentation](https://docs.fantom.foundation/staking/run-a-read-only-node)
 
 ## Install required dependencies
+
 In order to build the `go-opera`, you first need to install all of the required dependencies.
 
 ##### 1. Update and install `build-essential`
@@ -34,6 +36,7 @@ export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 ## Install Go-Opera
 
 ##### 1. Checkout and build go-opera
+
 Use the commands below to clone the `go-opera` repository, checkout correct version and compile the binary.
 
 ```bash
@@ -67,7 +70,7 @@ tmux new -s fantom
 Once you're inside the newly created tmux session, start the `opera-go`:
 
 ```bash
-./opera --genesis testnet.g --http --http.addr=0.0.0.0 --http.vhosts="*" --http.corsdomain="*" --ws --ws.origins="*" 
+./opera --genesis testnet.g --http --http.addr=0.0.0.0 --http.vhosts="*" --http.corsdomain="*" --ws --ws.origins="*"
 ```
 
 Your node will now start to synchronize with the network. It will take several hours before the node is fully synced.
@@ -92,9 +95,6 @@ In order for Axelar Network to connect to your Fantom node, your `rpc_addr` shou
 ```bash
 http://IP:PORT
 ```
+
 Example:
-```http://192.168.192.168:18545```
-
-
-
-
+`http://192.168.192.168:18545`

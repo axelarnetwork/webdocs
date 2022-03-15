@@ -1,35 +1,36 @@
 // @ts-check
 // Note: type annotations allow type checking and IDEs autocompletion
 
-const lightCodeTheme = require('prism-react-renderer/themes/github');
-const darkCodeTheme = require('prism-react-renderer/themes/dracula');
+const lightCodeTheme = require("prism-react-renderer/themes/github");
+const darkCodeTheme = require("prism-react-renderer/themes/dracula");
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
-  title: 'Axelar Docs',
-  tagline: 'Connecting Web3',
-  url: 'https://docs.axelar.dev/',
-  baseUrl: '/',
-  onBrokenLinks: 'throw',
-  onBrokenMarkdownLinks: 'warn',
-  favicon: 'img/axelar-favicon.svg',
+  title: "Axelar Docs",
+  tagline: "Connecting Web3",
+  url: "https://docs.axelar.dev/",
+  baseUrl: "/",
+  onBrokenLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
+  favicon: "img/axelar-favicon.svg",
   // organizationName: 'axelarnetwork', // Usually your GitHub org/user name.
   // projectName: 'axelar-core', // Usually your repo name.
 
   presets: [
     [
-      'classic',
+      "classic",
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          routeBasePath: '/',
-          sidebarPath: require.resolve('./sidebars.js'),
+          routeBasePath: "/",
+          sidebarPath: require.resolve("./sidebars.js"),
           // Please change this to your repo.
-          editUrl: 'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+          editUrl:
+            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
         blog: false,
         theme: {
-          customCss: require.resolve('./src/css/custom.css'),
+          customCss: require.resolve("./src/css/custom.css"),
         },
       }),
     ],
@@ -39,11 +40,11 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Axelar Network',
+        title: "Axelar Network",
         logo: {
-          alt: 'Axelar',
-          src: 'img/logo.png',
-          srcDark: 'img/logo-dark.png'
+          alt: "Axelar",
+          src: "img/logo.png",
+          srcDark: "img/logo-dark.png",
         },
         items: [
           // {
@@ -60,56 +61,56 @@ const config = {
         ],
       },
       footer: {
-        style: 'dark',
+        style: "dark",
         links: [
           {
-            title: 'Other',
+            title: "Other",
             items: [
               {
-                label: 'Bug bounty',
-                href: 'https://immunefi.com/bounty/axelarnetwork/',
+                label: "Bug bounty",
+                href: "https://immunefi.com/bounty/axelarnetwork/",
               },
               {
-                label: 'Terms of use',
-                to: '/terms-of-use',
+                label: "Terms of use",
+                to: "/terms-of-use",
               },
             ],
           },
           {
-            title: 'Links',
+            title: "Links",
             items: [
               {
-                label: 'Website',
-                href: 'https://axelar.network/',
+                label: "Website",
+                href: "https://axelar.network/",
               },
               {
-                label: 'Github',
-                href: 'https://github.com/axelarnetwork',
+                label: "Github",
+                href: "https://github.com/axelarnetwork",
               },
               {
-                label: 'Blog',
-                href: 'https://axelar.network/blog',
+                label: "Blog",
+                href: "https://axelar.network/blog",
               },
             ],
           },
           {
-            title: 'Community',
+            title: "Community",
             items: [
               {
-                label: 'Twitter',
-                href: 'https://twitter.com/axelarcore',
+                label: "Twitter",
+                href: "https://twitter.com/axelarcore",
               },
               {
-                label: 'Discord',
-                href: 'https://discord.gg/aRZ3Ra6f7D',
+                label: "Discord",
+                href: "https://discord.gg/aRZ3Ra6f7D",
               },
               {
-                label: 'Telegram',
-                href: 'https://t.me/axelarcommunity',
+                label: "Telegram",
+                href: "https://t.me/axelarcommunity",
               },
               {
-                label: 'Community Discussions',
-                href: 'https://community.axelar.network',
+                label: "Community Discussions",
+                href: "https://community.axelar.network",
               },
             ],
           },

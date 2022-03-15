@@ -3,12 +3,14 @@
 Set up your Avalanche Fuji Testnet node.
 
 ## Prerequisites
+
 - [Setup your Axelar validator](/roles/validator/setup)
 - Minimum hardware requirements: 8 AWS vCPU+, 16GB RAM, 100GB+ free storage space.
 - MacOS or Ubuntu 18.04+
 - [Official Documentation](https://docs.avax.network/build/tutorials/nodes-and-staking/run-avalanche-node)
 
 ## Install AvalancheGo
+
 In this guide we will be using a bash script created by the Avalanche team, which will automatically set up a running node with minimum user input required.
 
 ##### 1. Download `avalanchego-installer`
@@ -25,6 +27,7 @@ chmod 755 avalanchego-installer.sh
 ```
 
 The script will start and prompt you for information about your server environment. Follow the required steps, enter your network information and confirm the installation. The script will then create and start the `avalanchego.service` for you automatically. To check if the service is running or follow the logs, use the following commands:
+
 ```bash
 sudo systemctl status avalanchego
 sudo journalctl -u avalanchego -f
@@ -49,8 +52,7 @@ sudo systemctl start avalanchego
 
 Now you should be synchronizing on Fuji testnet network. Once the network is fully synced, you should see a message like:
 
-```health/service.go#130: "isBootstrapped" became healthy with: {"timestamp":"2021-12-27T21:35:36.879654389+01:00","duration":6943,"contiguousFailures":0,"timeOfFirstFailure":null}```
-
+`health/service.go#130: "isBootstrapped" became healthy with: {"timestamp":"2021-12-27T21:35:36.879654389+01:00","duration":6943,"contiguousFailures":0,"timeOfFirstFailure":null}`
 
 ## Test your Avalanche RPC connection
 
@@ -70,9 +72,6 @@ Axelar Network will be connecting to the C-Chain, which is the EVM compatible bl
 ```bash
 http://IP:PORT/ext/bc/C/rpc
 ```
+
 Example:
-```http://192.168.192.168:9650/ext/bc/C/rpc```
-
-
-
-
+`http://192.168.192.168:9650/ext/bc/C/rpc`

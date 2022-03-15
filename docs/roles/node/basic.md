@@ -5,16 +5,17 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
-Stop your node, backup your chain data, resume your node.  Check your AXL balance, get AXL tokens from the faucet.
+Stop your node, backup your chain data, resume your node. Check your AXL balance, get AXL tokens from the faucet.
 
 :::danger
 
-The Axelar network is under active development.  Use at your own risk with funds you're comfortable using.  See [Terms of use](/terms-of-use).
+The Axelar network is under active development. Use at your own risk with funds you're comfortable using. See [Terms of use](/terms-of-use).
 
 :::
+
 ## Prerequisites
 
-You have launched your Axelar node as per [Quick sync](join).  Perhaps you have not yet completed downloading the blockchain.
+You have launched your Axelar node as per [Quick sync](join). Perhaps you have not yet completed downloading the blockchain.
 
 <Tabs groupId="network">
 <TabItem value="mainnet" label="Mainnet" default>
@@ -62,7 +63,7 @@ Resume your stopped Axelar node.
 
 :::tip
 
-If your node is still in `catching_up` mode then you might need to use the `-a` flag in the following command to specify a different version of axelar-core depending on your current progress downloading the blockchain.  See [Join the Axelar testnet for the first time](join.md).
+If your node is still in `catching_up` mode then you might need to use the `-a` flag in the following command to specify a different version of axelar-core depending on your current progress downloading the blockchain. See [Join the Axelar testnet for the first time](join.md).
 
 :::
 
@@ -87,7 +88,7 @@ KEYRING_PASSWORD=my-secret-password ./scripts/node.sh
 
 :::tip
 
-A new account named `validator` was automatically created for you when you joined the Axelar network for the first time.  This is just a name---you are not (yet) a validator on the Axelar network.
+A new account named `validator` was automatically created for you when you joined the Axelar network for the first time. This is just a name---you are not (yet) a validator on the Axelar network.
 
 :::
 

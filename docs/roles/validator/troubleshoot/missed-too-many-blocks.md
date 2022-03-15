@@ -12,6 +12,6 @@ You can restore your validator to healthy status simply by waiting --- `missed_t
 
 :::tip
 
-If you missed 50 or more of the last 100 blocks then your validator status becomes `jailed`.  In this case, see [Unjail](../troubleshoot/unjail) for instructions on how to restore your validator to healthy status.
+If you missed 50 or more of the last 100 blocks then your validator status becomes `jailed`. In this case, see [Unjail](../troubleshoot/unjail) for instructions on how to restore your validator to healthy status.
 
 :::

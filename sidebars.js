@@ -18,60 +18,57 @@ const sidebars = {
 
   // But you can create a sidebar manually
   tutorialSidebar: [
-    'intro',
+    "intro",
     {
-      type: 'category',
-      label: 'Get started',
+      type: "category",
+      label: "Get started",
       collapsible: true,
       collapsed: false,
       items: [
         {
-          type: 'category',
-          label: 'Satellite user',
+          type: "category",
+          label: "Satellite user",
+          items: ["roles/user/satellite", "roles/user/metamask"],
+        },
+        {
+          type: "category",
+          label: "Node operator",
           items: [
-            'roles/user/satellite',
-            'roles/user/metamask',
+            "roles/node/join",
+            "roles/node/join-genesis",
+            "roles/node/basic",
           ],
         },
         {
-          type: 'category',
-          label: 'Node operator',
-          items: [
-            'roles/node/join',
-            'roles/node/join-genesis',
-            'roles/node/basic',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Validator',
+          type: "category",
+          label: "Validator",
           items: [
             {
-              type: 'category',
-              label: 'Setup',
+              type: "category",
+              label: "Setup",
               items: [
-                'roles/validator/setup/overview',
-                'roles/validator/setup/vald-tofnd',
-                'roles/validator/setup/backup',
-                'roles/validator/setup/register-broadcaster',
-                'roles/validator/setup/stake-axl',
-                'roles/validator/setup/health-check',
-                'roles/validator/setup/manual',
+                "roles/validator/setup/overview",
+                "roles/validator/setup/vald-tofnd",
+                "roles/validator/setup/backup",
+                "roles/validator/setup/register-broadcaster",
+                "roles/validator/setup/stake-axl",
+                "roles/validator/setup/health-check",
+                "roles/validator/setup/manual",
               ],
             },
             {
-              type: 'category',
-              label: 'Support external chains',
+              type: "category",
+              label: "Support external chains",
               items: [
-                'roles/validator/external-chains/overview',
-                'roles/validator/external-chains/avalanche',
-                'roles/validator/external-chains/ethereum',
-                'roles/validator/external-chains/fantom',
-                'roles/validator/external-chains/moonbeam',
-                'roles/validator/external-chains/polygon',
+                "roles/validator/external-chains/overview",
+                "roles/validator/external-chains/avalanche",
+                "roles/validator/external-chains/ethereum",
+                "roles/validator/external-chains/fantom",
+                "roles/validator/external-chains/moonbeam",
+                "roles/validator/external-chains/polygon",
               ],
             },
-            // Hide this section until the pages are updated and refreshed 
+            // Hide this section until the pages are updated and refreshed
             // {
             //   type: 'category',
             //   label: 'Troubleshoot',
@@ -86,26 +83,26 @@ const sidebars = {
           ],
         },
         {
-          type: 'category',
-          label: 'Developer',
+          type: "category",
+          label: "Developer",
           items: [
             {
-              type: 'category',
-              label: 'AxelarJS SDK',
+              type: "category",
+              label: "AxelarJS SDK",
               items: [
-                'roles/dev/sdk/axelarjs',
-                'roles/dev/sdk/deposit-address-demo',
+                "roles/dev/sdk/axelarjs",
+                "roles/dev/sdk/deposit-address-demo",
               ],
             },
             {
-              type: 'category',
-              label: 'CLI',
+              type: "category",
+              label: "CLI",
               items: [
-                'roles/dev/cli/axelar-cli',
-                'roles/dev/cli/ust-to-evm',
-                'roles/dev/cli/ust-from-evm',
-                'roles/dev/cli/axl-to-evm',
-                'roles/dev/cli/axl-from-evm',
+                "roles/dev/cli/axelar-cli",
+                "roles/dev/cli/ust-to-evm",
+                "roles/dev/cli/ust-from-evm",
+                "roles/dev/cli/axl-to-evm",
+                "roles/dev/cli/axl-from-evm",
               ],
             },
           ],
@@ -113,42 +110,42 @@ const sidebars = {
       ],
     },
     {
-      type: 'category',
-      label: 'Releases',
+      type: "category",
+      label: "Releases",
       collapsible: true,
       collapsed: false,
       items: [
-        'releases/mainnet',
+        "releases/mainnet",
         {
-          type: 'category',
-          label: 'Testnet',
-          link: {type: 'doc', id: 'releases/testnet'},
+          type: "category",
+          label: "Testnet",
+          link: { type: "doc", id: "releases/testnet" },
           items: [
             {
-              type: 'doc',
-              id: 'releases/testnet/upgrade',
-              label: 'Upgrade', // sidebar label
+              type: "doc",
+              id: "releases/testnet/upgrade",
+              label: "Upgrade", // sidebar label
             },
           ],
         },
       ],
     },
-    'ecosystem',
+    "ecosystem",
     {
-      type: 'link',
-      label: 'Bug bounty',
-      href: 'https://immunefi.com/bounty/axelarnetwork/',
+      type: "link",
+      label: "Bug bounty",
+      href: "https://immunefi.com/bounty/axelarnetwork/",
     },
   ],
 
   controllerSidebar: [
     {
-      type: 'category',
-      label: 'Controller',
-      link: {type: 'doc', id: 'roles/controller'},
+      type: "category",
+      label: "Controller",
+      link: { type: "doc", id: "roles/controller" },
       items: [
-        'roles/controller/add-evm-chain',
-        'roles/controller/deploy-token',    
+        "roles/controller/add-evm-chain",
+        "roles/controller/deploy-token",
       ],
     },
   ],
