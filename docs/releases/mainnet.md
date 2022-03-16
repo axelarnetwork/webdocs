@@ -6,7 +6,7 @@ import UpgradePath from '/md/mainnet/upgrade-path.md'
 
 | Variable                                  | Value                                        |
 | ----------------------------------------- | -------------------------------------------- |
-| `axelar-core` version                     | `v0.14.1`                                    |
+| `axelar-core` version                     | `v0.15.0`                                    |
 | `tofnd` version                           | `v0.8.2`                                     |
 | Ethereum Axelar Gateway contract address  | `0x4F4495243837681061C4743b74B3eEdf548D56A5` |
 | Ethereum AXL token address                | `0x3eacbDC6C382ea22b78aCc158581A55aaF4ef3Cc` |
