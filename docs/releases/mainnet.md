@@ -40,24 +40,27 @@ import UpgradePath from '/md/mainnet/upgrade-path.md'
 The Network (and thus the Satellite app) charges a base fee for all cross-chain transfers.
 This fee only depends on the source/destination chain and the asset and does NOT take a percentage from the transfer amount.
 When transferring an asset X from chain Y to chain Z, the transfer fee is the sum of per-chain fee for that asset.
-For e.g. a transfer of 1000 UST from Terra to Avalanche will have a fee of 1.5 UST, and so the recipient will get 998.5 UST.
+For e.g. a transfer of 1000 UST from Terra to Avalanche will have a fee of 1.5 UST (= 0.5 UST for Terra + 1.0 UST for Avalanche), and so the recipient will get 998.5 UST.
 
-| Asset symbol | Ethereum   | non-Ethereum EVM | Cosmos (Terra) |
-| ------------ | ---------- | ---------------- | -------------- |
-| UST          | 20 UST     | 1 UST            | 0.5 UST        |
-| LUNA         | 0.2 LUNA   | 0.01 LUNA        | 0.005 LUNA     |
+| Asset symbol | Ethereum | non-Ethereum EVM | Cosmos (Terra) |
+| ------------ | -------- | ---------------- | -------------- |
+| UST          | 20 UST   | 1 UST            | 0.5 UST        |
+| LUNA         | 0.2 LUNA | 0.01 LUNA        | 0.005 LUNA     |
 
 The current transfer fee can also be queried on the network with
+
 ```bash
 axelard q nexus transfer-fee [source chain] [destination chain] [amount]
 ```
 
 For e.g., querying the example transfer above (note `1 UST = 10^6 uusd`),
+
 ```bash
 axelard q nexus transfer-fee terra avalanche 1000000000uusd
 ```
 
 The per-chain fee info can be queried via
+
 ```bash
 axelard q nexus fee avalanche uusd
 ```
