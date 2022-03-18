@@ -35,23 +35,38 @@ import UpgradePath from '/md/mainnet/upgrade-path.md'
 | Cosmoshub -> Axelar IBC channel id        | `channel-293`                                |
 | Axelar -> Cosmoshub IBC channel id        | `channel-2`                                  |
 
-## Minimum transfer amounts
+## Cross-chain transfer fee
 
-For each asset X in (AXL, UST, LUNA) and each external chain Y in (Ethereum, non-Ethereum EVM, Cosmos/IBC): any transfer of asset X to chain Y must exceed the minimum amount given in the table below. (If Y is the origin chain for asset X then this transfer is called "redeem"/"burn"; there is no minimum in this case.)
+The Network (and thus the Satellite app) charges a base fee for all cross-chain transfers.
+This fee only depends on the source/destination chain and the asset and does NOT take a percentage from the transfer amount.
+When transferring an asset X from chain Y to chain Z, the transfer fee is the sum of per-chain fee for that asset.
+For e.g. a transfer of 1000 UST from Terra to Avalanche will have a fee of 1.5 UST, and so the recipient will get 998.5 UST.
 
-If the total amount of asset X sent to a deposit address A is smaller than the minimum then those deposits will sit in the queue until a future deposit to A brings the total above the minimum.
+| Asset symbol | Ethereum   | non-Ethereum EVM | Cosmos (Terra) |
+| ------------ | ---------- | ---------------- | -------------- |
+| UST          | 20 UST     | 1 UST            | 0.5 UST        |
+| LUNA         | 0.2 LUNA   | 0.01 LUNA        | 0.005 LUNA     |
 
-| Asset symbol | Ethereum | non-Ethereum EVM | Cosmos/IBC |
-| ------------ | -------- | ---------------- | ---------- |
-| AXL          | 100 AXL  | 10 AXL           | 0.1 AXL    |
-| UST          | 100 UST  | 10 UST           | 0.1 UST    |
-| LUNA         | 1 LUNA   | 0.1 LUNA         | 0.001 LUNA |
+The current transfer fee can also be queried on the network with
+```bash
+axelard q nexus transfer-fee [source chain] [destination chain] [amount]
+```
 
-## Transaction Fees
+For e.g., querying the example transfer above (note `1 UST = 10^6 uusd`),
+```bash
+axelard q nexus transfer-fee terra avalanche 1000000000uusd
+```
 
-The Network will assess a processing fee of **0.1%** percent on any transaction through the protocol. For example, a transfer of 100 of asset X from Chain Y to Chain Z will result in 99.9 of token X in the destination address (specified by the user) on Chain Z.
+The per-chain fee info can be queried via
+```bash
+axelard q nexus fee avalanche uusd
+```
 
-Additionally, users should be prepared to pay for any transaction fees assessed by the source chain when transferring funds into a deposit account. These fees are typically in the form of native tokens in that chain.
+If the total amount of asset X sent to a deposit address A is NOT greater than the transfer fee,
+then those deposits will sit in the queue until a future deposit to A brings the total above the fee.
+
+Additionally, users should be prepared to pay for any transaction fees assessed by the source chain when transferring funds into a deposit address.
+These fees are typically in the form of native tokens on that chain (for e.g. LUNA on Terra, ETH on Ethereum).
 
 ## Upgrade Path
 
