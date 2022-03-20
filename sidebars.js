@@ -118,7 +118,19 @@ const sidebars = {
       collapsible: true,
       collapsed: false,
       items: [
-        'releases/mainnet',
+        {
+          type: 'category',
+          label: 'Mainnet',
+          link: {type: 'doc', id: 'releases/mainnet'},
+          items: [
+            {
+              type: 'doc',
+              id: 'releases/mainnet/upgrade',
+              label: 'Upgrade', // sidebar label
+            },
+            
+          ],
+        },
         {
           type: 'category',
           label: 'Testnet',
@@ -129,6 +141,7 @@ const sidebars = {
               id: 'releases/testnet/upgrade',
               label: 'Upgrade', // sidebar label
             },
+            
           ],
         },
       ],
