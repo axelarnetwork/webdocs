@@ -57,7 +57,7 @@ This fee only depends on the source/destination chain and the asset and does NOT
 When transferring an asset X from chain Y to chain Z, the transfer fee is the sum of per-chain fee for that asset.
 For e.g. a transfer of 1000 UST from Terra to Avalanche will have a fee of 1.5 UST (= 0.5 UST for Terra + 1.0 UST for Avalanche), and so the recipient will get 998.5 UST.
 
-| Asset symbol | Ethereum | non-Ethereum EVM | Cosmos (Terra) | Decimals  | Unit     |
+| Asset symbol | Ethereum | non-Ethereum EVM | Cosmos Chains  | Decimals  | Unit     |
 | ------------ | -------- | ---------------- | -------------- | --------- | -------- |
 | UST          | 20 UST   | 1 UST            | 0.5 UST        | 6         | uusd     |
 | LUNA         | 0.2 LUNA | 0.01 LUNA        | 0.005 LUNA     | 6         | uluna    |
