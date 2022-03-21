@@ -88,6 +88,7 @@ const sidebars = {
         {
           type: 'category',
           label: 'Developer',
+          link: {type: 'doc', id: 'roles/dev'},
           items: [
             {
               type: 'category',
