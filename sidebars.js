@@ -99,6 +99,13 @@ const sidebars = {
             },
             {
               type: 'category',
+              label: 'Solidity',
+              items: [
+                'roles/dev/solidity/gmp',
+              ],
+            },
+            {
+              type: 'category',
               label: 'CLI',
               items: [
                 'roles/dev/cli/axelar-cli',
