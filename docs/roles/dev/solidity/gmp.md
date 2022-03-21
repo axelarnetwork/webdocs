@@ -28,7 +28,7 @@ To calling a contact on chain B from directly from the Gateway on chain A user o
 ```solidity
  function callContract(
         string memory destinationChain,
-        string memory contractAddress,
+        string memory destinationContractAddress,
         bytes memory payload
     )
 ```
@@ -42,7 +42,7 @@ To calling a contact on chain B from directly from the Gateway on chain A with s
 ```solidity
  function callContractWithToken(
         string memory destinationChain,
-        string memory contractAddress,
+        string memory destinationContractAddress,
         bytes memory payload,
         string memory symbol,
         uint256 amount
