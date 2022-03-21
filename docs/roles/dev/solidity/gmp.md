@@ -10,7 +10,7 @@ Consider unrelated EVM chains A and B (the source and destination chain). It is 
 
 In order to send a token directly from the Gateway on chain A user or smart contract would need to call a following method:
 
-```
+```solidity
  function sendToken(
         string memory destinationChain,
         string memory destinationAddress,
@@ -25,7 +25,7 @@ This would result in instant burning of the token on chain A and emitting an eve
 
 To calling a contact on chain B from directly from the Gateway on chain A user or smart contract would need to call a following method:
 
-```
+```solidity
  function callContract(
         string memory destinationChain,
         string memory contractAddress,
@@ -39,7 +39,7 @@ An event called `ContractCall` will be emitted and Axelar network will listen to
 
 To calling a contact on chain B from directly from the Gateway on chain A with some token attached the following method needs to be called:
 
-```
+```solidity
  function callContractWithToken(
         string memory destinationChain,
         string memory contractAddress,
