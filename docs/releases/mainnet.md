@@ -6,7 +6,7 @@ import UpgradePath from '/md/mainnet/upgrade-path.md'
 
 | Variable                                  | Value                                        |
 | ----------------------------------------- | -------------------------------------------- |
-| `axelar-core` version                     | `v0.16.1`                                    |
+| `axelar-core` version                     | `v0.16.2`                                    |
 | `tofnd` version                           | `v0.8.2`                                     |
 | Ethereum Axelar Gateway contract address  | `0x4F4495243837681061C4743b74B3eEdf548D56A5` |
 | Ethereum AXL token address                | `0x3eacbDC6C382ea22b78aCc158581A55aaF4ef3Cc` |
@@ -57,10 +57,13 @@ This fee only depends on the source/destination chain and the asset and does NOT
 When transferring an asset X from chain Y to chain Z, the transfer fee is the sum of per-chain fee for that asset.
 For e.g. a transfer of 1000 UST from Terra to Avalanche will have a fee of 1.5 UST (= 0.5 UST for Terra + 1.0 UST for Avalanche), and so the recipient will get 998.5 UST.
 
-| Asset symbol | Ethereum | non-Ethereum EVM | Cosmos (Terra) |
-| ------------ | -------- | ---------------- | -------------- |
-| UST          | 20 UST   | 1 UST            | 0.5 UST        |
-| LUNA         | 0.2 LUNA | 0.01 LUNA        | 0.005 LUNA     |
+| Asset symbol | Ethereum | non-Ethereum EVM | Cosmos Chains  | Decimals  | Unit     |
+| ------------ | -------- | ---------------- | -------------- | --------- | -------- |
+| UST          | 20 UST   | 1 UST            | 0.5 UST        | 6         | uusd     |
+| LUNA         | 0.2 LUNA | 0.01 LUNA        | 0.005 LUNA     | 6         | uluna    |
+| ATOM         | 0.7 ATOM | 0.04 ATOM        | 0.02 ATOM      | 6         | uatom    |
+| USDC         | 20 USDC  | 1 USDC           | 0.5 USDC       | 6         | uusdc    |
+| FRAX         | 20 FRAX  | 1 FRAX           | 0.5 FRAX       | 18        | frax-wei |
 
 The current transfer fee can also be queried on the network with
 
