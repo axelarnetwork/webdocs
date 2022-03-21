@@ -1,7 +1,3 @@
----
-slug: /roles/dev/sdk
----
-
 # Overview
 
 The AxelarJS SDK empowers developers to make requests into the Axelar network from a frontend.
