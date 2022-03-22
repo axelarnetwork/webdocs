@@ -1,4 +1,4 @@
-# AxelarJS SDK
+# Stable (v0.4.xx)
 
 ## Overview
 
@@ -22,7 +22,7 @@ Axelar will continue to add support for new assets and chains in the future.
 
 The AxelarJS SDK is a `npm` dependency that includes libraries that make requests into the Axelar network.
 
-![Architecture diagram](sdk-diagram.png)
+![Architecture diagram](/img/sdk-diagram.png)
 
 Any request from the JS SDK is routed through a node REST server that redirects requests through a coordinated collection of microservices controlled by Axelar.
 
