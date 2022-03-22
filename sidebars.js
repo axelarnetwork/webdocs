@@ -38,8 +38,10 @@ const sidebars = {
             {
               type: 'category',
               label: 'AxelarJS SDK',
-              link: {type: 'doc', id: 'roles/dev/sdk'},
+              link: {type: 'doc', id: 'roles/dev/sdk/axelarjs-stable'},
               items: [
+                'roles/dev/sdk/axelarjs-stable',
+                'roles/dev/sdk/axelarjs-alpha',
                 'roles/dev/sdk/deposit-address-demo',
               ],
             },
