@@ -91,6 +91,11 @@ const sidebars = {
           link: {type: 'doc', id: 'roles/dev'},
           items: [
             {
+              type: 'doc',
+              id: 'roles/dev/hackathon',
+              label: 'Hackathon', // sidebar label
+            },
+            {
               type: 'category',
               label: 'AxelarJS SDK',
               items: [
