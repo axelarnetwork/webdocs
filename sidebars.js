@@ -21,10 +21,50 @@ const sidebars = {
     'intro',
     {
       type: 'category',
-      label: 'Get started',
+      label: 'I am a...',
       collapsible: true,
       collapsed: false,
       items: [
+        {
+          type: 'category',
+          label: 'Developer',
+          link: {type: 'doc', id: 'roles/dev'},
+          items: [
+            {
+              type: 'doc',
+              id: 'roles/dev/hackathon',
+              label: 'Hackathon', // sidebar label
+            },
+            {
+              type: 'category',
+              label: 'AxelarJS SDK',
+              link: {type: 'doc', id: 'roles/dev/sdk/axelarjs-stable'},
+              items: [
+                'roles/dev/sdk/axelarjs-stable',
+                'roles/dev/sdk/axelarjs-alpha',
+                'roles/dev/sdk/deposit-address-demo',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Solidity',
+              items: [
+                'roles/dev/solidity/gmp',
+              ],
+            },
+            {
+              type: 'category',
+              label: 'CLI',
+              items: [
+                'roles/dev/cli/axelar-cli',
+                'roles/dev/cli/ust-to-evm',
+                'roles/dev/cli/ust-from-evm',
+                'roles/dev/cli/axl-to-evm',
+                'roles/dev/cli/axl-from-evm',
+              ],
+            },
+          ],
+        },
         {
           type: 'category',
           label: 'Satellite user',
@@ -83,32 +123,6 @@ const sidebars = {
             //     'roles/validator/troubleshoot/missed-too-many-blocks',
             //   ],
             // },
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Developer',
-          items: [
-            {
-              type: 'category',
-              label: 'AxelarJS SDK',
-              items: [
-                'roles/dev/sdk/axelarjs-latest',
-                'roles/dev/sdk/axelarjs-alpha',
-                'roles/dev/sdk/deposit-address-demo',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'CLI',
-              items: [
-                'roles/dev/cli/axelar-cli',
-                'roles/dev/cli/ust-to-evm',
-                'roles/dev/cli/ust-from-evm',
-                'roles/dev/cli/axl-to-evm',
-                'roles/dev/cli/axl-from-evm',
-              ],
-            },
           ],
         },
       ],
