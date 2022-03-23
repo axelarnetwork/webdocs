@@ -2,7 +2,7 @@
 
 | Variable                                  | Value                                        |
 | ----------------------------------------- | -------------------------------------------- |
-| `axelar-core` version                     | `v0.16.?`, untagged release                  |
+| `axelar-core` version                     | `0612e0c32a7f63795034b25f69fce4829d9dd788`   |
 | `tofnd` version                           | `v0.8.2`                                     |
 | Chain ID                                  | `axelar-devnet-rammstein-3`                  |
 | Avalanche Axelar Gateway contract address | `0x4ffb57Aea2295d663B03810a5802ef2Bc322370D` |
