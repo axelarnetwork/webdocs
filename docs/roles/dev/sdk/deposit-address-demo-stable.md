@@ -1,4 +1,4 @@
-# Deposit address demo
+# Deposit address demo - stable (v0.4.x) sdk
 
 Git: [deposit-address-demo](https://github.com/axelarnetwork/deposit-address-demo)
 
@@ -28,7 +28,7 @@ npm start
 
 Your browser should open automatically to URL `http://localhost:3000/` and display the following
 
-![deposit-address-demo welcome screen](/img/deposit-address-demo-welcome.png)
+![deposit-address-demo welcome screen](/img/deposit-address-demo-welcome-stable.png)
 
 Metamask should automatically appear. You'll be asked to connect Metamask to `http://localhost:3000/`. (If Metamask is locked then you first need to unlock it using your Metamask password.)
 
@@ -53,7 +53,7 @@ Click "sign" in Metamask.
 
 After a few seconds you should see the following
 
-![deposit-address-demo example address](/img/deposit-address-demo-address.png)
+![deposit-address-demo example address](/img/deposit-address-demo-address-stable.png)
 
 The demo is now complete.
 
