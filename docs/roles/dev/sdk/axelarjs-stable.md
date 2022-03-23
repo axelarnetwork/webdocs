@@ -1,5 +1,21 @@
 # Stable (v0.4.xx)
 
+## Quick start: simple Axelar-to-Avalanche token transfer demo
+
+We'll write a function `myGetDepositAddress` with
+
+- **Input:** A user-provided `destinationAddress` on Avalanche testnet.
+- **Output:** A new one-time deposit address `addr` on the Axelar testnet.
+
+From here, a user could do the following:
+
+- Use the [Axelar testnet faucet](https://faucet.testnet.axelar.dev/) to deposit AXL tokens to `addr`. (Be sure to exceed the minimum of 10 AXL tokens!) The Axelar network will transfer these AXL tokens to Avalanche.
+- After some time, verify your AXL tokens arrived on Avalanche at `destinationAddress`. Use an Avalanche testnet block explorer such as [Snowtrace](https://testnet.snowtrace.io/). View the ERC-20 [token contract for AXL tokens on Avalanche testnet](https://testnet.snowtrace.io/address/0x46cc87ea84586c03bb2109ed9b33f998d40b7623).
+
+You can substitute (Axelar, AXL, Avalanche) for many other choices of (source chain, asset, destination chain).
+
+See [Deposit address demo](deposit-address-demo.md) for a working demo in the browser.
+
 ## Install
 
 Install the latest patch of AxelarJS SDK v0.4.xx:
@@ -10,11 +26,7 @@ npm i --save @axelar-network/axelarjs-sdk@0.4.29
 
 ## Get a deposit address from the Axelar network
 
-We'll write a function `myGetDepositAddress` that returns a new deposit address `A` on the Axelar chain. A user could then send AXL tokens to `A`. The Axelar network will transfer any such AXL tokens to the Avalanche chain. You can substitute (Axelar, AXL, Avalanche) for many other choices of (source chain, asset, destination chain).
-
-See [Deposit address demo](deposit-address-demo.md) for a working demo in the browser.
-
-The function `myGetDepositAddress` wraps a call to `getDepositAddress` from the AxelarJS SDK API like so:
+Write a function `myGetDepositAddress` that wraps a call to `getDepositAddress` from the AxelarJS SDK API like so:
 
 ```typescript
 import {
