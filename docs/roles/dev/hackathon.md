@@ -32,3 +32,23 @@ Join our [discord](https://discord.gg/aRZ3Ra6f7D) and visit our [developers](htt
 See [AxelarJS SDK documentation](sdk.md)
 
 :::
+
+## Spin up an Axelar hacknet node
+
+Join a special hacknet network (different from testnet/mainnet):
+
+```bash
+git clone git@github.com:axelarnetwork/axelarate-community.git
+cd axelarate-community
+
+# start your node
+KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -n hacknet
+
+# view logs
+tail -f ~/.axelar_hacknet/logs/axelard.log
+
+# stop your node
+kill -9 $(pgrep -f "axelard start")
+```
+
+Need more info? See detailed instructions for testnet/mainnet: [Quick sync](../node/join.md)
