@@ -38,7 +38,7 @@ const sidebars = {
             {
               type: 'category',
               label: 'AxelarJS SDK',
-              link: {type: 'doc', id: 'roles/dev/sdk/axelarjs-stable'},
+              link: {type: 'doc', id: 'roles/dev/sdk'},
               items: [
                 'roles/dev/sdk/axelarjs-stable',
                 'roles/dev/sdk/axelarjs-alpha',

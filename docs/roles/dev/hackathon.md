@@ -1,7 +1,5 @@
 # Hackathon developer cheat sheet
 
-Developer documentation: https://docs.axelar.dev/roles/dev
-
 ## Resources
 
 |                 | Mainnet                                                      | Testnet                                                                         |
@@ -13,12 +11,7 @@ Developer documentation: https://docs.axelar.dev/roles/dev
 
 ## Tech support
 
-:::caution Under construction
-
-- Discord channel?
-- Calendly link for call with a team member?
-
-:::
+Join our [discord](https://discord.gg/aRZ3Ra6f7D) and visit our [developers](https://discord.com/channels/770814806105128977/955655587260170272) channel.
 
 ## Example use cases, integrations
 
@@ -35,5 +28,7 @@ Developer documentation: https://docs.axelar.dev/roles/dev
 ## Code snippets
 
 :::caution Under construction
+
+See [AxelarJS SDK documentation](sdk.md)
 
 :::

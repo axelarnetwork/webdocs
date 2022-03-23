@@ -1,5 +1,7 @@
 # Deposit address demo
 
+Git: [deposit-address-demo](https://github.com/axelarnetwork/deposit-address-demo)
+
 This simple frontend demo app uses [axelarjs-sdk](https://github.com/axelarnetwork/axelarjs-sdk) to enable a user to transfer AXL tokens from Axelar to Avalanche.
 
 This demo performs one task: call `axelarJsSDK.getDepositAddress` to request a one-time deposit address `A` from the Axelar network and present `A` to the user.
