@@ -159,6 +159,7 @@ const sidebars = {
             
           ],
         },
+        'releases/hacknet',
       ],
     },
     'ecosystem',
