@@ -42,7 +42,8 @@ const sidebars = {
               items: [
                 'roles/dev/sdk/axelarjs-stable',
                 'roles/dev/sdk/axelarjs-alpha',
-                'roles/dev/sdk/deposit-address-demo',
+                'roles/dev/sdk/deposit-address-demo-stable',
+                'roles/dev/sdk/deposit-address-demo-alpha',
               ],
             },
             {

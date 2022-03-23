@@ -20,7 +20,7 @@ npm i --save @axelar-network/axelarjs-sdk@alpha
 
 We'll write a function `myGetDepositAddress` that returns a new deposit address `A` on the Axelar chain. A user could then send AXL tokens to `A`. The Axelar network will transfer any such AXL tokens to the Avalanche chain. You can substitute (Axelar, AXL, Avalanche) for many other choices of (source chain, asset, destination chain).
 
-See [Deposit address demo](deposit-address-demo.md) for a working demo in the browser. //TBU
+See [Deposit address demo (alpha)](deposit-address-demo-alpha.md) for a working demo in the browser.
 
 The function `myGetDepositAddress` wraps a call to `getDepositAddress` from the AxelarJS SDK API like so:
 

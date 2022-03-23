@@ -14,7 +14,7 @@ From here, a user could do the following:
 
 You can substitute (Axelar, AXL, Avalanche) for many other choices of (source chain, asset, destination chain).
 
-See [Deposit address demo](deposit-address-demo.md) for a working demo in the browser.
+See [Deposit address demo (stable)](deposit-address-demo-stable.md) for a working demo in the browser.
 
 ## Install
 
@@ -27,6 +27,7 @@ npm i --save @axelar-network/axelarjs-sdk@0.4.29
 ## Get a deposit address from the Axelar network
 
 Write a function `myGetDepositAddress` that wraps a call to `getDepositAddress` from the AxelarJS SDK API like so:
+
 
 ```typescript
 import {
