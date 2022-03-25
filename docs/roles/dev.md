@@ -1,5 +1,9 @@
 # Developer
 
+```mdx-code-block
+import ResourcesTable from '/md/resources.md'
+```
+
 :::caution Under construction
 
 This section of Axelar documentation is under active development. Expect frequent changes.
@@ -8,18 +12,15 @@ This section of Axelar documentation is under active development. Expect frequen
 
 ## Resources
 
-|                 | Mainnet                                                      | Testnet                                                                         |
-| --------------- | ------------------------------------------------------------ | ------------------------------------------------------------------------------- |
-| Block explorers | https://axelarscan.io/ <br/> https://www.mintscan.io/axelar  | https://testnet.axelarscan.io/ <br/> https://testnet.mintscan.io/axelar-testnet |
-| Wallets         | https://wallet.keplr.app/ <br/> https://www.cosmostation.io/ |                                                                                 |
-| Faucet          |                                                              | https://faucet.testnet.axelar.dev/                                              |
-| RPC endpoints   | https://quickapi.com/ <br/> https://axelar-rpc.pops.one/     | https://quickapi.com/                                                           |
-
-Set up the [Axelar local development environment](https://github.com/axelarnetwork/axelar-local-dev)
+<ResourcesTable />
 
 ## Tech support
 
 Join the [Axelar discord](https://discord.gg/aRZ3Ra6f7D) and visit the [developers channel](https://discord.com/channels/770814806105128977/955655587260170272).
+
+## Local test environment
+
+[Local test environment](dev/local.md)
 
 ## Ways for developers to interact with the Axelar network
 
@@ -36,4 +37,4 @@ See the [cross-chain contract calls explainer](dev/explainers/cccc.md).
 
 ### Get a deposit address for cross-chain token transfer
 
-Build your own [Satellite dapp](https://satellite.axelar.network/). Use [AxelarJS SDK](dev/sdk.md) or [CLI](dev/cli.md) to generate a one-time deposit address `addr` for asset `A` on chain `C`. Send `A` tokens to `addr` and sit back while the Axelar network transfers those `A` tokens to another chain `D`.
+Build your own [Satellite dapp](https://satellite.axelar.network/) or something even better! Use [AxelarJS SDK](dev/sdk.md) or [CLI](dev/cli.md) to generate a one-time deposit address `addr` for asset `A` on chain `C`. Send `A` tokens to `addr` and sit back while the Axelar network transfers those `A` tokens to another chain `D`.
