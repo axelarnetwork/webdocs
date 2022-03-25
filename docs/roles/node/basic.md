@@ -154,4 +154,6 @@ Check your balance again to see the tokens you received from the faucet.
 </TabItem>
 </Tabs>
 
-TODO recovery info here
+## Recover your secret keys
+
+Join the network as per [Quick sync](join.md), except use the flags `-t path_to_tendermint_key -m path_to_validator_mnemonic -r` (`-r` is to reset the chain). These flags work only on a completely fresh state.

@@ -42,7 +42,7 @@ KEYRING_PASSWORD=my-secret-password TOFND_PASSWORD=my-tofnd-password ./scripts/v
 </TabItem>
 </Tabs>
 
-TODO recovery info here
+To recover your secret keys from mnemonics, use `-p path_to_broadcaster_mnemonic -z path_to_tofnd_mnemonic`. These flags work only on a completely fresh state.
 
 :::danger
 
