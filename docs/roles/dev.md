@@ -32,7 +32,7 @@ Join the [Axelar discord](https://discord.gg/aRZ3Ra6f7D) and visit the [develope
 
 The Axelar network supports arbitrary cross-chain contract calls for EVM chains. This feature can be used to transfer ERC-20 tokens across EVM chains---a simple and efficient alternative to deposit addresses for EVM-to-EVM token transfers.
 
-See the [cross-chain contract calls explainer](dev/explainers/gmp.md).
+See the [cross-chain contract calls explainer](dev/explainers/cccc.md).
 
 ### Get a deposit address for cross-chain token transfer
 
