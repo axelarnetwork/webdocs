@@ -56,7 +56,7 @@ const sidebars = {
               type: 'category',
               label: 'Explainers',
               items: [
-                'roles/dev/solidity/gmp',
+                'roles/dev/explainers/gmp',
               ],
             },
             {
