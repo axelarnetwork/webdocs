@@ -52,6 +52,7 @@ const sidebars = {
                 'roles/dev/cli/axl-from-evm',
               ],
             },
+            'roles/dev/local',
             {
               type: 'category',
               label: 'Explainers',

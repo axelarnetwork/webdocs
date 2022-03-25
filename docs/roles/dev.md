@@ -14,11 +14,13 @@ This section of Axelar documentation is under active development. Expect frequen
 
 <ResourcesTable />
 
-Set up the [Axelar local development environment](https://github.com/axelarnetwork/axelar-local-dev)
-
 ## Tech support
 
 Join the [Axelar discord](https://discord.gg/aRZ3Ra6f7D) and visit the [developers channel](https://discord.com/channels/770814806105128977/955655587260170272).
+
+## Local test environment
+
+[Local test environment](dev/local.md)
 
 ## Ways for developers to interact with the Axelar network
 

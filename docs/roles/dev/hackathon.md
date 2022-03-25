@@ -1,6 +1,12 @@
 # Hackathon developer cheat sheet
 
-- Set up the [Axelar local development environment](https://github.com/axelarnetwork/axelar-local-dev)
+:::caution Under construction
+
+This document will be updated frequently.
+
+:::
+
+- Set up the [Axelar local test environment](local.md)
 - Use the [AxelarJS SDK](sdk.md)
 
 ## Tech support
