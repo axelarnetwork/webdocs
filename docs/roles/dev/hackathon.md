@@ -2,8 +2,6 @@
 
 :::caution Under construction
 
-This document will be updated frequently.
-
 :::
 
 - Set up the [Axelar local test environment](local.md)
@@ -13,9 +11,9 @@ This document will be updated frequently.
 
 Axelar has set up a special new "hacknet" network (different form testnet/mainnet).
 
-Hacknet RPC endpoint: https://hackathon-nodes.devnet.axelar.dev/
+Axelar hacknet RPC endpoint: https://hackathon-nodes.devnet.axelar.dev/
 
-Need test AXL or UST tokens? Reach out to an Axelar team member in person at the event or on discord (link below).
+Need Axelar-hacknet-wrapped AXL or UST test tokens? Reach out to an Axelar team member in person at the event or on discord (link below).
 
 ## Tech support
 
@@ -52,3 +50,11 @@ kill -9 $(pgrep -f "axelard start")
 ```
 
 Need more info? See detailed instructions for testnet/mainnet: [Quick sync](../node/join.md)
+
+:::caution Sync issue for ARM build
+
+Trouble syncing your hacknet node? Axelar team has identified an issue with Apple M1 chips running axelar-core hacknet arm64 build. Team is investigating.
+
+Workaround: switch to an AMD build.
+
+:::
