@@ -31,11 +31,6 @@ const sidebars = {
           link: {type: 'doc', id: 'roles/dev'},
           items: [
             {
-              type: 'doc',
-              id: 'roles/dev/hackathon',
-              label: 'Hackathon', // sidebar label
-            },
-            {
               type: 'category',
               label: 'AxelarJS SDK',
               link: {type: 'doc', id: 'roles/dev/sdk'},
@@ -48,13 +43,6 @@ const sidebars = {
             },
             {
               type: 'category',
-              label: 'Solidity',
-              items: [
-                'roles/dev/solidity/gmp',
-              ],
-            },
-            {
-              type: 'category',
               label: 'CLI',
               link: {type: 'doc', id: 'roles/dev/cli'},
               items: [
@@ -63,6 +51,18 @@ const sidebars = {
                 'roles/dev/cli/axl-to-evm',
                 'roles/dev/cli/axl-from-evm',
               ],
+            },
+            {
+              type: 'category',
+              label: 'Explainers',
+              items: [
+                'roles/dev/solidity/gmp',
+              ],
+            },
+            {
+              type: 'doc',
+              id: 'roles/dev/hackathon',
+              label: 'Hackathon', // sidebar label
             },
           ],
         },
