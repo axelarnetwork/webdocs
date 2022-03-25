@@ -72,6 +72,8 @@ Your Axelar node will initialize your data folder `~/.axelar_testnet`
 </TabItem>
 </Tabs>
 
+TODO recover info here
+
 Your Axelar node will launch and begin downloading the blockchain.
 
 ## Backup your secret keys
