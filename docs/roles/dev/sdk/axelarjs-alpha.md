@@ -10,7 +10,7 @@
 Install the latest patch of AxelarJS SDK v0.5.xx:
 
 ```bash
-npm i --save @axelar-network/axelarjs-sdk@0.5.0-alpha.3
+npm i --save @axelar-network/axelarjs-sdk@0.5.0-alpha.6
 ```
 
 or
