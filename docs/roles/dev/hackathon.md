@@ -7,14 +7,6 @@
 - Set up the [Axelar local test environment](local.md)
 - Use the [AxelarJS SDK](sdk.md)
 
-## Hacknet
-
-Axelar has set up a special new "hacknet" network (different form testnet/mainnet).
-
-Axelar hacknet RPC endpoint: https://hackathon-nodes.devnet.axelar.dev/
-
-Need Axelar-hacknet-wrapped AXL or UST test tokens? Reach out to an Axelar team member in person at the event or on discord (link below).
-
 ## Tech support
 
 Join the [Axelar discord](https://discord.gg/aRZ3Ra6f7D) and visit the [developers channel](https://discord.com/channels/770814806105128977/955655587260170272).
@@ -30,3 +22,7 @@ Join the [Axelar discord](https://discord.gg/aRZ3Ra6f7D) and visit the [develope
 - Cross-chain asset management
   - Deposit asset A from chain C, earn yield on chain D.
 - Universal payments, NFT / game asset portability
+
+## Start here!
+
+Set up the [Axelar local test environment](local.md).
