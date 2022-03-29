@@ -164,7 +164,6 @@ const sidebars = {
         'releases/hacknet',
       ],
     },
-    'ecosystem',
     'bug-bounty',
   ],
 

@@ -39,9 +39,9 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       navbar: {
-        title: 'Axelar Network',
+        title: 'Axelar',
         logo: {
-          alt: 'Axelar',
+          alt: 'Axelar logo',
           src: 'img/logo.png',
           srcDark: 'img/logo-dark.png'
         },
