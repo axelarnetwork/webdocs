@@ -60,11 +60,6 @@ const sidebars = {
                 'roles/dev/explainers/cccc',
               ],
             },
-            {
-              type: 'doc',
-              id: 'roles/dev/hackathon',
-              label: 'Hackathon', // sidebar label
-            },
           ],
         },
         {
