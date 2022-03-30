@@ -1,12 +1,7 @@
 # Keyring Backend
 
-```mdx-code-block
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-```
-
-Accounts use digital signatures to sign and authenticate transactions through keypairs. Keypairs need 
-a mechanism to be stored and managed. 
+Accounts use digital signatures to sign and authenticate transactions through keypairs. 
+Keypairs need a mechanism to be stored and managed. 
 
 ## Keyring
 
@@ -33,6 +28,8 @@ axelard config --keyring-backend test
 For more information on the keyring backends, check out the Cosmos SDK documentation on 
 [Setting up the keyring](https://docs.cosmos.network/v0.42/run-node/keyring.html). 
 
+To add a key, see the [Adding a Key](add-key.md) documentation.
+
 ## Password Management
 
 There are different ways a user can configure and store their password.
@@ -58,11 +55,12 @@ The objective should always be safe and secure configuration.
 :::caution Using a different keyring backend
 
 Be wary when using different keyring backends. Take the case where you have a node with keyring 
-backend A, and you attempt to run axelard commands with a different keyring backend, keyring backend B. 
-For instance, a validator may attempt to sign a transaction with a keypair from keyring backend B, where 
-keyring backend A is the validator node's default keyring backend. The keyring backends are storage and 
-management methods for keypairs. Assuming that the encrypted data within the keyring backend is the same, 
-the validator may use keyring backend B as they would use keyring backend A, with the necessary configuration.
+backend A, and you attempt to run axelard commands with a different keyring backend, keyring backend 
+B. For instance, a validator may attempt to sign a transaction with a keypair from keyring backend B, 
+where keyring backend A is the validator node's default keyring backend. The keyring backends are storage 
+and management methods for keypairs. Assuming that the encrypted data within the keyring backend is the 
+same, the validator may use keyring backend B as they would use keyring backend A, with the necessary 
+configuration.
 
 :::
 
