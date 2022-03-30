@@ -5,10 +5,8 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
-Accounts facilitate all interactions on the Axelar network. Like other cryptographic 
-networks, Axelar requires account keys for accounts to interact and transact. Accounts use 
-digital signatures to sign and authenticate transactions through keypairs. Keypairs need a
-mechanism to be stored and managed. 
+Accounts use digital signatures to sign and authenticate transactions through keypairs. Keypairs need 
+a mechanism to be stored and managed. 
 
 ## Keyring
 
@@ -49,10 +47,20 @@ The objective should always be safe and secure configuration.
 :::tip Protecting your keyring password
 
 * Keep your password out of the bash history.
-* Use a file to store your password only if necessary.
-* Environment variables are generally more secure than plaintext files.
+* It is more secure to simply type your password whenever prompted.
+* Use your best judgement if storing your password in an environment variable or configuration 
+  file.
+
+If storing through an environment variable, 
+
+The `file` backend does not account for sessions. As a result, you must enter the password each 
+time you access the keyring, which may occur multiple times in a single command resulting in repeated 
+password prompts.
 
 :::
+
+For validators, check out this blog post on 
+[Improving Validator Security and using HSM Module for 2FA](https://medium.com/chainode-tech/improving-validator-security-and-using-hsm-module-for-2fa-aa8b451bd84f).
 
 ### Configuring a password
 
@@ -79,10 +87,6 @@ KEYRING_PASSWORD=my-secret-password ./scripts/node.sh -a {CORE_VERSION} -n testn
 
 where *{CORE_VERSION}* is the release you are running on, such as *v0.10.6*.
 
-The `file` backend does not account for sessions. As a result, you must enter the password each 
-time you access the keyring, which may occur multiple times in a single command resulting in repeated 
-password prompts.
-
 :::tip
 
 A way around this is to use a bash script to set the `KEYRING_PASSWORD` and account for multiple 
@@ -108,8 +112,6 @@ Apply your changes:
 source $HOME/.profile
 ```
 
-### Things to Consider
-
 :::caution Using a different keyring backend
 
 Take the case where you have a node with keyring backend A, and you attempt to run axelard commands 
@@ -120,5 +122,5 @@ with a different keyring backend, keyring backend B.
 For instance, a validator may attempt to sign a transaction with a keypair from keyring backend B, 
 where keyring backend A is the validator node's default keyring backend. The keyring backends are 
 storage and management methods for keypairs. Assuming that the encrypted data within the 
-keyring backend is the same, the validator may use keyring backend B as they would use keyring backend 
-A, with the necessary configuration.
+keyring backend is the same, the validator may use keyring backend B as they would use keyring 
+backend A, with the necessary configuration.
