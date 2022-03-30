@@ -1,4 +1,4 @@
-# Adding a key
+# Adding a Key
 
 To add a key: 
 

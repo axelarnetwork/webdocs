@@ -27,6 +27,9 @@ axelard config --keyring-backend test
 
 The `file` backend stores the keyring within an application's configuration directory.
 
+To specify the client keyring directory, use the `--keyring-dir <string>`,
+where *string* is the directory. Otherwise, the default `home` directory is used.
+
 For more information on the keyring backends, check out the Cosmos SDK documentation on 
 [Setting up the keyring](https://docs.cosmos.network/v0.42/run-node/keyring.html). 
 
@@ -34,7 +37,7 @@ To add a key, see the [Adding a Key](add-key.md) documentation.
 
 ## Password Management
 
-There are different ways a user can configure and store their password.
+There are different ways a user can configure and enter their password.
 
 :::caution Practice safe and diligent computing
 
@@ -46,11 +49,11 @@ The objective should be secure configuration with enough accessability.
 :::tip Protecting your keyring password
 
 * Keep your password out of the bash history.
-* It is more secure to type your password whenever prompted.
+* While tedious, it is more secure to type your password whenever prompted.
 * Use your best judgment for storing your password in an environment variable or in a configuration 
   file.
-* For validators, check out this blog post on 
-[Improving Validator Security and using HSM Module for 2FA](https://medium.com/chainode-tech/improving-validator-security-and-using-hsm-module-for-2fa-aa8b451bd84f).
+* For validators, check out this article on 
+[Improving Validator Security and using HSM Module for 2FA by Chainode Tech | Chainode Tech | Medium](https://medium.com/chainode-tech/improving-validator-security-and-using-hsm-module-for-2fa-aa8b451bd84f).
 
 :::
 
