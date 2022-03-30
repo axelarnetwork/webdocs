@@ -72,6 +72,8 @@ Your Axelar node will initialize your data folder `~/.axelar_testnet`
 </TabItem>
 </Tabs>
 
+To recover your secret keys from mnemonics, use `-t path_to_tendermint_key -m path_to_validator_mnemonic -r` (`-r` is to reset the chain). These flags work only on a completely fresh state.
+
 Your Axelar node will launch and begin downloading the blockchain.
 
 ## Backup your secret keys

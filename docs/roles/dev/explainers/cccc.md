@@ -1,4 +1,8 @@
-# General Message Passing Overview
+# Cross-chain contract calls
+
+:::caution Under construction
+
+:::
 
 Consider unrelated EVM chains A and B (the source and destination chain). It is assumed that gateway contracts run on both chains A and B. Three different scenarios are as follows:
 
