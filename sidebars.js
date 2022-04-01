@@ -42,6 +42,7 @@ const sidebars = {
                 'roles/dev/sdk/deposit-address-demo-alpha',
               ],
             },
+            'roles/dev/gmp',
             {
               type: 'category',
               label: 'CLI',
@@ -53,7 +54,6 @@ const sidebars = {
                 'roles/dev/cli/axl-from-evm',
               ],
             },
-            'roles/dev/gmp',
           ],
         },
         {
