@@ -7,8 +7,8 @@
 ## Develop your cross-chain dapp in 3 simple steps
 
 1. Build cross-chain contracts in the [Axelar local development environment](https://github.com/axelarnetwork/axelar-local-dev).
-2. Deploy your dapp to testnet or hacknet [link to subpage].
-3. Deploy your dapp to mainnet and go global [link].
+2. Deploy your dapp to testnet or hacknet.
+3. Deploy your dapp to mainnet and go global.
 
 # Local development environment
 

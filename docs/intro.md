@@ -5,15 +5,7 @@ slug: /
 
 # Build on Axelar
 
-:::caution Under construction
-
-TODO: fancy buttons for roles
-
-:::
-
-## Button: Developer
-
-Button: [I'm a developer](roles/dev.md).
+## [Developer](roles/dev.md)
 
 Use [Axelar gateway contracts](https://github.com/axelarnetwork/axelar-cgp-solidity/blob/main/src/interfaces/IAxelarGateway.sol) to call any EVM contract on any chain:
 
@@ -28,13 +20,11 @@ interface IAxelarGateway {
     uint256 amount
   ) external;
 
-  // etc...
-
 }
 ```
 
-## Button: User
+## [User](roles/user/satellite.md)
 
-## Button: Node operator
+## [Node operator](roles/node/join.md)
 
-## Button: Validator
+## [Validator](roles/validator/setup/overview.md)
