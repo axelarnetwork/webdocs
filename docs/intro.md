@@ -3,21 +3,28 @@ sidebar_position: 1
 slug: /
 ---
 
-# Axelar Documentation
+# Build on Axelar
 
-```mdx-code-block
-import ThemedImage from '@theme/ThemedImage';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+## [Developer](roles/dev.md)
+
+Use [Axelar gateway contracts](https://github.com/axelarnetwork/axelar-cgp-solidity/blob/main/src/interfaces/IAxelarGateway.sol) to call any EVM contract on any chain:
+
+```solidity
+interface IAxelarGateway {
+
+  function callContractWithToken(
+    string memory destinationChain,
+    string memory contractAddress,
+    bytes memory payload,
+    string memory symbol,
+    uint256 amount
+  ) external;
+
+}
 ```
 
-<ThemedImage
-alt="Axelar logo"
-sources={{
-    light: useBaseUrl('/img/axelar.png'),
-    dark: useBaseUrl('/img/axelar-dark.png'),
-  }}
-/>
+## [User](roles/user/satellite.md)
 
-- Looking for help? Join our [Discord](https://discord.gg/aRZ3Ra6f7D) and visit channels in the `testnet` category.
-- [Dashboards and Tools](/ecosystem)
-- Token contract addresses, releases: [Mainnet](/releases/mainnet) | [Testnet](/releases/testnet)
+## [Node operator](roles/node/join.md)
+
+## [Validator](roles/validator/setup/overview.md)

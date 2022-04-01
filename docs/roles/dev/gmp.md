@@ -1,4 +1,4 @@
-# Cross-chain contract calls
+# General message passing
 
 :::caution Under construction
 
