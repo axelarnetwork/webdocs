@@ -17,9 +17,9 @@ import TabItem from '@theme/TabItem';
 mkdir binaries && cd binaries
 
 # get axelard, tofnd binaries and rename
-wget https://github.com/axelarnetwork/axelar-core/releases/download/v0.13.6/axelard-linux-amd64-v0.13.6
+wget https://github.com/axelarnetwork/axelar-core/releases/download/v0.16.2/axelard-linux-amd64-v0.16.2
 wget https://github.com/axelarnetwork/tofnd/releases/download/v0.9.1/tofnd-linux-amd64-v0.9.1
-mv axelard-linux-amd64-v0.13.6 axelard
+mv axelard-linux-amd64-v0.16.2 axelard
 mv tofnd-linux-amd64-v0.9.1 tofnd
 
 # make binaries executable
@@ -119,16 +119,16 @@ sed -i.bak 's/external_address = \"\"/external_address = \"'"$(curl -4 ifconfig.
 
 ```bash
 axelard init $MONIKER --chain-id $CHAIN_ID
-wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml -O $HOME/.axelar_testnet/config/config.toml
-wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml -O $HOME/.axelar_testnet/config/app.toml
-wget https://axelar-testnet.s3.us-east-2.amazonaws.com/genesis.json -O $HOME/.axelar_testnet/config/genesis.json
-wget https://axelar-testnet.s3.us-east-2.amazonaws.com/seeds.txt -O $HOME/.axelar_testnet/config/seeds.txt
+wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/config.toml -O $HOME/.axelar/config/config.toml
+wget https://raw.githubusercontent.com/axelarnetwork/axelarate-community/main/configuration/app.toml -O $HOME/.axelar/config/app.toml
+wget https://axelar-testnet.s3.us-east-2.amazonaws.com/genesis.json -O $HOME/.axelar/config/genesis.json
+wget https://axelar-testnet.s3.us-east-2.amazonaws.com/seeds.txt -O $HOME/.axelar/config/seeds.txt
 
 # enter seeds to your config.json file
-sed -i.bak 's/seeds = \"\"/seeds = \"'$(cat $HOME/.axelar_testnet/config/seeds.txt)'\"/g' $HOME/.axelar_testnet/config/config.toml
+sed -i.bak 's/seeds = \"\"/seeds = \"'$(cat $HOME/.axelar/config/seeds.txt)'\"/g' $HOME/.axelar/config/config.toml
 
 # set external ip to your config.json file
-sed -i.bak 's/external_address = \"\"/external_address = \"'"$(curl -4 ifconfig.co)"':26656\"/g' $HOME/.axelar_testnet/config/config.toml
+sed -i.bak 's/external_address = \"\"/external_address = \"'"$(curl -4 ifconfig.co)"':26656\"/g' $HOME/.axelar/config/config.toml
 ```
 
 </TabItem>
@@ -156,7 +156,7 @@ cd $HOME
 axelard unsafe-reset-all
 URL=`curl https://quicksync.io/axelar.json | jq -r '.[] |select(.file=="axelartestnet-lisbon-3-pruned")|.url'`
 echo $URL
-cd $HOME/.axelar_testnet/
+cd $HOME/.axelar/
 wget -O - $URL | lz4 -d | tar -xvf -
 cd $HOME
 ```

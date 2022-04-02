@@ -30,6 +30,7 @@ const sidebars = {
           label: 'Developer',
           link: {type: 'doc', id: 'roles/dev'},
           items: [
+            'resources',
             {
               type: 'category',
               label: 'AxelarJS SDK',
@@ -41,6 +42,7 @@ const sidebars = {
                 'roles/dev/sdk/deposit-address-demo-alpha',
               ],
             },
+            'roles/dev/gmp',
             {
               type: 'category',
               label: 'CLI',
@@ -51,19 +53,6 @@ const sidebars = {
                 'roles/dev/cli/axl-to-evm',
                 'roles/dev/cli/axl-from-evm',
               ],
-            },
-            'roles/dev/local',
-            {
-              type: 'category',
-              label: 'Explainers',
-              items: [
-                'roles/dev/explainers/cccc',
-              ],
-            },
-            {
-              type: 'doc',
-              id: 'roles/dev/hackathon',
-              label: 'Hackathon', // sidebar label
             },
           ],
         },
@@ -133,9 +122,10 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Releases',
+      label: 'Resources',
       collapsible: true,
       collapsed: false,
+      link: {type: 'doc', id: 'resources'},
       items: [
         {
           type: 'category',
@@ -166,7 +156,6 @@ const sidebars = {
         'releases/hacknet',
       ],
     },
-    'ecosystem',
     'bug-bounty',
   ],
 
