@@ -83,6 +83,10 @@ const config = {
                 href: 'https://axelar.network/',
               },
               {
+                label: 'White paper',
+                href: 'https://axelar.network/wp-content/uploads/2021/07/axelar_whitepaper.pdf',
+              },
+              {
                 label: 'Github',
                 href: 'https://github.com/axelarnetwork',
               },
