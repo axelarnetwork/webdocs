@@ -3,11 +3,17 @@ sidebar_position: 1
 slug: /
 ---
 
-# Build on Axelar
+# What is Axelar?
 
-## [Developer](roles/dev.md)
+Axelar is a decentralized layer-one blockchain that connects all blockchains, assets and applications through a universal set of protocols and APIs.
 
-Use [Axelar gateway contracts](https://github.com/axelarnetwork/axelar-cgp-solidity/blob/main/src/interfaces/IAxelarGateway.sol) to call any EVM contract on any chain:
+Deploy your dApp on the blockchain best suited for your use case. Through a single integration with the Axelar API unlock access to multiple interconnected Axelar networks, users, assets, liquidity and data.
+
+## Learn for your role:
+
+### [Developer](roles/dev.md)
+
+Use Axelar gateway contracts to call any EVM contract on any chain:
 
 ```solidity
 interface IAxelarGateway {
@@ -23,8 +29,18 @@ interface IAxelarGateway {
 }
 ```
 
-## [User](roles/user/satellite.md)
+### [Satellite user](roles/user/satellite.md)
 
-## [Node operator](roles/node/join.md)
+_Satellite_ is a web app built on top of the Axelar network. Use it to transfer assets from one chain to another.
 
-## [Validator](roles/validator/setup/overview.md)
+### [Node operator](roles/node/join.md)
+
+Learn how to run a node on the Axelar netowrk.
+
+### [Validator](roles/validator/setup/overview.md)
+
+Axelar validators facilitate cross-chain connections by participating in the following activities:
+
+- Block creation on the Axelar blockchain
+- Multi-party cryptography protocols for passing general messages between blockchains
+- Reaching consensus on events that occur on other blockchains
