@@ -1,6 +1,6 @@
 # Develop on your Local Machine
 
-We've developed a tool called [Axelar Local Development Environment](https://github.com/axelarnetwork/axelar-local-dev) to help you start developing a cross-chain dapp on your local machine very easily. It provides you a set of utility functions including:
+We've developed a tool called [Axelar Local Development Environment](https://github.com/axelarnetwork/axelar-local-dev) to help you get started on develop a cross-chain dapp on your local machine very easily. The tool provides you a set of utility functions including:
 
 1. A function to create an evm-based blockchain
 2. A function to deploy a smart contract
@@ -52,4 +52,10 @@ Great! Now, you successfully sent token cross-chain. You can read full source co
 
 ## Deploy a contract
 
-The general message passing can do much more than that, so we'll see how to deploy a custom destination contract.
+To create more interesting cross-chain dapp, we'll see how to deploy a custom contract.
+
+TODO
+
+## Ready to deploy on live network
+
+See [Migrate to live network](migrate-to-live-network)
