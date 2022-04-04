@@ -5,7 +5,7 @@ slug: /
 
 # What is Axelar?
 
-Axelar is a decentralized layer-one blockchain that connects all blockchains, assets and applications through a universal set of protocols and APIs.
+Axelar is a decentralized overlay network that connects all blockchains, assets and applications through a universal set of protocols and APIs. It is designed from the ground up to deliver secure interoperability and transport layer for web3.
 
 Deploy your dApp on the blockchain best suited for your use case. Through a single integration with the Axelar API unlock access to multiple interconnected Axelar networks, users, assets, liquidity and data.
 
