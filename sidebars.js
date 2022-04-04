@@ -48,7 +48,7 @@ const sidebars = {
               link: { type: "doc", id: "roles/dev/gmp" },
               items: [
                 "roles/dev/gmp/local-dev",
-                "roles/dev/gmp/migrate-to-our-network",
+                "roles/dev/gmp/migrate-to-live-network",
               ],
             },
             {
