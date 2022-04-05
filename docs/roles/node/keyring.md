@@ -49,14 +49,3 @@ Example: to print the address of your account named `my_account` we write only
 axelard keys show my_account -a
 axelar1r25hycaye0uz3k554mdu4a7dvc82uelj7y6ddn
 ```
-
-## Security risks of automatic password entry
-
-Automatic password entry is convenient, but any such method must store the plaintext password somewhere. Plaintext password storage is a security risk. It is your responsibility to add
-
-This article is not a comprehensive guide to password security. Instead we offer only the following tips:
-
-- Keep your password out of your shell history. For example, never prefix a CLI command with your plaintext password: `echo my-secret-password | `.
-- Consider using a different keyring backend configuration so as to reduce the number of times you need to type your password.
-- TODO risks of storing password in a file in plaintext? [link](https://stackoverflow.com/questions/12461484/is-it-secure-to-store-passwords-as-environment-variables-rather-than-as-plain-t)
-- TODO fancy ramfs solutions? [link](https://medium.com/chainode-tech/improving-validator-security-and-using-hsm-module-for-2fa-aa8b451bd84f)
