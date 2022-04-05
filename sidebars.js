@@ -71,6 +71,7 @@ const sidebars = {
             'roles/node/join',
             'roles/node/join-genesis',
             'roles/node/basic',
+            'roles/node/keyring',
           ],
         },
         {
