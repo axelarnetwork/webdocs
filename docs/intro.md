@@ -7,7 +7,7 @@ slug: /
 
 Axelar is a decentralized overlay network that connects all blockchains, assets and applications through a universal set of protocols and APIs. It is designed from the ground up to deliver secure interoperability and transport layer for web3.
 
-Deploy your dApp on the blockchain best suited for your use case. Through a single integration with the Axelar API unlock access to multiple interconnected Axelar networks, users, assets, liquidity and data.
+Deploy your dApp on any blockchain, choosing the one most suitable for your use case. Through a single integration with the Axelar Gateway API, unlock access to users, assets, liquidity and data on any other connected blockchain.
 
 ## Learn for your role:
 
@@ -41,6 +41,6 @@ Learn how to run a node on the Axelar netowrk.
 
 Axelar validators facilitate cross-chain connections by participating in the following activities:
 
-- Block creation on the Axelar blockchain
-- Multi-party cryptography protocols for passing general messages between blockchains
-- Reaching consensus on events that occur on other blockchains
+- Maintaining the Axelar blockchain with its decentralized and permisionless validator set
+- Reaching consensus on cross-chain transactions and events that occur on other blockchains
+- Running multiparty cryptography protocols for passing general messages between blockchains
