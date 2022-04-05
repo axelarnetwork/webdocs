@@ -19,7 +19,6 @@ A simple and highly-secure method for password entry is to type your password wh
 ```bash
 axelard keys show my_account -a
 Enter keyring passphrase: {TYPE_YOUR_PASSWORD_HERE}
-axelar1r25hycaye0uz3k554mdu4a7dvc82uelj7y6ddn
 ```
 
 ## Automatic password entry
@@ -30,7 +29,6 @@ Suppose your keyring password is stored in a shell environment variable called `
 
 ```bash
 echo $KEYRING_PASSWORD | axelard keys show my_account -a
-axelar1r25hycaye0uz3k554mdu4a7dvc82uelj7y6ddn
 ```
 
 :::danger
@@ -47,5 +45,4 @@ Example: to print the address of your account named `my_account` we write only
 
 ```bash
 axelard keys show my_account -a
-axelar1r25hycaye0uz3k554mdu4a7dvc82uelj7y6ddn
 ```
