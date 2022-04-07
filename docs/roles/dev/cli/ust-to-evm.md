@@ -65,7 +65,7 @@ Use a web wallet such as Keplr. See [Transfer Terra assets to EVM chains using S
 ### IBC from the terminal
 
 You need shell access to a Terra node with at least `{AMOUNT}` balance of UST tokens in an account called `terra-validator`.
-Get `{TERRA_TO_AXELAR_CHANNEL_ID}` from [Testnet resources](/releases/testnet) or [Mainnet resources](releases/mainnet).
+Get `{TERRA_TO_AXELAR_CHANNEL_ID}` from [Testnet resources](/resources/testnet) or [Mainnet resources](resources/mainnet).
 
 ```bash
 terrad tx ibc-transfer transfer transfer {TERRA_TO_AXELAR_CHANNEL_ID} {AXELAR_TEMP_ADDR} --packet-timeout-timestamp 0 --packet-timeout-height "0-20000" {AMOUNT}uusd --gas-prices 0.15uusd --from terra-validator -y -b block
@@ -105,7 +105,7 @@ You will not see `UST`, `uusd` or a similar token denomination for `{IBC_DENOM}`
 
 :::
 
-Get `{IBC_DENOM}` from [Testnet resources](/releases/testnet) or [Mainnet resources](/releases/mainnet).
+Get `{IBC_DENOM}` from [Testnet resources](/resources/testnet) or [Mainnet resources](/resources/mainnet).
 
 The remaining steps are similar to [Transfer AXL tokens from Axelar to an EVM chain using the terminal](axl-to-evm).
 
@@ -200,7 +200,7 @@ Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 
 ### 1. Documentation
 
-[Testnet resources](/releases/testnet), [Mainnet resources](/releases/mainnet).
+[Testnet resources](/resources/testnet), [Mainnet resources](/resources/mainnet).
 
 ### 2. Terminal
 

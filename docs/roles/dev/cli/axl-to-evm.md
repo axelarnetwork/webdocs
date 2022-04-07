@@ -26,7 +26,7 @@ The Axelar network is under active development. Use at your own risk with funds 
     - Get some AXL testnet tokens from the [Axelar testnet faucet](http://faucet.testnet.axelar.dev/).
   - **Mainnet:** You are responsible for obtaining your own tokens.
 - `{EVM_DEST_ADDR}` is an address controlled by you on the external EVM chain `{EVM_CHAIN}`. (In your Metamask, for example.) This is where your AXL tokens will be sent.
-- `{AMOUNT}` is the amount of AXL tokens you wish to transfer, denominated in `uaxl`. Recall that `1 AXL = 1000000 uaxl`. See [Testnet releases](/releases/testnet) or [Mainnet releases](/releases/mainnet) for minimum transfer amounts.
+- `{AMOUNT}` is the amount of AXL tokens you wish to transfer, denominated in `uaxl`. Recall that `1 AXL = 1000000 uaxl`. See [Testnet resources](/resources/testnet) or [Mainnet resources](/resources/mainnet) for minimum transfer amounts.
 
 <Tabs groupId="network">
 <TabItem value="mainnet" label="Mainnet" default>
@@ -209,7 +209,7 @@ Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 
 ### 1. Documentation
 
-[Testnet resources](/releases/testnet), [Mainnet resources](/releases/mainnet).
+[Testnet resources](/resources/testnet), [Mainnet resources](/resources/mainnet).
 
 ### 2. Terminal
 
