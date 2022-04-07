@@ -54,6 +54,14 @@ const sidebars = {
                 'roles/dev/cli/axl-from-evm',
               ],
             },
+            {
+              type: 'category',
+              label: 'Network Design',
+              link: {type: 'doc', id: 'roles/dev/design'},
+              items: [
+                'roles/dev/design/contracts',
+              ],
+            },
           ],
         },
         {
