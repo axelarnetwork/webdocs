@@ -136,11 +136,11 @@ const sidebars = {
         {
           type: 'category',
           label: 'Mainnet',
-          link: {type: 'doc', id: 'releases/mainnet'},
+          link: {type: 'doc', id: 'resources/mainnet'},
           items: [
             {
               type: 'doc',
-              id: 'releases/mainnet/upgrade',
+              id: 'resources/mainnet/upgrade',
               label: 'Upgrade', // sidebar label
             },
             
@@ -149,17 +149,17 @@ const sidebars = {
         {
           type: 'category',
           label: 'Testnet',
-          link: {type: 'doc', id: 'releases/testnet'},
+          link: {type: 'doc', id: 'resources/testnet'},
           items: [
             {
               type: 'doc',
-              id: 'releases/testnet/upgrade',
+              id: 'resources/testnet/upgrade',
               label: 'Upgrade', // sidebar label
             },
             
           ],
         },
-        'releases/hacknet',
+        'resources/hacknet',
       ],
     },
     'bug-bounty',
