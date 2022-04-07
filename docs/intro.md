@@ -44,3 +44,8 @@ Axelar validators facilitate cross-chain connections by participating in the fol
 - Maintaining the Axelar blockchain with its decentralized and permisionless validator set
 - Reaching consensus on cross-chain transactions and events that occur on other blockchains
 - Running multiparty cryptography protocols for passing general messages between blockchains
+
+## Links
+
+- [Axelar discord](https://discord.gg/aRZ3Ra6f7D)
+- [White paper](https://axelar.network/wp-content/uploads/2021/07/axelar_whitepaper.pdf)
