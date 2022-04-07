@@ -11,6 +11,10 @@
     {
       "source": "/releases(.*)",
       "destination": "/resources$1"
+    },
+    {
+      "source": "/roles(.*)",
+      "destination": "$1"
     }
   ]
 }

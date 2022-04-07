@@ -1,5 +1,5 @@
 ---
-slug: /roles/validator/external-chains
+slug: /validator/external-chains
 ---
 
 # Overview
@@ -39,7 +39,7 @@ Your `config.toml` file should already contain a snippet like the following:
 # 3. 'rpc_addr'              # EVM RPC endpoint URL; chain maintainers set their own endpoint
 # 4. `start-with-bridge`     # `true` to support this chain
 #
-# see https://docs.axelar.dev/roles/validator/external-chains
+# see https://docs.axelar.dev/validator/external-chains
 
 [[axelar_bridge_evm]]
 name = "Ethereum"

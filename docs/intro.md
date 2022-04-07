@@ -11,7 +11,7 @@ Deploy your dApp on any blockchain, choosing the one most suitable for your use 
 
 ## Learn for your role:
 
-### [Developer](roles/dev.md)
+### [Developer](dev.md)
 
 Use Axelar gateway contracts to call any EVM contract on any chain:
 
@@ -29,15 +29,15 @@ interface IAxelarGateway {
 }
 ```
 
-### [Satellite user](roles/user/satellite.md)
+### [Satellite user](user/satellite.md)
 
 _Satellite_ is a web app built on top of the Axelar network. Use it to transfer assets from one chain to another.
 
-### [Node operator](roles/node/join.md)
+### [Node operator](node/join.md)
 
 Learn how to run a node on the Axelar netowrk.
 
-### [Validator](roles/validator/setup/overview.md)
+### [Validator](validator/setup/overview.md)
 
 Axelar validators facilitate cross-chain connections by participating in the following activities:
 
