@@ -30,7 +30,6 @@ const sidebars = {
           label: 'Developer',
           link: {type: 'doc', id: 'roles/dev'},
           items: [
-            'resources',
             {
               type: 'category',
               label: 'AxelarJS SDK',
