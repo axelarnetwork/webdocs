@@ -5,6 +5,10 @@ slug: /
 
 # What is Axelar?
 
+```mdx-code-block
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+```
+
 Axelar is a decentralized overlay network that connects all blockchains, assets and applications through a universal set of protocols and APIs. It is designed from the ground up to deliver secure interoperability and transport layer for web3.
 
 Deploy your dApp on any blockchain, choosing the one most suitable for your use case. Through a single integration with the Axelar Gateway API, unlock access to users, assets, liquidity and data on any other connected blockchain.
@@ -28,6 +32,8 @@ interface IAxelarGateway {
 
 }
 ```
+
+<HomepageFeatures />
 
 ### [Satellite user](resources/satellite.md)
 
