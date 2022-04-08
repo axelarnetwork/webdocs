@@ -151,7 +151,6 @@ const sidebars = {
             
           ],
         },
-        'resources/hacknet',
       ],
     },
     'bug-bounty',
