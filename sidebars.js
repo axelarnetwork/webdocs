@@ -59,14 +59,6 @@ const sidebars = {
     },
     {
       type: 'category',
-      label: 'Satellite user',
-      items: [
-        'user/satellite',
-        'user/metamask',
-      ],
-    },
-    {
-      type: 'category',
       label: 'Node operator',
       items: [
         'node/join',
@@ -151,6 +143,8 @@ const sidebars = {
             
           ],
         },
+        'resources/satellite',
+        'resources/metamask',
       ],
     },
     'bug-bounty',
