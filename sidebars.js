@@ -24,17 +24,6 @@ const sidebars = {
       label: 'Developer',
       link: {type: 'doc', id: 'dev'},
       items: [
-        {
-          type: 'category',
-          label: 'AxelarJS SDK',
-          link: {type: 'doc', id: 'dev/sdk'},
-          items: [
-            'dev/sdk/axelarjs-stable',
-            'dev/sdk/axelarjs-alpha',
-            'dev/sdk/deposit-address-demo-stable',
-            'dev/sdk/deposit-address-demo-alpha',
-          ],
-        },
         'dev/gmp',
         {
           type: 'category',
@@ -113,8 +102,6 @@ const sidebars = {
     {
       type: 'category',
       label: 'Resources',
-      collapsible: true,
-      collapsed: false,
       link: {type: 'doc', id: 'resources'},
       items: [
         {
