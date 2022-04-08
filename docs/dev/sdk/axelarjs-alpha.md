@@ -2,8 +2,8 @@
 
 ## What you can do with v0.5.xx
 
-1. **New!** Cross-chain EVM contract calls
-2. Get a deposit address for cross-chain token transfer
+1. Get a deposit address for cross-chain token transfer
+2. **New!** Cross-chain EVM contract calls
 
 ## Install
 
@@ -12,6 +12,28 @@ Install the latest patch of AxelarJS SDK v0.5.xx:
 ```bash
 npm i --save @axelar-network/axelarjs-sdk@alpha
 ```
+
+## Get a deposit address for cross-chain token transfer
+
+For cross-chain token transfers from a source chain `X` to destination chain `Y` for asset `Z`, Axelar generates a deposit address on the source chain `X` that accepts deposits of asset `Z` that are then relayed through a collection of microservices through the Axelar network to the destination chain `Y`. 
+
+Below is a sample function `myGetDepositAddress` that returns a new deposit address `A` on the Axelar chain. The function `myGetDepositAddress` wraps a call to `getDepositAddress` from the AxelarJS SDK API like so:
+
+```typescript
+import {
+  AxelarAssetTransfer,
+  Environment
+} from "@axelar-network/axelarjs-sdk"
+
+const api = new AxelarAssetTransfer({ environment: Environment.TESTNET });
+
+const myGetDepositAddress = async (destinationAddress?: string) => {
+  const linkAddress: string = await api.getDepositAddress("axelar", "avalanche", "0x74Ccd7d9F1F40417C6F7fD1151429a2c44c34e6d", "uaxl");
+  return linkAddress;
+};
+```
+
+See [Deposit address demo (alpha)](deposit-address-demo-alpha.md) for a working demo in the browser.
 
 ## New! Cross-chain EVM contract calls
 
@@ -149,38 +171,4 @@ The SDK includes abstracted methods for those defined on the Axelar Gateway cont
 
 ```typescript
 const gatewayContract = gateway.getContract();
-```
-
-## Get a deposit address for cross-chain token transfer
-
-We'll write a function `myGetDepositAddress` that returns a new deposit address `A` on the Axelar chain. A user could then send AXL tokens to `A`. The Axelar network will transfer any such AXL tokens to the Avalanche chain. You can substitute (Axelar, AXL, Avalanche) for many other choices of (source chain, asset, destination chain).
-
-See [Deposit address demo (alpha)](deposit-address-demo-alpha.md) for a working demo in the browser.
-
-The function `myGetDepositAddress` wraps a call to `getDepositAddress` from the AxelarJS SDK API like so:
-
-```typescript
-import {
-  GetDepositAddressDto,
-  GetDepositAddressPayload,
-  TransferAssetBridge,
-} from "@axelar-network/axelarjs-sdk";
-
-const environment = "testnet";
-const api = new TransferAssetBridge(environment);
-
-const myGetDepositAddress = async (destinationAddress?: string) => {
-  const payload: GetDepositAddressPayload = {
-    fromChain: "axelar",
-    toChain: "avalanche",
-    asset: "uaxl",
-    destinationAddress:
-      destinationAddress || "0x74Ccd7d9F1F40417C6F7fD1151429a2c44c34e6d",
-  };
-  const requestPayload: GetDepositAddressDto = {
-    payload,
-  } as GetDepositAddressDto;
-  const linkAddress: string = await api.getDepositAddress(requestPayload);
-  return linkAddress;
-};
 ```
