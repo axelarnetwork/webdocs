@@ -3,7 +3,8 @@
 Set up your Polygon Mumbai Testnet node.
 
 ## Prerequisites
-- [Setup your Axelar validator](/roles/validator/setup)
+
+- [Setup your Axelar validator](/validator/setup)
 - Minimum hardware requirements: 4-8+ core CPU , 16-32GB RAM, 100GB+ free storage space.
 - MacOS or Ubuntu 18.04+
 - Build-essential packages
@@ -11,6 +12,7 @@ Set up your Polygon Mumbai Testnet node.
 - [Official Documentation](https://docs.polygon.technology/docs/integrate/full-node-binaries)
 
 ## Install required dependencies
+
 In order to build the `go-opera`, you first need to install all of the required dependencies.
 
 ##### 1. Update and install `build-essential`
@@ -36,10 +38,13 @@ docker run -it --rm --name rabbitmq -p 5672:5672 -p 15672:15672 rabbitmq:3.9-man
 ```
 
 ## Install the Polygon node
-Polygon node consists of 2 layers, `Heimdall` and `Bor`. Heimdall is a fork of tendermint and is running in parallel to an Ethereum network, monitoring contracts. Bor is a fork of go-Ethereum and producing blocks shuffled by Heimdall nodes. You need to install and run both binaries in the correct order as explained in the following steps. 
 
-##### 1. Install Heimdall 
+Polygon node consists of 2 layers, `Heimdall` and `Bor`. Heimdall is a fork of tendermint and is running in parallel to an Ethereum network, monitoring contracts. Bor is a fork of go-Ethereum and producing blocks shuffled by Heimdall nodes. You need to install and run both binaries in the correct order as explained in the following steps.
+
+##### 1. Install Heimdall
+
 Please make sure you checkout the [latest release tag](https://github.com/maticnetwork/heimdall/tags). In this tutorial we are using `v0.2.5-beta1`
+
 ```bash
 cd ~/
 git clone https://github.com/maticnetwork/heimdall
@@ -52,7 +57,9 @@ heimdalld version --long
 ```
 
 ##### 2. Install Bor
+
 Please make sure you checkout the [latest release tag](https://github.com/maticnetwork/bor/tags). In this tutorial we are using `v0.2.13-beta2`
+
 ```bash
 cd ~/
 git clone https://github.com/maticnetwork/bor
@@ -63,8 +70,9 @@ sudo ln -nfs ~/bor/build/bin/bor /usr/bin/bor
 sudo ln -nfs ~/bor/build/bin/bootnode /usr/bin/bootnode
 
 # Verify the correct version
-bor version 
+bor version
 ```
+
 ## Setup and configure node
 
 ##### 1. Setup launch directory
@@ -110,17 +118,20 @@ sudo cp *.service /etc/systemd/system/
 ##### 4. Setup config files
 
 Open the `~/.heimdalld/config/config.toml` and edit:
+
 ```bash
 moniker=<enter unique identifier>
 seeds="4cd60c1d76e44b05f7dfd8bab3f447b119e87042@54.147.31.250:26656,b18bbe1f3d8576f4b73d9b18976e71c65e839149@34.226.134.117:26656"
 ```
 
 Open the `~/.heimdalld/config/heimdall-config.toml` and edit:
+
 ```bash
 eth_rpc_url = <insert Infura or any full node RPC URL to Goerli>
 ```
 
 Open the `~/node/bor/start.sh` and add the following flag to start parameters:
+
 ```bash
 --bootnodes "enode://320553cda00dfc003f499a3ce9598029f364fbb3ed1222fdc20a94d97dcc4d8ba0cd0bfa996579dcc6d17a534741fb0a5da303a90579431259150de66b597251@54.147.31.250:30303"
 ```
@@ -141,12 +152,12 @@ wget https://matic-blockchain-snapshots.s3-accelerate.amazonaws.com/matic-mumbai
 # If needed, change the path depending on your server configuration.
 ```
 
-
 ## Start the Polygon services
 
 After completing all of the previous steps, your node should be configured and ready to launch with the previously created service files.
 
 ##### 1. Start Heimdalld
+
 ```bash
 sudo service heimdalld start
 sudo service heimdalld-rest-server start
@@ -159,13 +170,16 @@ Important: You need to wait for Heimdall node to fully sync with the network bef
 :::
 
 You can check the status of `heimdalld` service or follow the logs with:
+
 ```bash
 sudo service heimdalld status
 journalctl -u heimdalld.service -f
 ```
+
 ##### 2. Start Bor
 
 Once `heimdalld` is synced with the [latest block height](https://wallet-dev.polygon.technology/staking/), then you can start the `bor` service file:
+
 ```bash
 sudo service bor start
 
@@ -191,9 +205,6 @@ Axelar Network will be connecting to the EVM compatible blockchain `Bor`, so you
 ```bash
 http://IP:PORT
 ```
+
 Example:
-```http://192.168.192.168:8545```
-
-
-
-
+`http://192.168.192.168:8545`

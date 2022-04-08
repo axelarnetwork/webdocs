@@ -3,13 +3,15 @@
 Set up your Moonbeam (Moonbase-Alpha) Testnet node.
 
 ## Prerequisites
-- [Setup your Axelar validator](/roles/validator/setup)
+
+- [Setup your Axelar validator](/validator/setup)
 - Minimum hardware requirements: 8+ cores CPU , 16GB+ RAM, 150GB+ free storage space.
 - MacOS or Ubuntu 18.04+
 - Rust (If you are compiling the binary manually)
 - [Official Documentation](https://docs.moonbeam.network/node-operators/networks/run-a-node/)
 
 ## Install required dependencies
+
 In order to compile the `moonbeam` binary by yourself, you first need to setup the required dependencies. In this guide we will be using the release binary instead, so you can skip this step.
 
 ##### 1. Setup Rust
@@ -21,6 +23,7 @@ cargo build --release
 ```
 
 ## Install Moonbase Alpha
+
 In this guide we are using the release binary from PureStake. To get started, you need to download the [latest version](https://github.com/PureStake/moonbeam/releases) and create the systemd configuration file.
 
 ##### 1. Download compiled binary
@@ -39,6 +42,7 @@ sudo chown -R moonbase_service /var/lib/alphanet-data
 ```
 
 ##### 3. Create the systemd service file
+
 After installation of `moonbase-alpha`, we are now ready to start the node but in order to ensure it is running in the background and auto-restarts in case of a server failure, we will setup a service file using systemd.
 
 :::note
@@ -88,9 +92,9 @@ ExecStart=/var/lib/alphanet-data/moonbeam \
 [Install]
 WantedBy=multi-user.target
 EOF
-  ```
+```
 
-  ##### 4. Enable and start the `moonbeam` service
+##### 4. Enable and start the `moonbeam` service
 
 ```bash
 sudo systemctl enable moonbeam.service
@@ -109,7 +113,7 @@ sudo journalctl -u moonbeam.service -f
 Once your `Moonbeam` node is fully synced, you can run a cURL request to see the status of your node:
 
 ```bash
-curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "eth_syncing", "params":[]}' localhost:9933 
+curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method": "eth_syncing", "params":[]}' localhost:9933
 ```
 
 If the node is successfully synced, the output from above will print `{"jsonrpc":"2.0","result":false,"id":1}`
@@ -121,9 +125,6 @@ Axelar Network will be connecting to the EVM compatible `Moonbean`, so your `rpc
 ```bash
 http://IP:PORT
 ```
+
 Example:
-```http://192.168.192.168:9933```
-
-
-
-
+`http://192.168.192.168:9933`

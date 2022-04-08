@@ -1,11 +1,11 @@
-# Send AXL to an EVM chain
+# Send UST to an EVM chain
 
 ```mdx-code-block
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 ```
 
-Transfer AXL tokens from Axelar to an EVM chain using the terminal.
+Transfer UST tokens from Terra to an EVM chain using the terminal.
 
 :::danger
 
@@ -16,17 +16,7 @@ The Axelar network is under active development. Use at your own risk with funds 
 ## Prerequisites
 
 - Skill level: intermediate
-- You have downloaded the Axelar blockchain and are comfortable with [Basic node management](/roles/node/basic).
-- Your Axelar node has an account named `validator` that you control. Let `{VALIDATOR_ADDR}` denote the address of your `validator` account.
-- Select an EVM chain `{EVM_CHAIN}` from: Ethereum, Avalanche, Fantom, Moonbeam, Polygon.
-- Complete steps from [Metamask for EVM chains](/roles/user/metamask) to connect your Metamask to `{EVM_CHAIN}`.
-- You need both AXL tokens and `{EVM_CHAIN}` tokens to pay transaction fees.
-  - **Testnet:**
-    - Get some `{EVM_CHAIN}` testnet tokens as per [Metamask for EVM chains](/roles/user/metamask).
-    - Get some AXL testnet tokens from the [Axelar testnet faucet](http://faucet.testnet.axelar.dev/).
-  - **Mainnet:** You are responsible for obtaining your own tokens.
-- `{EVM_DEST_ADDR}` is an address controlled by you on the external EVM chain `{EVM_CHAIN}`. (In your Metamask, for example.) This is where your AXL tokens will be sent.
-- `{AMOUNT}` is the amount of AXL tokens you wish to transfer, denominated in `uaxl`. Recall that `1 AXL = 1000000 uaxl`. See [Testnet releases](/releases/testnet) or [Mainnet releases](/releases/mainnet) for minimum transfer amounts.
+- Prerequisites for [Send AXL to an EVM chain](axl-to-evm)
 
 <Tabs groupId="network">
 <TabItem value="mainnet" label="Mainnet" default>
@@ -35,9 +25,7 @@ The Axelar network is under active development. Use at your own risk with funds 
 </TabItem>
 </Tabs>
 
-## Send AXL tokens from Axelar to an EVM chain
-
-Optional: Verify that your `validator` account has sufficient balance as per [Basic node management](/roles/node/basic).
+## Send UST tokens from Terra to an EVM chain
 
 Link your `{EVM_DEST_ADDR}` to a new temporary deposit address on Axelar:
 
@@ -45,14 +33,14 @@ Link your `{EVM_DEST_ADDR}` to a new temporary deposit address on Axelar:
 <TabItem value="mainnet" label="Mainnet" default>
 
 ```bash
-echo my-secret-password | ~/.axelar/bin/axelard tx axelarnet link {EVM_CHAIN} {EVM_DEST_ADDR} uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
+echo my-secret-password | ~/.axelar/bin/axelard tx axelarnet link {EVM_CHAIN} {EVM_DEST_ADDR} uusd --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
 ```
 
 </TabItem>
 <TabItem value="testnet" label="Testnet">
 
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet link {EVM_CHAIN} {EVM_DEST_ADDR} uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet link {EVM_CHAIN} {EVM_DEST_ADDR} uusd --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 </TabItem>
@@ -64,49 +52,34 @@ Output should contain
 successfully linked {AXELAR_TEMP_ADDR} and {EVM_DEST_ADDR}
 ```
 
-Optional: query your new `{AXELAR_TEMP_ADDR}`:
+Send UST tokens from Terra to your temporary Axelar address `{AXELAR_TEMP_ADDR}` via IBC.
 
-<Tabs groupId="network" className='hidden'>
-<TabItem value="mainnet" label="Mainnet" default>
+:::info
 
-```bash
-~/.axelar/bin/axelard q nexus latest-deposit-address axelarnet {EVM_CHAIN} {EVM_DEST_ADDR}
-```
+There are several ways to do IBC.
 
-</TabItem>
-<TabItem value="testnet" label="Testnet">
+### IBC from a web wallet
 
-```bash
-~/.axelar_testnet/bin/axelard q nexus latest-deposit-address axelarnet {EVM_CHAIN} {EVM_DEST_ADDR}
-```
+Use a web wallet such as Keplr. See [Transfer Terra assets to EVM chains using Satellite | Axelar Network](https://axelar.network/transfer-terra-assets-to-evm-chains-using-satellite).
 
-</TabItem>
-</Tabs>
+### IBC from the terminal
 
-Send `{AMOUNT}` of `uaxl` to the new `{AXELAR_TEMP_ADDR}`.
-
-<Tabs groupId="network" className='hidden'>
-<TabItem value="mainnet" label="Mainnet" default>
+You need shell access to a Terra node with at least `{AMOUNT}` balance of UST tokens in an account called `terra-validator`.
+Get `{TERRA_TO_AXELAR_CHANNEL_ID}` from [Testnet resources](/resources/testnet) or [Mainnet resources](resources/mainnet).
 
 ```bash
-echo my-secret-password | ~/.axelar/bin/axelard tx bank send validator {AXELAR_TEMP_ADDR} {AMOUNT}uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-dojo-1 --home ~/.axelar/.core
+terrad tx ibc-transfer transfer transfer {TERRA_TO_AXELAR_CHANNEL_ID} {AXELAR_TEMP_ADDR} --packet-timeout-timestamp 0 --packet-timeout-height "0-20000" {AMOUNT}uusd --gas-prices 0.15uusd --from terra-validator -y -b block
 ```
 
-</TabItem>
-<TabItem value="testnet" label="Testnet">
+:::
 
-```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx bank send validator {AXELAR_TEMP_ADDR} {AMOUNT}uaxl --from validator --gas auto --gas-adjustment 1.5 --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
-```
-
-</TabItem>
-</Tabs>
+Wait a few minutes for the IBC relayer to relay your transaction to Axelar.
 
 :::note
 
 Third-party monitoring tools will automatically complete the remaining steps of this process.
 
-Wait a few minutes then check your Metamask for the AXL tokens. Don't forget to import the AXL token into Metamask so you can see your balance as described in [Metamask for EVM chains](/roles/user/metamask).
+Wait a few minutes then check your Metamask for the UST tokens. Don't forget to import the UST token into Metamask so you can see your balance as described in [Metamask for EVM chains](/resources/metamask).
 
 :::
 
@@ -118,20 +91,38 @@ The remaining steps are needed only if there are no active third-party monitorin
 
 :::
 
+Verify the IBC transaction by checking the balances of `{AXELAR_TEMP_ADDR}` as per [Basic node management](/node/basic.md). Output should contain something like:
+
+```
+balances:
+- amount: "15000000"
+  denom: {IBC_DENOM}
+```
+
+:::note
+
+You will not see `UST`, `uusd` or a similar token denomination for `{IBC_DENOM}`. IBC token denominations look something like `ibc/6F4968A73F90CF7DE6394BF937D6DF7C7D162D74D839C13F53B41157D315E05F`
+
+:::
+
+Get `{IBC_DENOM}` from [Testnet resources](/resources/testnet) or [Mainnet resources](/resources/mainnet).
+
+The remaining steps are similar to [Transfer AXL tokens from Axelar to an EVM chain using the terminal](axl-to-evm).
+
 Confirm the deposit transaction. Look for `{TX_HASH}` in the output of the previous command.
 
 <Tabs groupId="network" className='hidden'>
 <TabItem value="mainnet" label="Mainnet" default>
 
 ```bash
-echo my-secret-password | ~/.axelar/bin/axelard tx axelarnet confirm-deposit {TX_HASH} {AMOUNT}uaxl {AXELAR_TEMP_ADDR} --from validator --chain-id axelar-dojo-1 --home ~/.axelar/.core
+echo my-secret-password | ~/.axelar/bin/axelard tx axelarnet confirm-deposit {TX_HASH} {AMOUNT}"{IBC_DENOM}" {AXELAR_TEMP_ADDR} --from validator --chain-id axelar-dojo-1 --home ~/.axelar/.core
 ```
 
 </TabItem>
 <TabItem value="testnet" label="Testnet">
 
 ```bash
-echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet confirm-deposit {TX_HASH} {AMOUNT}uaxl {AXELAR_TEMP_ADDR} --from validator --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
+echo my-secret-password | ~/.axelar_testnet/bin/axelard tx axelarnet confirm-deposit {TX_HASH} {AMOUNT}"{IBC_DENOM}" {AXELAR_TEMP_ADDR} --from validator --chain-id axelar-testnet-lisbon-3 --home ~/.axelar_testnet/.core
 ```
 
 </TabItem>
@@ -209,7 +200,7 @@ Learn the Axelar `{GATEWAY_ADDR}` for `{EVM_CHAIN}` in two ways:
 
 ### 1. Documentation
 
-[Testnet resources](/releases/testnet), [Mainnet resources](/releases/mainnet).
+[Testnet resources](/resources/testnet), [Mainnet resources](/resources/mainnet).
 
 ### 2. Terminal
 

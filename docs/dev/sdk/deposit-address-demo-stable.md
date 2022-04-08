@@ -10,7 +10,7 @@ From here, the user may send AXL tokens to `A` on the Axelar blockchain. Any use
 
 ## Prerequisites
 
-Configure your Metamask as per [Set up Metamask for EVM chains | Axelar Docs](https://docs.axelar.dev/roles/user/metamask):
+Configure your Metamask as per [Set up Metamask for EVM chains | Axelar Docs](https://docs.axelar.dev/resources/metamask):
 
 - Add Avalanche testnet to your "networks"
 - Import the Axlear ERC20 token to your "assets" for Avalanche

@@ -1,4 +1,4 @@
-# Using Satellite
+# Satellite
 
 Using Satellite to transfer assets across chains.
 
@@ -21,4 +21,4 @@ For a step-by-step walkthrough on how to use Satellite, check out the following 
 - [Tutorial Video](https://www.youtube.com/watch?v=VsfCJl1A9QI)
 - [Instructional Medium Post](https://medium.com/axelar/transfer-terra-assets-to-evm-chains-using-satellite-f6480c7ff20c)
 
-See [Mainnet Release](/releases/mainnet) for a reference list of Axelar's cross chain contract addresses, minimum asset transfer amounts, and cross-chain transaction processing fees.
+See [Mainnet resources](/resources/mainnet) for a reference list of Axelar's cross chain contract addresses, minimum asset transfer amounts, and cross-chain transaction processing fees.

@@ -21,110 +21,93 @@ const sidebars = {
     'intro',
     {
       type: 'category',
-      label: 'I am a...',
-      collapsible: true,
-      collapsed: false,
+      label: 'Developer',
+      link: {type: 'doc', id: 'dev'},
       items: [
         {
           type: 'category',
-          label: 'Developer',
-          link: {type: 'doc', id: 'roles/dev'},
+          label: 'AxelarJS SDK',
+          link: {type: 'doc', id: 'dev/sdk'},
           items: [
-            'resources',
-            {
-              type: 'category',
-              label: 'AxelarJS SDK',
-              link: {type: 'doc', id: 'roles/dev/sdk'},
-              items: [
-                'roles/dev/sdk/axelarjs-stable',
-                'roles/dev/sdk/axelarjs-alpha',
-                'roles/dev/sdk/deposit-address-demo-stable',
-                'roles/dev/sdk/deposit-address-demo-alpha',
-              ],
-            },
-            'roles/dev/gmp',
-            {
-              type: 'category',
-              label: 'CLI',
-              link: {type: 'doc', id: 'roles/dev/cli'},
-              items: [
-                'roles/dev/cli/ust-to-evm',
-                'roles/dev/cli/ust-from-evm',
-                'roles/dev/cli/axl-to-evm',
-                'roles/dev/cli/axl-from-evm',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Network Design',
-              link: {type: 'doc', id: 'roles/dev/design'},
-              items: [
-                'roles/dev/design/contracts',
-              ],
-            },
+            'dev/sdk/axelarjs-stable',
+            'dev/sdk/axelarjs-alpha',
+            'dev/sdk/deposit-address-demo-stable',
+            'dev/sdk/deposit-address-demo-alpha',
+          ],
+        },
+        'dev/gmp',
+        {
+          type: 'category',
+          label: 'CLI',
+          link: {type: 'doc', id: 'dev/cli'},
+          items: [
+            'dev/cli/ust-to-evm',
+            'dev/cli/ust-from-evm',
+            'dev/cli/axl-to-evm',
+            'dev/cli/axl-from-evm',
           ],
         },
         {
           type: 'category',
-          label: 'Satellite user',
+          label: 'Network Design',
+          link: {type: 'doc', id: 'dev/design'},
           items: [
-            'roles/user/satellite',
-            'roles/user/metamask',
+            'dev/design/contracts',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Node operator',
+      items: [
+        'node/join',
+        'node/join-genesis',
+        'node/basic',
+        'node/keyring',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Validator',
+      items: [
+        {
+          type: 'category',
+          label: 'Setup',
+          items: [
+            'validator/setup/overview',
+            'validator/setup/vald-tofnd',
+            'validator/setup/backup',
+            'validator/setup/register-broadcaster',
+            'validator/setup/stake-axl',
+            'validator/setup/health-check',
+            'validator/setup/manual',
           ],
         },
         {
           type: 'category',
-          label: 'Node operator',
+          label: 'Support external chains',
           items: [
-            'roles/node/join',
-            'roles/node/join-genesis',
-            'roles/node/basic',
-            'roles/node/keyring',
+            'validator/external-chains/overview',
+            'validator/external-chains/avalanche',
+            'validator/external-chains/ethereum',
+            'validator/external-chains/fantom',
+            'validator/external-chains/moonbeam',
+            'validator/external-chains/polygon',
           ],
         },
-        {
-          type: 'category',
-          label: 'Validator',
-          items: [
-            {
-              type: 'category',
-              label: 'Setup',
-              items: [
-                'roles/validator/setup/overview',
-                'roles/validator/setup/vald-tofnd',
-                'roles/validator/setup/backup',
-                'roles/validator/setup/register-broadcaster',
-                'roles/validator/setup/stake-axl',
-                'roles/validator/setup/health-check',
-                'roles/validator/setup/manual',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Support external chains',
-              items: [
-                'roles/validator/external-chains/overview',
-                'roles/validator/external-chains/avalanche',
-                'roles/validator/external-chains/ethereum',
-                'roles/validator/external-chains/fantom',
-                'roles/validator/external-chains/moonbeam',
-                'roles/validator/external-chains/polygon',
-              ],
-            },
-            // Hide this section until the pages are updated and refreshed 
-            // {
-            //   type: 'category',
-            //   label: 'Troubleshoot',
-            //   items: [
-            //     'roles/validator/troubleshoot/recovery',
-            //     'roles/validator/troubleshoot/startup',
-            //     'roles/validator/troubleshoot/leave',
-            //     'roles/validator/troubleshoot/unjail',
-            //     'roles/validator/troubleshoot/missed-too-many-blocks',
-            //   ],
-            // },
-          ],
-        },
+        // Hide this section until the pages are updated and refreshed 
+        // {
+        //   type: 'category',
+        //   label: 'Troubleshoot',
+        //   items: [
+        //     'validator/troubleshoot/recovery',
+        //     'validator/troubleshoot/startup',
+        //     'validator/troubleshoot/leave',
+        //     'validator/troubleshoot/unjail',
+        //     'validator/troubleshoot/missed-too-many-blocks',
+        //   ],
+        // },
       ],
     },
     {
@@ -137,11 +120,11 @@ const sidebars = {
         {
           type: 'category',
           label: 'Mainnet',
-          link: {type: 'doc', id: 'releases/mainnet'},
+          link: {type: 'doc', id: 'resources/mainnet'},
           items: [
             {
               type: 'doc',
-              id: 'releases/mainnet/upgrade',
+              id: 'resources/mainnet/upgrade',
               label: 'Upgrade', // sidebar label
             },
             
@@ -150,17 +133,18 @@ const sidebars = {
         {
           type: 'category',
           label: 'Testnet',
-          link: {type: 'doc', id: 'releases/testnet'},
+          link: {type: 'doc', id: 'resources/testnet'},
           items: [
             {
               type: 'doc',
-              id: 'releases/testnet/upgrade',
+              id: 'resources/testnet/upgrade',
               label: 'Upgrade', // sidebar label
             },
             
           ],
         },
-        'releases/hacknet',
+        'resources/satellite',
+        'resources/metamask',
       ],
     },
     'bug-bounty',
@@ -170,10 +154,10 @@ const sidebars = {
     {
       type: 'category',
       label: 'Controller',
-      link: {type: 'doc', id: 'roles/controller'},
+      link: {type: 'doc', id: 'controller'},
       items: [
-        'roles/controller/add-evm-chain',
-        'roles/controller/deploy-token',    
+        'controller/add-evm-chain',
+        'controller/deploy-token',    
       ],
     },
   ],
