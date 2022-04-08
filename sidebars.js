@@ -44,7 +44,7 @@ const sidebars = {
             'dev/design/contracts',
             {
               type: 'category',
-              label: 'Generte deposit address',
+              label: 'Generate deposit address',
               link: {type: 'doc', id: 'dev/sdk'},
               items: [
                 'dev/sdk/axelarjs-stable',
