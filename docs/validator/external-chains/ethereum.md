@@ -76,7 +76,7 @@ sudo journalctl -u geth -f
 Alternatively, you can now also use the Geth JavaScript console and check status of your node by attaching to your newly created `geth.ipc`. Don't forget to replace $USER and path, depending on your server configuration.
 
 ```bash
-geth attach ipc:/home/$USER/.ethereum/ropsten/geth.ipc
+geth attach ipc:/home/$resources/.ethereum/ropsten/geth.ipc
 eth.syncing
 
 ```

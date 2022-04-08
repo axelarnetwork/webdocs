@@ -79,7 +79,7 @@ Wait a few minutes for the IBC relayer to relay your transaction to Axelar.
 
 Third-party monitoring tools will automatically complete the remaining steps of this process.
 
-Wait a few minutes then check your Metamask for the UST tokens. Don't forget to import the UST token into Metamask so you can see your balance as described in [Metamask for EVM chains](/user/metamask).
+Wait a few minutes then check your Metamask for the UST tokens. Don't forget to import the UST token into Metamask so you can see your balance as described in [Metamask for EVM chains](/resources/metamask).
 
 :::
 

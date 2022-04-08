@@ -29,7 +29,7 @@ interface IAxelarGateway {
 }
 ```
 
-### [Satellite user](user/satellite.md)
+### [Satellite user](resources/satellite.md)
 
 _Satellite_ is a web app built on top of the Axelar network. Use it to transfer assets from one chain to another.
 

@@ -19,10 +19,10 @@ The Axelar network is under active development. Use at your own risk with funds 
 - You have downloaded the Axelar blockchain and are comfortable with [Basic node management](/node/basic).
 - Your Axelar node has an account named `validator` that you control. Let `{VALIDATOR_ADDR}` denote the address of your `validator` account.
 - Select an EVM chain `{EVM_CHAIN}` from: Ethereum, Avalanche, Fantom, Moonbeam, Polygon.
-- Complete steps from [Metamask for EVM chains](/user/metamask) to connect your Metamask to `{EVM_CHAIN}`.
+- Complete steps from [Metamask for EVM chains](/resources/metamask) to connect your Metamask to `{EVM_CHAIN}`.
 - You need both AXL tokens and `{EVM_CHAIN}` tokens to pay transaction fees.
   - **Testnet:**
-    - Get some `{EVM_CHAIN}` testnet tokens as per [Metamask for EVM chains](/user/metamask).
+    - Get some `{EVM_CHAIN}` testnet tokens as per [Metamask for EVM chains](/resources/metamask).
     - Get some AXL testnet tokens from the [Axelar testnet faucet](http://faucet.testnet.axelar.dev/).
   - **Mainnet:** You are responsible for obtaining your own tokens.
 - `{EVM_DEST_ADDR}` is an address controlled by you on the external EVM chain `{EVM_CHAIN}`. (In your Metamask, for example.) This is where your AXL tokens will be sent.
@@ -106,7 +106,7 @@ echo my-secret-password | ~/.axelar_testnet/bin/axelard tx bank send validator {
 
 Third-party monitoring tools will automatically complete the remaining steps of this process.
 
-Wait a few minutes then check your Metamask for the AXL tokens. Don't forget to import the AXL token into Metamask so you can see your balance as described in [Metamask for EVM chains](/user/metamask).
+Wait a few minutes then check your Metamask for the AXL tokens. Don't forget to import the AXL token into Metamask so you can see your balance as described in [Metamask for EVM chains](/resources/metamask).
 
 :::
 
