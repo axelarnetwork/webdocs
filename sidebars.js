@@ -21,109 +21,101 @@ const sidebars = {
     'intro',
     {
       type: 'category',
-      label: 'I am a...',
-      collapsible: true,
-      collapsed: false,
+      label: 'Developer',
+      link: {type: 'doc', id: 'dev'},
       items: [
         {
           type: 'category',
-          label: 'Developer',
-          link: {type: 'doc', id: 'dev'},
+          label: 'AxelarJS SDK',
+          link: {type: 'doc', id: 'dev/sdk'},
           items: [
-            {
-              type: 'category',
-              label: 'AxelarJS SDK',
-              link: {type: 'doc', id: 'dev/sdk'},
-              items: [
-                'dev/sdk/axelarjs-stable',
-                'dev/sdk/axelarjs-alpha',
-                'dev/sdk/deposit-address-demo-stable',
-                'dev/sdk/deposit-address-demo-alpha',
-              ],
-            },
-            'dev/gmp',
-            {
-              type: 'category',
-              label: 'CLI',
-              link: {type: 'doc', id: 'dev/cli'},
-              items: [
-                'dev/cli/ust-to-evm',
-                'dev/cli/ust-from-evm',
-                'dev/cli/axl-to-evm',
-                'dev/cli/axl-from-evm',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Network Design',
-              link: {type: 'doc', id: 'dev/design'},
-              items: [
-                'dev/design/contracts',
-              ],
-            },
+            'dev/sdk/axelarjs-stable',
+            'dev/sdk/axelarjs-alpha',
+            'dev/sdk/deposit-address-demo-stable',
+            'dev/sdk/deposit-address-demo-alpha',
+          ],
+        },
+        'dev/gmp',
+        {
+          type: 'category',
+          label: 'CLI',
+          link: {type: 'doc', id: 'dev/cli'},
+          items: [
+            'dev/cli/ust-to-evm',
+            'dev/cli/ust-from-evm',
+            'dev/cli/axl-to-evm',
+            'dev/cli/axl-from-evm',
           ],
         },
         {
           type: 'category',
-          label: 'Satellite user',
+          label: 'Network Design',
+          link: {type: 'doc', id: 'dev/design'},
           items: [
-            'user/satellite',
-            'user/metamask',
+            'dev/design/contracts',
+          ],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Satellite user',
+      items: [
+        'user/satellite',
+        'user/metamask',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Node operator',
+      items: [
+        'node/join',
+        'node/join-genesis',
+        'node/basic',
+        'node/keyring',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Validator',
+      items: [
+        {
+          type: 'category',
+          label: 'Setup',
+          items: [
+            'validator/setup/overview',
+            'validator/setup/vald-tofnd',
+            'validator/setup/backup',
+            'validator/setup/register-broadcaster',
+            'validator/setup/stake-axl',
+            'validator/setup/health-check',
+            'validator/setup/manual',
           ],
         },
         {
           type: 'category',
-          label: 'Node operator',
+          label: 'Support external chains',
           items: [
-            'node/join',
-            'node/join-genesis',
-            'node/basic',
-            'node/keyring',
+            'validator/external-chains/overview',
+            'validator/external-chains/avalanche',
+            'validator/external-chains/ethereum',
+            'validator/external-chains/fantom',
+            'validator/external-chains/moonbeam',
+            'validator/external-chains/polygon',
           ],
         },
-        {
-          type: 'category',
-          label: 'Validator',
-          items: [
-            {
-              type: 'category',
-              label: 'Setup',
-              items: [
-                'validator/setup/overview',
-                'validator/setup/vald-tofnd',
-                'validator/setup/backup',
-                'validator/setup/register-broadcaster',
-                'validator/setup/stake-axl',
-                'validator/setup/health-check',
-                'validator/setup/manual',
-              ],
-            },
-            {
-              type: 'category',
-              label: 'Support external chains',
-              items: [
-                'validator/external-chains/overview',
-                'validator/external-chains/avalanche',
-                'validator/external-chains/ethereum',
-                'validator/external-chains/fantom',
-                'validator/external-chains/moonbeam',
-                'validator/external-chains/polygon',
-              ],
-            },
-            // Hide this section until the pages are updated and refreshed 
-            // {
-            //   type: 'category',
-            //   label: 'Troubleshoot',
-            //   items: [
-            //     'validator/troubleshoot/recovery',
-            //     'validator/troubleshoot/startup',
-            //     'validator/troubleshoot/leave',
-            //     'validator/troubleshoot/unjail',
-            //     'validator/troubleshoot/missed-too-many-blocks',
-            //   ],
-            // },
-          ],
-        },
+        // Hide this section until the pages are updated and refreshed 
+        // {
+        //   type: 'category',
+        //   label: 'Troubleshoot',
+        //   items: [
+        //     'validator/troubleshoot/recovery',
+        //     'validator/troubleshoot/startup',
+        //     'validator/troubleshoot/leave',
+        //     'validator/troubleshoot/unjail',
+        //     'validator/troubleshoot/missed-too-many-blocks',
+        //   ],
+        // },
       ],
     },
     {
