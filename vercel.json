@@ -15,6 +15,10 @@
     {
       "source": "/roles(.*)",
       "destination": "$1"
+    },
+    {
+      "source": "/user(.*)",
+      "destination": "/resources$1"
     }
   ]
 }
