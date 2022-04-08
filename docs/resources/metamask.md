@@ -1,4 +1,4 @@
-# Set up Metamask for EVM chains
+# Set up Metamask
 
 1. Connect Metamask to other EVM chains
 2. Get testnet tokens for other EVM chains to pay for gas

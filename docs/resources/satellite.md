@@ -1,4 +1,4 @@
-# Using Satellite
+# Satellite
 
 Using Satellite to transfer assets across chains.
 
