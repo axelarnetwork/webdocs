@@ -5,10 +5,10 @@ Instructions for 2022-Apr-12 testnet upgrade to axelar-core `v0.17.0`.
 1. If you're a validator, please vote for the upgrade proposal via
 
 ```bash
-axelard tx gov vote 6 yes --from validator
+axelard tx gov vote 6 'yes' --from validator
 ```
 
-2. Wait for the proposed upgrade block, `1619675`. Your node will panic at that block height with a log: `{"level":"error","module":"consensus","err":"UPGRADE \"v0.17\" NEEDED at height: ",`. Stop your node after chain halt.
+2. Wait for the proposed upgrade block, `1619950`. Your node will panic at that block height with a log: `{"level":"error","module":"consensus","err":"UPGRADE \"v0.17\" NEEDED at height: ",`. Stop your node after chain halt.
 
 ```bash
 pkill -f 'axelard start'
