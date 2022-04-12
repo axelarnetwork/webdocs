@@ -88,6 +88,8 @@ For e.g. a transfer of 1000 UST from Terra to Avalanche will have a fee of 1.5 U
 | FRAX         | 20 FRAX  | 1 FRAX           | 0.5 FRAX       | 18        | frax-wei |
 | DAI          | 20 DAI   | 1 DAI            | 0.5 DAI        | 18        | dai-wei  |
 | USDT         | 20 USDT  | 1 USDT           | 0.5 USDT       | 6         | uusdt    |
+| NGM          | 16 NGM   | 0.8 NGM          | 0.4 NGM        | 6         | ungm     |
+| EEUR         | 20 EEUR  | 1 EEUR           | 0.5 EEUR       | 6         | eeur     |
 
 The current transfer fee can also be queried on the network with
 
