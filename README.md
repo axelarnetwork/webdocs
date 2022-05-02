@@ -1,5 +1,7 @@
 # Axelar webdocs
 
+This repo has been `archived`. The new docs repo is [axelar-docs](https://github.com/axelarnetwork/axelar-docs/).
+
 Source for [docs.axelar.dev](docs.axelar.dev).
 
 This website is built using [Docusaurus 2](https://docusaurus.io/), a modern static website generator.
